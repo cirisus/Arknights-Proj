@@ -1,0 +1,220 @@
+#odialog-container, #odialog-container * {
+    box-sizing: border-box;
+}
+@media only screen and (max-width: 56.25rem)
+#odialog-container div.owindow {
+    min-width: 80%;
+    max-width: 99%;
+}
+@media only screen and (max-width: 56.25rem)
+#odialog-container .modal-body .table, #odialog-container .modal-body .table~div {
+    float: left;
+}
+#odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child~table td.active {
+    display: flex;
+    align-items: center;
+}
+#odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child~table tbody, #odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child~table tr {
+    display: contents;
+}
+@media only screen and (max-width: 56.25rem)
+#odialog-container .owindow .button-bar {
+    float: center;
+}
+#odialog-container div.owindow {
+    display: grid;
+    position: fixed;
+    top: 50%!important;
+    left: 50%!important;
+    transform: translateY(-50%) translateX(-50%);
+    border: none;
+    background-color: #fff;
+    box-shadow: inset 0 0 0px 0.125rem #303b77;
+    color: #243a4a;
+}
+#odialog-container .modal-header, #odialog-container .title {
+    --wght: 800;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 2.5ex 42%;
+    background-image: linear-gradient(125deg,rgb(65 49 110) 25%,transparent 25%,transparent 50%,rgb(65 49 110) 50%,rgb(65 50 110) 75%,transparent 75%,transparent 100%);
+    background-size: 3rem 4.35rem;
+    background-color: rgb(78 70 129 / 75%);
+    color: #fff;
+    font-weight: var(--wght);
+    font-size: 1.5em;
+    line-height: 1ex;
+    font-family: 'Noto Serif SC';
+    text-transform: uppercase;
+    height: 100%;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+#odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child {
+    grid-row: 1;
+    grid-column: 1;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 1em 0 .25em .25rem;
+    padding: 0!important;
+    background-color: initial!important;
+    box-shadow: 0 0 0 .25rem #7e9bb8;
+}
+#odialog-container .content, #odialog-container .modal-body {
+    display: grid;
+    margin: 0 1rem;
+    padding: 0;
+}
+#odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child+h1 {
+    display: inline-flex;
+    grid-row: 1;
+    grid-column: 1/span 2;
+    align-self: center;
+    width: calc(100% - 7.5rem);
+    margin-left: 7.5rem;
+    border-bottom: 1px solid #2a3570;
+    font-family: unset;
+    letter-spacing: -0.1rem;
+}
+#odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child~table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1/span 2;
+    margin-top: .25rem;
+}
+#odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child~table+div {
+    display: grid;
+    grid-template-rows: -webkit-min-content;
+    grid-template-rows: min-content;
+    grid-template-columns: repeat(2,1fr);
+    grid-column: span 2;
+    justify-self: flex-end;
+    text-align: center;
+}
+#odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child~table td.active:after {
+    content: "";
+    flex-grow: 1;
+    margin: auto 1rem;
+    border-bottom: thin dashed #2a3570;
+ 
+}
+.ruby, ruby {
+    display: inline-table;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 1;
+    height: 1em;
+    vertical-align: text-bottom;
+}
+.rt, rt {
+    display: table-header-group;
+    font-size: 0.6em;
+    line-height: 1.1;
+    text-align: center;
+    white-space: nowrap;
+}
+.keycap {
+    border: 1px solid;
+    border-color: #ddd #bbb #bbb #ddd;
+    border-bottom-width: 2px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #f9f9f9;
+    padding: 1px 3px;
+    font-family: inherit;
+    font-size: 0.85em;
+    white-space: nowrap;
+}
+blockquote {
+    border: 1px;
+    padding: 1em;
+    background: linear-gradient(to right, rgba(47, 54, 76, 0.96) , rgba(63, 47, 85, 0.96));
+    border-radius: 0.5px 3px 3px 0.5px;
+    box-shadow: 0 0 9px 0px #212121;
+    border-left: 5px #fddf4d solid;
+    color: #fdf7cf;
+}
+ 
+blockquote a, blockquote a:visited, blockquote a:hover {
+    color: rgb(253 237 159 / 95%);
+}
+#lock-info {
+    background-color: rgba(255, 255, 255, .06);
+    border: 1px solid rgb(0 0 0 / 27%);
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    font-family: 华文中宋;
+    color: #fff;
+    font-weight: 900;
+    text-shadow: 0 0 1px #000, 0 0 10px #000;
+    letter-spacing: -.2em !important;
+    font-size: larger;
+    box-shadow: 0px 0px 8px 0px #a2a2a2;
+}
+@media (max-width: 767px) {
+#edit-page-comments {
+    width: 103px !important;
+    height: 32px !important;
+    margin: 0;
+}
+}
+.page-options-bottom a {
+    color: rgb(255, 255, 255);
+    margin: 2px 2px;
+    font-size: 105%;
+    padding: .4125px 8px;
+    border: 1px solid;
+    border-radius: 1.5px;
+    box-shadow: 0px 0px 2px 1px rgb(0 0 0 / 32%);
+    text-shadow: none;
+    font-family: 华文中宋;
+    background-color: rgb(0 0 0 / 41%);
+    transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+}
+.page-options-bottom a:hover {
+    color: rgb(255, 255, 255);
+    margin: 2px 2px;
+    font-size: 105%;
+    padding: .4125px 8px;
+    border: 1px solid;
+    border-radius: 1.5px;
+    box-shadow: 0px 0px 9px 1.5px #000000;
+    text-shadow: none;
+    font-family: 华文中宋;
+    background-color: rgb(0 0 0 / 41%);
+}
+.page-source {
+    border: 1px dashed #AAA;
+    padding: 1em 2em;
+    background: linear-gradient(135deg, rgb(47 54 76 / 94%) , rgb(63 47 85 / 94%));
+    color: #fff;
+    text-shadow: 0 0 3px;
+    font-family: "Noto Sans SC", 'Lato', sans-serif !important;
+}
+#page-info {
+    clear: both;
+    text-align: right;
+    font-size: 87%;
+    margin: 2px 2px;
+    text-shadow: 0 0 4px #fff;
+}
+.code {
+    border: 1px dashed #DDD;
+    background-color: rgb(247 247 247 / 26%);
+    font-family: 'Andale Mono', 'Courier New', Courier, monospace;
+    padding: 0 1em;
+    margin: 0.4em 0;
+    overflow: auto;
+}
