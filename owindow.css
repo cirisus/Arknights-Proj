@@ -1,14 +1,16 @@
 #odialog-container, #odialog-container * {
     box-sizing: border-box;
 }
-@media only screen and (max-width: 56.25rem)
+@media only screen and (max-width: 56.25rem) {
 #odialog-container div.owindow {
     min-width: 80%;
     max-width: 99%;
 }
-@media only screen and (max-width: 56.25rem)
+}
+@media only screen and (max-width: 56.25rem) {
 #odialog-container .modal-body .table, #odialog-container .modal-body .table~div {
     float: left;
+}
 }
 #odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child~table td.active {
     display: flex;
@@ -17,9 +19,10 @@
 #odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child~table tbody, #odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child~table tr {
     display: contents;
 }
-@media only screen and (max-width: 56.25rem)
+@media only screen and (max-width: 56.25rem) {
 #odialog-container .owindow .button-bar {
     float: center;
+}
 }
 #odialog-container div.owindow {
     display: grid;
