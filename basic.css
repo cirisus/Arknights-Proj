@@ -1,0 +1,397 @@
+@charset "utf-8";
+ 
+@import url("http://wanderers-library.wikidot.com/component:dustjacket-theme-typefaces/code/1");
+@import url("https://use.typekit.net/tqr1skr.css");
+@import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css');
+@import url('https://fonts.font.im/css?family=Cormorant+SC|Italianno|Josefin+Sans|Mina|Nixie+One|Petit+Formal+Script|Poiret+One|Rajdhani|Special+Elite|Titillium+Web&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC|Noto+Serif+SC|Noto+Sans+TC|Noto+Serif+TC&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:600,800|Space+Mono:400,400i,700,700i&display=swap&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Condensed:400");
+@import url("https://fonts.font.im/css?family=Cinzel|Cinzel+Decorative|Julius+Sans+One");
+
+:root {
+/* BASIC */
+    --trans: 255, 255, 255, 0;
+    --ti-color: 255, 255, 255, 1;
+    --te-shadow: 255, 255, 255, 1;
+    --ti-shadow: 0, 0, 0, 1;
+    --ho-shadow: 0, 0, 0, 0.13;
+    --scroll-back: 0, 0, 0, 0.11;
+    --rhodes: 41, 75, 140, 0.9;
+    --rhodes-light: 93, 154, 255;
+    --rhodes-light-trans: 64, 61, 94, 0.9;
+    --rhodes-light-lite: 41, 75, 140, 1;
+    --link: 4, 89, 119, 1;
+    --link-deep: 6, 34, 60, 1;
+    --link-lite: 120, 132, 156, 1;
+    --link-click: 64, 75, 95, 1;
+ /* BG & HEAD */
+    --content-bg: 255, 255, 255, 0.38;
+    --bg-shadow: 0, 0, 0, 0.25;
+    --frame-shadow: 0, 0, 0, 0.58;
+    --head-gradient: 139, 141, 164, 1;
+ /* SEARCH */
+    --input-text: 255, 255, 255, 1;
+    --input-box: 58, 69, 76, 1;
+    --input-border: 59, 64, 72, 1;
+    --input-shadow: 0, 0, 0, 0.5;
+    --hover-border: 97, 117, 142, 1;
+    --box-text: 255, 255, 255, 1;
+    --box-bg: 77, 97, 111, 1;
+    --box-border: 153, 153, 153, 1;
+    --box-top: 59, 69, 82, 1;
+    --box-mid: 53, 69, 88, 1;
+    --box-bottom: 51, 63, 90, 1;
+    --button: 240, 252, 255, 1;
+    --button-bg: 255, 255, 255, 1;
+    --button-top: 98, 108, 121, 1;
+    --button-mid: 55, 60, 68, 1;
+    --button-bottom: 52, 52, 60, 1;
+    --button-shadow: 0, 0, 0, 0.8;
+    --button-text-shadow: 255, 255, 255, 0.25;
+ /* LG */
+    --lg-bg: 48, 48, 48, 0.72;
+    --lg-a: 228, 236, 255, 1;
+    --lg-border: 93, 100, 115, 1;
+    --lg-ul: 41, 73, 87, 1;
+ /* SIDEBAR */
+    --sami: 198, 184, 255;
+    --si-a: 255, 255, 255, 1;
+    --si-a-deep: 167, 205, 233, .25;
+    --si-a-bg: 170, 200, 239, 1;
+    --si-a-text: 18, 1, 70, 1;
+    --si-bg-ori: 54, 58, 72, 0.1;
+    --si-bg: 54, 58, 72, 0.37;
+    --si-shadow: 54, 58, 72, 0.77;
+    --si-mo-shadow: 171, 171, 171, 1;
+    --diamond-outshadow: 22, 34, 45, 0.44;
+    --diamond-inshadow: 255, 255, 255, 1;
+    --diamond-inborder: 255, 255, 255, 0.37;
+    --Priestess: 251, 251, 251, 0.45;
+    --Priestess-lite: 255, 255, 255, 1;
+    --target-frame: 255, 255, 255, 0.22;
+ /* REMAINDER */
+    --lk-bg: 255, 255, 255, 0.06;
+    --lk-border: 0, 0, 0, 0.27;
+    --lk-shadow: 162, 162, 162, 1;
+ 
+    --bu-button-shadow: 0, 0, 0, 0.32;
+    --bu-button-bg: 0, 0, 0, 0.41;
+    --bu-button-ho-shadow: 0, 0, 0, 1;
+ 
+    --source-border: 170, 170, 170, 1;
+    --source-wn: 47, 54, 76, 0.94;
+    --source-es: 58, 47, 85, 0.94;
+ 
+    --code-border: 221, 221, 221, 1;
+    --code-bg: 245, 245, 245, 0.3;
+}
+ 
+h1, #page-title {
+    color: rgba(var(--ti-color));
+    padding: 0 0 0.25em;
+    margin: 0 0 0.6em;
+    font-weight: normal;
+    text-shadow: 0 0 5px #000, 0 0 10px #000;
+}
+#page-title {
+    margin-top: -1em;
+}
+h1 {
+    margin-top: 0.7em;
+    font-family: 'zuijinregular', "Source Han Serif", "Source Han Serif CN", Songti SC, serif;
+    color: rgba(var(--ti-color));
+    font-weight: 900;
+    text-shadow: 0 0 5px rgba(var(--ti-shadow)), 0 0 10px rgba(var(--ti-shadow));
+    letter-spacing: -.25rem;
+    font-size: xx-large;
+}
+h2 {
+    margin-top: 0.7em;
+    font-family: 'zuijinregular', "Source Han Serif", "Source Han Serif CN", Songti SC, serif;
+    color: rgba(var(--ti-color));
+    font-weight: 900;
+    text-shadow: 0 0 5px rgba(var(--ti-shadow)), 0 0 10px rgba(var(--ti-shadow));
+    letter-spacing: -.2rem;
+    font-size: x-large;
+}
+h3 {
+    font-family: 'Noto Serif SC', 'Noto Serif TC';
+    font-weight: 900;
+    font-size: 130%;
+}
+ 
+#page-title {
+    font-family: 'zuijinregular', "Source Han Serif", "Source Han Serif CN", Songti SC, serif;
+    color: rgba(var(--ti-color));
+    font-weight: 900;
+    text-shadow: 0 0 5px rgba(var(--ti-shadow)), 0 0 10px rgba(var(--ti-shadow));
+    letter-spacing: -.4rem;
+    font-size: xx-large;
+    border-bottom: none;
+    text-align: center;
+}
+ 
+ul {
+    list-style: square;
+}
+#top-bar ul {
+    list-style-image: none; 
+}
+#top-bar a:hover {
+    background-color: rgba(var(--ti-color));
+    text-decoration: underline;
+    background-color: rgba(var(--ho-shadow));
+}
+ 
+@media (min-width: 767px) {
+#top-bar {
+    visibility: hidden;
+}
+}
+ 
+blockquote > p {
+    text-shadow: none;
+}
+ 
+blockquote > li {
+    text-shadow: none;
+}
+ 
+main-content > li, p {
+    line-height: 135%;
+    text-shadow: rgba(var(--te-shadow)) 0px 0px 1em, rgba(var(--te-shadow)) 0px 0px 1em;
+}
+ 
+a {
+    color: rgba(var(--link));
+    text-decoration: none;
+    background: transparent;
+    transition: all .4s cubic-bezier(.4,0,.2,1);
+    border-bottom: 1px solid transparent;
+    -moz-transition: all .4s cubic-bezier(.4,0,.2,1);
+    -webkit-transition: all .4s cubic-bezier(.4,0,.2,1);
+    -o-transition: all .4s cubic-bezier(.4,0,.2,1);
+    text-shadow: rgba(var(--te-shadow)) 0px 0px 3px, rgba(var(--te-shadow)) 0px 0px 3px;
+}
+ 
+a:visited {
+    color: rgba(var(--link-deep));
+    text-shadow: rgba(var(--te-shadow)) 0px 0px 3px, rgba(var(--te-shadow)) 0px 0px 3px;
+}
+ 
+a.newpage {
+    color: rgba(var(--link-lite));
+    text-decoration: none;
+    background: transparent;
+    text-shadow: rgba(var(--te-shadow)) 0px 0px 3px, rgba(var(--te-shadow)) 0px 0px 3px;
+}
+ 
+a:hover {
+    color: rgba(var(--link-click));
+    text-decoration: none;
+    border-bottom: 1px solid rgba(var(--link-click));
+    background-color: transparent;
+    text-shadow: rgba(var(--te-shadow)) 0px 0px 2px, rgba(var(--te-shadow)) 0px 0px 2px;
+}
+ 
+/* 版头 */
+#header {
+    height: 50%;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 0px;
+    background-image: none !important;
+    display: grid;
+    align-items: center;
+    justify-items: start;
+}
+#header h1 {
+    margin-left: 120px;
+    padding: 0;
+    float: left;
+    max-height: 95px;
+    letter-spacing: -0.2em;
+    color: transparent;
+}
+#header h2 {
+    margin-left: 120px;
+    padding: 1em 0 0 0;
+    clear: left;
+    float: left;
+    font-size: 141%;
+    max-height: 38px;
+    line-height: 3rem;
+    letter-spacing: -0.2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+ 
+#header h1 a {
+    visibility: hidden;
+}
+@media (min-width: 767px) {
+#header h1 {
+    margin: 0em 0 0 4em;
+    color: transparent;
+}
+#header h1 a {
+    margin: 1em 0 0 5.525em;
+}
+ 
+#header h2 {
+    margin: 9% 0 0 45.4%;
+ }
+}
+ 
+@media (max-width: 767px) {
+#header h1 a {
+    display: block !important;
+    padding: 38px 10px 33px 0px;
+    color: rgba(var(--trans));
+    text-decoration: none !important;
+    background: url(http://arknights.wikidot.com/local--files/files/TITLE) 2px 15px no-repeat;
+    background-size: 85% !important;
+    text-shadow: none !important;
+    margin-left: 0em !important;
+}
+ 
+#header {
+    height: 160px;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 22px;
+    background: url(http://arknights.wdfiles.com/local--files/files/Rhodes%20Island) 2em 7em no-repeat;
+    background-size: 100px;
+}
+ 
+#header h2 {
+    margin-left: 129px;
+    padding: 3em 0px 0px 4px;
+    clear: left;
+    float: left;
+    font-size: 110%;
+    max-height: 38px;
+    line-height: 3rem;
+    font-family: 华文中宋;
+    letter-spacing: -0.2em;
+ }
+}
+ 
+div#extra-div-1 {
+    height: 38px;
+    width: 100%;
+    top: 0px;
+    background: url("http://prts.wiki/images/b/b5/Garanheadleft.png") left top no-repeat, url("http://prts.wiki/images/1/18/Garanheadright.png") right top repeat-x;
+    z-index: 8;
+    box-shadow: 0 1px 4px 0.5px rgba(var(--frame-shadow));
+    position: fixed;
+    overflow: visible;
+}
+@media (max-width: 767px) {
+div#extra-div-1 {
+    height: 38px;
+    width: 100%;
+    top: 0px;
+    background: url("http://prts.wiki/images/b/b5/Garanheadleft.png") left top no-repeat, url("http://prts.wiki/images/1/18/Garanheadright.png") right top repeat-x;
+    z-index: 0 !important;
+    box-shadow: 0 1px 4px 0.5px rgba(var(--frame-shadow));
+    position: fixed;
+    overflow: visible;
+}
+}
+div#extra-div-2 {
+    height: 855px;
+    width: 100%;
+    top: 38px;
+    position: absolute;
+    background: url("http://arknights.wdfiles.com/local--files/component%3Adev-style/wikibg") 50% no-repeat;
+    background-size: cover;
+    z-index: -1;
+    box-shadow: inset 0px -10px 12px 0px rgba(var(--head-gradient));
+    animation: emerge 1s cubic-bezier(0, 0, 0.05, 0.99);
+    -moz-animation: emerge 1s cubic-bezier(0, 0, 0.05, 0.99);
+    -webkit-animation: emerge 1s cubic-bezier(0.35, 0.4, 0.98, 0.63);
+    -o-animation: emerge 1s cubic-bezier(0, 0, 0.05, 0.99);
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+div#extra-div-3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background: url(http://arknights.wdfiles.com/local--files/component%3Amain-style/SamiFoundation.png) 50% 50% no-repeat;
+    background-size: 10%;
+    top: 38px;
+    position: absolute;
+    height: 282px;
+    width: 100%;
+    z-index: -2;
+    animation: blur-in 1.2s cubic-bezier(0, 0, 0, 1);
+    -moz-animation: blur-in 1.2s cubic-bezier(0, 0, 0, 1); /* Firefox */
+    -webkit-animation: blur-in 1.2s cubic-bezier(0, 0, 0, 1); /* Safari and Chrome */
+    -o-animation: blur-in 1.2s cubic-bezier(0, 0, 0, 1); /* Opera */
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+ 
+div#extra-div-5 {
+    position: fixed;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    animation: blur-in 1.2s cubic-bezier(0, 0, 0, 1);
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    top: 38px;
+    height: 100vh;
+    z-index: 0;
+}
+ 
+@media (min-width: 480px) and (max-width: 580px) {
+#search-top-box-input {
+    width: 7em;
+}
+#main-content {
+    margin: 0 2em 0 2em;
+}
+td.name {
+    width: 15em;
+}
+.content-panel.left-column, .content-panel.right-column {
+    width: 99%;
+    float: left;
+}
+#page-content div, #page-content div table {
+    clear: both;
+}
+}
+.forum-thread-box .description-block {
+    padding: .5em 1em;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0,0,0,.15), inset 0 1px 0 rgba(255,255,255,.8), inset 0 10px 5px rgba(255,255,255,.25), inset 0 -15px 30px rgba(0,0,0,.1);
+}
+.thread-container .post .head {
+    padding: 0.5em 1em;
+    background-color: #eee;
+    background: linear-gradient(to right, #eee, #eeecec);
+    box-shadow: inset 2px 3px 6px rgba(0,0,0,.15);
+    border-radius: 5px 5px 0 0;
+}
+.thread-container .post .content {
+    position: relative;
+    overflow: hidden;
+}
+ 
+.signature {
+    display: none !important;
+}
