@@ -478,7 +478,8 @@ ________________________________________________________________________________
     --orphant-txt: "(Изолированный)";
     --drafts-txt: "(Проекты остаются в силе)";
     --site-tools-txt: "———— Инструменты ————";
-}a {
+}
+a {
     -webkit-font-smoothing: auto;
 }
 p, #text {
@@ -659,7 +660,8 @@ div#extra-div-5 {
     top: var(--banner-height);
     height: 100vh;
     z-index: 0;
-}@keyframes respire {
+}
+@keyframes respire {
     0% { border-bottom: 1px solid rgba(var(--highlight-primary-color), 0.3);}
     100% { border-bottom: 1px solid rgba(var(--highlight-primary-color), 1);}
 }
@@ -819,7 +821,8 @@ div#extra-div-5 {
 .screen {
     visibility: hidden;
 }
-}body {
+}
+body {
     color: #000;
     font-weight: 500;
     font-size: 0.8em;
@@ -3089,7 +3092,8 @@ form#edit-page-form .wd-editor-toolbar-panel {
   100% {
       box-shadow:0 0 0 0 rgb(var(--undertone),0)
   }
-}@media (min-width: 767px) {
+}
+@media (min-width: 767px) {
     div#extra-div-5::after {
         content: " ";
         position: fixed;
@@ -3269,7 +3273,8 @@ form#edit-page-form .wd-editor-toolbar-panel {
         margin-left: 0rem;
         opacity: 1;
     }
-}/* INDEX */
+}
+/* INDEX */
 .forum-group table td.threads, .forum-group table td.posts {
     width: fit-content;
 }
@@ -3961,13 +3966,13 @@ table.wiki-content-table th {
 sup.footnoteref {
     padding: 2px;
 }
-a.footnoteref {
+a.footnoteref, a.bibcite {
     text-indent: initial;
     -webkit-text-stroke: .5px rgba(var(--undertone));
     border-bottom: none;
     transition: all .2s var(--standard-curve);
 }
-a.footnoteref:hover {
+a.footnoteref:hover, a.bibcite:hover {
     mix-blend-mode: darken;
     -webkit-text-stroke: 1px rgba(var(--undertone));
     transition: all.2s var(--standard-curve);
@@ -4007,8 +4012,10 @@ a.footnoteref:hover {
     margin: .25em 0 0 6ch
 }
 .bibitems .bibitem {
-    margin: .25em 0 0 3ch;
-    text-indent: 2ch
+    margin: .5em 0 0 5ch;
+    padding-left:0;
+    -webkit-transition: all .2s var(--standard-curve);
+    transition: all .2s var(--standard-curve);
 }
 .bibitems .bibitem:first-letter {
     font-size: 0
@@ -4016,17 +4023,18 @@ a.footnoteref:hover {
 .bibitems .bibitem:after, .footnotes-footer a[href*=javascript] {
     border-left: 0px solid transparent;
     border-bottom: none;transition: all .4s var(--standard-curve);
-    -moz-transition: all .2s var(--standard-curve);
     -webkit-transition: all .2s var(--standard-curve);
-    -o-transition: all .2s var(--standard-curve);
     transition: all .2s var(--standard-curve)
 }
-.bibitems .bibitem:after, .footnotes-footer a[href*=javascript]:hover {
+.bibitems .bibitem:hover:after, .footnotes-footer a[href*=javascript]:hover {
     border-left: .25rem solid rgba(var(--link-hover-color));
     border-bottom: none;
-    -moz-transition: all .2s var(--standard-curve);
     -webkit-transition: all .2s var(--standard-curve);
-    -o-transition: all .2s var(--standard-curve);
+    transition: all .2s var(--standard-curve);
+}
+.bibitems .bibitem:hover {
+    padding-left: .25rem;
+    -webkit-transition: all .2s var(--standard-curve);
     transition: all .2s var(--standard-curve);
 }
 .footnotes-footer a[href*=javascript],.footnotes-footer a[href*=javascript]:visited {
@@ -4084,10 +4092,15 @@ a.footnoteref:hover {
     width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
-    margin: 0 0 0 -2ch;
+    margin: -.15em 0 0 -2ch;
+    padding-left:2px;
     content: counter(bibitems) ".";
-    color: rgb(var(--bright-primary-color),.25);
+    color: rgb(var(--footnotes-footer-num-color));
     counter-increment: bibitems
+}
+.bibitems .bibitem:hover:after {
+    cursor: pointer;
+    color: rgb(var(--footnotes-footer-num-hover-color))
 }
 .bibitems .bibitem:nth-child(n+11):after {
     width: calc(1em + .75ch);
@@ -5161,7 +5174,8 @@ p#file-uploader-legacy-switch {
 @keyframes constructing {
 0% {background-position: 100% 100%;}
 100% {background-position: 0% 100%;}
-}@media only screen and (max-width: 56.25rem) {
+}
+@media only screen and (max-width: 56.25rem) {
     :root {
         overflow:-moz-scrollbars-none;
         scrollbar-width: none
