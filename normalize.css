@@ -1723,11 +1723,10 @@ blockquote a, blockquote a:visited, blockquote a:hover {
     height: 1.3125rem;
     border-right: 2px solid rgb(var(--bright-secondary-color));
     padding: 0px 0.125rem;
-    border-radius: 2px 0px 0px 2px;
+    border-radius: 2px 0 0 2px;
     overflow: hidden;
-    box-shadow: var(--scale-0) 0px 0px 5px 1px;
-    background-color: rgb(var(--scale-2));
-    background: linear-gradient(to top,rgb(var(--liltone),.25) 0,rgb(var(--liltone),.15) 100%);
+    box-shadow: rgb(var(--scale-0)) 0px 0px 5px 1px;
+    background-color: rgb(var(--scale-2))
 }
 .page-rate-widget-box .rate-points {
     display: flex;
