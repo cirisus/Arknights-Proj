@@ -611,7 +611,7 @@ h1 {
     color: rgb(var(--title-color));
     font-weight: 900;
     text-shadow: 0 0 5px rgb(var(--title-shadow)), 0 0 10px rgb(var(--title-shadow));
-    letter-spacing: -.15rem;
+    letter-spacing: -.3rem;
     font-size: xx-large;
 }
 h2 {
