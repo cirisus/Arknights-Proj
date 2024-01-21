@@ -3,13 +3,14 @@
     === Basic Info //基本信息 ===
         [2024 Arknights Theme]
         Developed by Senioriousc/Cirisus.
-        Only farmatted to Arknights.wikidot.com.
+        The logo of the theme is illustrated by Senioriousc.
+        Only formatted to Arknights.wikidot.com.
 
-        独立开发者为Senioriousc。
+        代码部分由Senioriousc独立开发，主题徽标由Senioriosuc绘制。
         仅用于Arknights.wikidot.com站点。
 
     === License //授权方式 ===
-        v0.1 released on 2023.12.31 on Github.
+        v0.6 released on 2024.01.22 on Github.
         All rights reserved, NO CC LICENSE THIS TIME, DO NOT USE THE THEME WITHOUT PERMISSION.
         Open source version will be released after completely developed.
 
@@ -17,11 +18,11 @@
         开源版本会在完全开发后放出。
 
     === Notes //注意事项 ===
-        Uncompatible with current themes (BHL / Sigma9 / Bedrock), NO MIX AVAILABLE.
-        No importment of any part of the theme can secure the availablity of your pages.
-        More variants should be developed via importing the normalized CSS file.
+        Uncompatible with current themes (BHL / Sigma9&10 / Bedrock&Basalt), NO MIX AVAILABLE.
+        Not importing of any part of the theme secure the availablity of your pages.
+        More variants should be developed via importing the normalized CSS file (/gh/normalize.min.css).
 
-        与现有的主流版式皆不兼容（基于黑色标记笔、Sigma9以及基岩），请勿混用！
+        与现有的主流版式皆不兼容（黑色标记笔、Sigma9/10以及基岩/玄武岩），请勿混用！
         如果需要使用其他主题，请确保你没有引入本主题的任意部分，否则可能带来不便。
         对本主题的二次开发应先引用基础主题文件。
 _______________________________________________________________________________________________ */
@@ -30,8 +31,6 @@ ________________________________________________________________________________
 @import url(https://cdn.jsdelivr.net/gh/cirisus/l-arca/font-face.css);
 @import url(https://fonts.font.im/css?family=Nova+Cut);
 @import url(https://use.typekit.net/tqr1skr.css);
-@import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
-@import url(https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+SC&family=Noto+Sans+TC&family=Noto+Serif&family=Noto+Serif+SC&family=Noto+Serif+TC&display=swap);
 @import url(https://fonts.font.im/css?family=Cinzel|Cinzel+Decorative|Julius+Sans+One);
 
@@ -59,6 +58,24 @@ ________________________________________________________________________________
     --orphant-txt: "（孤立页面）";
     --drafts-txt: "（存稿页面）";
     --site-tools-txt: "———— 网站工具 ————";
+    --edit-info-txt: "简要修改说明：";
+    --variation-txt: "变更说明 =\00a0";
+    --version-txt: "版本";
+    --flag-txt: "标记";
+    --behavior-txt: "操作";
+    --editor-txt: "编辑者";
+    --edit-time-txt: "编辑时间";
+    --toc-txt: "目录";
+
+    --waiting-txt: "加载中……";
+    --error-txt: "错误";
+    --note-txt: "注意：";
+    --saving-page-txt: "提交反馈至神经中枢……";
+    --saved-txt: "提交成功！";
+    --delete-draft-txt:"停止编辑并删除草稿";
+    --save-draft-txt:"停止编辑并保留草稿";
+    --edit-draft-txt:"编辑上次草稿";
+    --discard-draft-txt:"编辑原有内容";
 
     --logo-image: url("https://arknights.wdfiles.com/local--files/component%3Amain-style/SamiFoundation.png");
     --banner-left:url("https://arknights.wdfiles.com/local--files/theme%3Asami/banner_left");
@@ -156,18 +173,18 @@ ________________________________________________________________________________
     --table-head:var(--lowlight-primary-color);
     --check-dot:var(--table-head);
     --check-dot-shadow:var(--table-head),.6;
- 
+
     --pager-link: var(--link-color);
     --pager-link-hover: var(--link-hover-color);
     --pager-hover-bg: var(--link-newpage-color);
     --pager-selected-bg: var(--lowlight-primary-color);
- 
+
     --ui-button-hover-outline:var(--scale-3);
     --ui-button-bg:var(--bright-third-color);
     --ui-button-hover-bg:var(--scale-3);
     --ui-button-txt:var(--scale-3);
     --ui-button-hover-txt:var(--bright-third-color);
- 
+
     --hoverblock-bg: var(--scale-7),0;
     --hoverblock-txt:var(--dark-secondary-color);
     --hoverblock-header-bg:var(--hoverblock-border);
@@ -175,8 +192,8 @@ ________________________________________________________________________________
     --hoverblock-footer-txt:var(--dark-secondary-color);
     --hoverblock-border:var(--dark-secondary-color);
     --hoverblock-outer-shadow:21,60,84;
-    --hoverblock-inner-shadow:var(--lowlight-secondaryy-color);
- 
+    --hoverblock-inner-shadow:var(--lowlight-secondary-color);
+
     --footnote-link-hover-bg:var(--lowlight-primary-color);
     --footnotes-footer-title-bg-color:var(--hoverblock-border);
     --footnotes-footer-bg-color:var(--scale-7);
@@ -187,7 +204,7 @@ ________________________________________________________________________________
     --footnotes-footer-num-color:var(--scale-2);
     --footnotes-footer-num-hover-color:var(--hoverblock-border);
     --footnotes-footer-title-text-color:var(--scale-7);
- 
+
     --table-head-bg:var(--dark-secondary-color);
     --table-head-border:var(--dark-primary-color);
 
@@ -255,7 +272,7 @@ ________________________________________________________________________________
     --viewport-scroll-track-width:2px;
     --viewport-scroll-track-height:80%;
     --view-thumb-color: rgb(var(--tab-title-color));
- 
+
     --tab-transition: .15s var(--tabview-transition-curve);
     --tab-bg-color: var(--scale-7);
     --tab-text-color: var(--scale-2);
@@ -267,7 +284,7 @@ ________________________________________________________________________________
     --border-angle-gradient:var(--third-accent);
     --tab-content-border-weight: .125rem;
     --tab-base-font-size: .9125rem;
- 
+
     --label-bg-color: var(--soft-light);
     --label-bg-hover-color: var(--scale-6);
     --lable-bg-selected-color: var(--scale-2);
@@ -279,7 +296,7 @@ ________________________________________________________________________________
     --label-txt-selected-color: var(--scale-7);
     --label-clip-path: polygon(100% 0,0 0,0 0,100% 0);
     --label-hover-clip-path: polygon(100% 0, 0 0, 0 100%, 100% 115%);
- 
+
     --search-icon-color: var(--scale-8);
     --swatch-text-tertiary-color: var(--scale-0);
     --search-icon-bg-color: var(--scale-0);
@@ -294,7 +311,7 @@ ________________________________________________________________________________
     --pagetag-text-hover-color:var(--lowlight-primary-color);
     --pagetags-text-hover-bg-color:var(--bright-primary-color);
     --pagetag-dot: var(--bright-secondary-color);
- 
+
     --split-line: var(--dark-third-color);
     --modal-stripe: var(--lowlight-secondary-color);
     --modal-font-color: var(--plain-primary-color);
@@ -302,7 +319,7 @@ ________________________________________________________________________________
     --pagetags-title-bg: var(--dark-third-color);
     --focus-border: var(--dark-primary-color);
     --icon-size: 1.5rem;
- 
+
     --editor-icon-bg:var(--scale-8);
     --editor-icon-submenu-bg: var(--editor-icon-bg);
     --editor-icon-color:var(--scale-0);
@@ -332,7 +349,7 @@ ________________________________________________________________________________
     --headerh1-color:var(--scale-0);
     --headerh2-color:var(--scale-0);
     --mo-ti-color:var(--scale-2);
- 
+
     --menubg-black-color: var(--scale-1);
 
     /* == MASKS == */
@@ -423,7 +440,9 @@ ________________________________________________________________________________
     --eq-def-mask: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' baseProfile='tiny' overflow='visible' version='1.2' viewBox='0 0 200 200' xml:space='preserve'%3E%3Cpath fill='none' d='M.5 0h200v200H.5z'/%3E%3Cpath d='m145.7 106.1.9-25-21.1 13.4L120 85l22.3-11.6L120 61.8l5.5-9.5 21.1 13.4-.9-25h10.9l-.9 25 21.1-13.4 5.5 9.5L160 73.4 182.3 85l-5.5 9.5-21.1-13.4.9 25h-10.9zM21 160V87.3h45.6v9.4H32v22.2h32.2v9.4H32v22.3h35v9.4H21zm100.9 20.5h-10.6v-28.9h-.6c-.6 1.2-1.6 2.5-2.8 4s-2.8 2.8-4.9 3.9c-2.1 1.1-4.8 1.7-8.1 1.7-4.4 0-8.3-1.1-11.8-3.4-3.4-2.3-6.1-5.5-8.1-9.7s-2.9-9.3-2.9-15.1 1-10.9 3-15.1c2-4.2 4.7-7.4 8.1-9.6 3.5-2.2 7.4-3.3 11.8-3.3 3.4 0 6.1.6 8.2 1.7 2.1 1.1 3.7 2.4 4.8 3.9 1.1 1.5 2 2.8 2.7 3.9h.9v-8.8H122v74.8zm-10.5-47.8c0-3.8-.5-7.1-1.6-9.9-1.1-2.8-2.7-5.1-4.8-6.6-2.1-1.6-4.7-2.4-7.8-2.4-3.2 0-5.9.8-8 2.5-2.1 1.7-3.7 3.9-4.8 6.8-1.1 2.9-1.6 6.1-1.6 9.7 0 3.6.5 6.9 1.6 9.8 1.1 2.9 2.7 5.2 4.8 6.9 2.1 1.7 4.8 2.5 7.9 2.5 3.1 0 5.6-.8 7.8-2.4 2.1-1.6 3.7-3.9 4.8-6.8 1.2-2.9 1.7-6.2 1.7-10.1z'/%3E%3C/svg%3E");
     --bib-mask: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' baseProfile='tiny' overflow='visible' version='1.2' viewBox='0 0 200 200' xml:space='preserve'%3E%3Cpath d='M165.6 110.1c2.6-6.4 2.6-13.8 0-20.2 2.7-6.7 2.6-14.6-.4-21.2-.2-.5-.6-.9-1-1.1l-46.4-27.1c-.4-.3-1-.4-1.5-.3l-81.4 6.9h-.5c-.1 0-.2.1-.2.1s-.1 0-.1.1c-.1 0-.2.1-.2.1l-.1.1-.2.2-.1.1-.2.2s-.1.1-.1.2-.1.1-.1.2-.1.1-.1.2-.1.1-.1.2 0 .1-.1.2v1.4c0 .1 0 .2.1.2 2.6 5.7 2.6 12.5 0 18.2v.1c0 .1-.1.2-.1.3v.1c0 .1 0 .3-.1.4v.6c0 .1 0 .2.1.3 0 .1 0 .1.1.2 0 .1 0 .1.1.2 2.6 5.7 2.6 12.5 0 18.2v.1c0 .1-.1.2-.1.3v.1c0 .1 0 .3-.1.4v.6c0 .1 0 .2.1.3 0 .1 0 .1.1.2 0 .1 0 .1.1.2 2.6 5.7 2.6 12.5 0 18.2v.1c0 .1-.1.2-.1.3v.1c0 .1 0 .3-.1.4v.6c0 .1 0 .2.1.3 0 .1 0 .1.1.2 0 .1 0 .1.1.2 2.6 5.7 2.6 12.5 0 18.2-.5 1.2-.1 2.5 1 3.2l46.4 27.1c.4.2.8.3 1.3.3h.2l81.4-6.9c.9-.1 1.7-.6 2.1-1.5 3-6.6 3.1-14.5.4-21.3 2.1-7 2.1-14.4-.4-20.8zm-81.3 6.7c2.5-6.4 2.4-13.7-.1-20 0-.1.1-.2.1-.2l76.1-6.5c0 .3.1.6.2.8 2.6 5.7 2.6 12.5 0 18.2-.2.4-.2.8-.2 1.2l-76.1 6.5zm-4.8-38.5c1.9 4.7 2.1 10 .7 14.8l-42-24.6c1.5-4.4 1.9-9.2 1.1-13.8l34.8 20.4 5.4 3.2zm0 20.2c1.9 4.7 2.1 10 .7 14.8l-42-24.6c1.5-4.4 1.9-9.2 1.1-13.8l40.2 23.6zm0 20.3c1.9 4.7 2.1 10 .7 14.8l-42-24.6c1.5-4.4 1.9-9.2 1.1-13.8l40.2 23.6zm.6 35-42-24.6c1.5-4.4 1.9-9.2 1.1-13.8l40.1 23.5.1.1c2 4.7 2.2 10 .7 14.8zm81-5.6-76 6.5c1.6-5.7 1.2-11.9-.9-17.4 0-.1.1-.2.1-.2l76.1-6.5c0 .3.1.6.2.8 2.3 5.2 2.5 11.4.5 16.8z'/%3E%3C/svg%3E");
     --bib-cite-mask: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' baseProfile='tiny' overflow='visible' version='1.2' viewBox='0 0 200 200' xml:space='preserve'%3E%3Cpath d='m145.2 106.1.9-25L125 94.5l-5.5-9.5 22.3-11.6-22.3-11.6 5.5-9.5 21.1 13.4-.9-25h10.9l-.9 25 21.1-13.4 5.5 9.5-22.3 11.6L181.8 85l-5.5 9.5-21.1-13.4.9 25h-10.9z'/%3E%3Cpath d='m165.9 99.7.2 6 .1 2.6c.8-2.4 1.2-5 1.3-7.6l-1.6-1zm.5 12.8.1 3.6h-31.7l.1-3.6-50.7 4.3c2.5-6.4 2.4-13.7-.1-20 0-.1.1-.2.1-.2l29-2.5-2.4-4.2-5.2-9 9.2-4.8 5.2-2.7-5.2-2.7-9.2-4.8 5.2-9 5.5-9.5 3.3-5.8-1.9-1.1c-.4-.3-1-.4-1.5-.3l-81.4 6.9h-.5c-.1 0-.2.1-.2.1s-.1 0-.1.1c-.1 0-.2.1-.2.1l-.1.1-.2.2-.1.1-.2.2s-.1.1-.1.2-.1.1-.1.2-.1.1-.1.2-.1.1-.1.2 0 .1-.1.2v1.4c0 .1 0 .2.1.2 2.6 5.7 2.6 12.5 0 18.2v.1c0 .1-.1.2-.1.3v.1c0 .1 0 .3-.1.4v.6c0 .1 0 .2.1.3 0 .1 0 .1.1.2 0 .1 0 .1.1.2 2.6 5.7 2.6 12.5 0 18.2v.1c0 .1-.1.2-.1.3v.1c0 .1 0 .3-.1.4v.6c0 .1 0 .2.1.3 0 .1 0 .1.1.2 0 .1 0 .1.1.2 2.6 5.7 2.6 12.5 0 18.2v.1c0 .1-.1.2-.1.3v.1c0 .1 0 .3-.1.4v.6c0 .1 0 .2.1.3 0 .1 0 .1.1.2 0 .1 0 .1.1.2 2.6 5.7 2.6 12.5 0 18.2-.5 1.2-.1 2.5 1 3.2l46.4 27.1c.4.2.8.3 1.3.3h.2l81.4-6.9c.9-.1 1.7-.6 2.1-1.5 3-6.6 3.1-14.5.4-21.3 1.9-6.2 2.2-12.6.5-18.4zm-86.3 41.3-42-24.6c1.5-4.4 1.9-9.2 1.1-13.8l40.1 23.5.1.1c2 4.7 2.2 10 .7 14.8zm0-20.2-42-24.6c1.5-4.4 1.9-9.2 1.1-13.8l40.2 23.5c2 4.7 2.2 10.1.7 14.9zm0-20.2-42-24.6c1.5-4.4 1.9-9.2 1.1-13.8l40.2 23.5c2 4.7 2.2 10 .7 14.9zm0-20.3-42-24.6c1.5-4.4 1.9-9.2 1.1-13.8L74 75.1l5.4 3.2c2 4.7 2.2 10 .7 14.8zm81 55.1-76 6.5c1.6-5.7 1.2-11.9-.9-17.4 0-.1.1-.2.1-.2l76.1-6.5c0 .3.1.6.2.8 2.3 5.2 2.5 11.4.5 16.8z'/%3E%3C/svg%3E");
-    --user-icon-mask: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCEtLUdlbmVyYXRvcjogQXBwbGUgTmF0aXZlIENvcmVTVkcgMjMyLjUtLT4KPCFET0NUWVBFIHN2ZwpQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIgogICAgICAgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjI5LjU5IiBoZWlnaHQ9IjIyOS43ODUiPgogPGc+CiAgPHJlY3QgaGVpZ2h0PSIyMjkuNzg1IiBvcGFjaXR5PSIwIiB3aWR0aD0iMjI5LjU5IiB4PSIwIiB5PSIwIi8+CiAgPHBhdGggZD0iTTM3Ljk4ODMgMjI5Ljc4NUwxOTEuNTA0IDIyOS43ODVDMjE2Ljc5NyAyMjkuNzg1IDIyOS41OSAyMTcuMDkgMjI5LjU5IDE5Mi4xODhMMjI5LjU5IDM3Ljg5MDZDMjI5LjU5IDEyLjk4ODMgMjE2Ljc5NyAwLjI5Mjk2OSAxOTEuNTA0IDAuMjkyOTY5TDM3Ljk4ODMgMC4yOTI5NjlDMTIuNzkzIDAuMjkyOTY5IDAgMTIuODkwNiAwIDM3Ljg5MDZMMCAxOTIuMTg4QzAgMjE3LjE4OCAxMi43OTMgMjI5Ljc4NSAzNy45ODgzIDIyOS43ODVaTTM4LjM3ODkgMjEyLjVDMjQuNzA3IDIxMi41IDE3LjI4NTIgMjA1LjI3MyAxNy4yODUyIDE5MS4zMDlMMTcuMjg1MiAzOC43Njk1QzE3LjI4NTIgMjQuODA0NyAyNC43MDcgMTcuNTc4MSAzOC4zNzg5IDE3LjU3ODFMMTkxLjIxMSAxNy41NzgxQzIwNC41OSAxNy41NzgxIDIxMi4zMDUgMjQuODA0NyAyMTIuMzA1IDM4Ljc2OTVMMjEyLjMwNSAxOTEuMzA5QzIxMi4zMDUgMjA1LjI3MyAyMDQuNTkgMjEyLjUgMTkxLjIxMSAyMTIuNVpNMjcuOTI5NyAyMTguMzU5TDIwMS44NTUgMjE4LjM1OUMxOTUuNDEgMTgzLjMwMSAxNTkuMDgyIDE1Ni4xNTIgMTE0Ljk0MSAxNTYuMTUyQzcwLjcwMzEgMTU2LjE1MiAzNC4zNzUgMTgzLjMwMSAyNy45Mjk3IDIxOC4zNTlaTTExNC44NDQgMTM1LjI1NEMxMzguNzcgMTM1LjQ0OSAxNTcuNjE3IDExNS4xMzcgMTU3LjYxNyA4OC4zNzg5QzE1Ny42MTcgNjMuMTgzNiAxMzguNzcgNDIuMzgyOCAxMTQuODQ0IDQyLjM4MjhDOTAuOTE4IDQyLjM4MjggNzEuOTcyNyA2My4xODM2IDcyLjA3MDMgODguMzc4OUM3Mi4xNjggMTE1LjEzNyA5MC45MTggMTM1LjA1OSAxMTQuODQ0IDEzNS4yNTRaIiBmaWxsPSIjZmZmZmZmIiBmaWxsLW9wYWNpdHk9IjAuODUiLz4KIDwvZz4KPC9zdmc+Cg==");    --search-icon-mask: url("data:image/svg+xml,%0A%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='154.785' height='156.152'%3E%3Cg%3E%3Crect height='156.152' opacity='0' width='154.785' x='0' y='0'/%3E%3Cpath d='M0 65.2344C0 101.27 29.1992 130.42 65.2344 130.42C76.8555 130.42 87.6465 127.295 96.9727 121.875L126.465 151.416C129.688 154.59 133.984 156.104 138.379 156.104C147.754 156.104 154.785 148.926 154.785 139.6C154.785 135.254 153.223 131.104 150.098 127.881L120.898 98.6328C126.953 88.9648 130.42 77.5391 130.42 65.2344C130.42 29.1992 101.27 0 65.2344 0C29.1992 0 0 29.1992 0 65.2344ZM23.4863 65.2344C23.4863 42.1387 42.1387 23.4863 65.2344 23.4863C88.2812 23.4863 106.982 42.1387 106.982 65.2344C106.982 88.2812 88.2812 106.982 65.2344 106.982C42.1387 106.982 23.4863 88.2812 23.4863 65.2344ZM45.4102 61.6211L85.5469 61.6211C89.1113 61.6211 91.8457 58.5449 91.8457 55.2246C91.8457 51.6113 89.1602 48.7793 85.5469 48.7793L45.4102 48.7793C41.7969 48.7793 39.1113 51.6602 39.1113 55.2246C39.1113 58.5938 41.8457 61.6211 45.4102 61.6211ZM45.4102 81.543L73.9258 81.543C77.4414 81.543 80.2246 78.6133 80.2246 75.1953C80.2246 71.6309 77.4902 68.7012 73.9258 68.7012L45.4102 68.7012C41.7969 68.7012 39.1113 71.6797 39.1113 75.1953C39.1113 78.6133 41.8457 81.543 45.4102 81.543Z' fill='%23ffffff' fill-opacity='0.85'/%3E%3C/g%3E%3C/svg%3E%0A");
+    --user-icon-mask: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCEtLUdlbmVyYXRvcjogQXBwbGUgTmF0aXZlIENvcmVTVkcgMjMyLjUtLT4KPCFET0NUWVBFIHN2ZwpQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIgogICAgICAgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjI5LjU5IiBoZWlnaHQ9IjIyOS43ODUiPgogPGc+CiAgPHJlY3QgaGVpZ2h0PSIyMjkuNzg1IiBvcGFjaXR5PSIwIiB3aWR0aD0iMjI5LjU5IiB4PSIwIiB5PSIwIi8+CiAgPHBhdGggZD0iTTM3Ljk4ODMgMjI5Ljc4NUwxOTEuNTA0IDIyOS43ODVDMjE2Ljc5NyAyMjkuNzg1IDIyOS41OSAyMTcuMDkgMjI5LjU5IDE5Mi4xODhMMjI5LjU5IDM3Ljg5MDZDMjI5LjU5IDEyLjk4ODMgMjE2Ljc5NyAwLjI5Mjk2OSAxOTEuNTA0IDAuMjkyOTY5TDM3Ljk4ODMgMC4yOTI5NjlDMTIuNzkzIDAuMjkyOTY5IDAgMTIuODkwNiAwIDM3Ljg5MDZMMCAxOTIuMTg4QzAgMjE3LjE4OCAxMi43OTMgMjI5Ljc4NSAzNy45ODgzIDIyOS43ODVaTTM4LjM3ODkgMjEyLjVDMjQuNzA3IDIxMi41IDE3LjI4NTIgMjA1LjI3MyAxNy4yODUyIDE5MS4zMDlMMTcuMjg1MiAzOC43Njk1QzE3LjI4NTIgMjQuODA0NyAyNC43MDcgMTcuNTc4MSAzOC4zNzg5IDE3LjU3ODFMMTkxLjIxMSAxNy41NzgxQzIwNC41OSAxNy41NzgxIDIxMi4zMDUgMjQuODA0NyAyMTIuMzA1IDM4Ljc2OTVMMjEyLjMwNSAxOTEuMzA5QzIxMi4zMDUgMjA1LjI3MyAyMDQuNTkgMjEyLjUgMTkxLjIxMSAyMTIuNVpNMjcuOTI5NyAyMTguMzU5TDIwMS44NTUgMjE4LjM1OUMxOTUuNDEgMTgzLjMwMSAxNTkuMDgyIDE1Ni4xNTIgMTE0Ljk0MSAxNTYuMTUyQzcwLjcwMzEgMTU2LjE1MiAzNC4zNzUgMTgzLjMwMSAyNy45Mjk3IDIxOC4zNTlaTTExNC44NDQgMTM1LjI1NEMxMzguNzcgMTM1LjQ0OSAxNTcuNjE3IDExNS4xMzcgMTU3LjYxNyA4OC4zNzg5QzE1Ny42MTcgNjMuMTgzNiAxMzguNzcgNDIuMzgyOCAxMTQuODQ0IDQyLjM4MjhDOTAuOTE4IDQyLjM4MjggNzEuOTcyNyA2My4xODM2IDcyLjA3MDMgODguMzc4OUM3Mi4xNjggMTE1LjEzNyA5MC45MTggMTM1LjA1OSAxMTQuODQ0IDEzNS4yNTRaIiBmaWxsPSIjZmZmZmZmIiBmaWxsLW9wYWNpdHk9IjAuODUiLz4KIDwvZz4KPC9zdmc+Cg==");
+    --search-icon-mask: url("data:image/svg+xml,%0A%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='154.785' height='156.152'%3E%3Cg%3E%3Crect height='156.152' opacity='0' width='154.785' x='0' y='0'/%3E%3Cpath d='M0 65.2344C0 101.27 29.1992 130.42 65.2344 130.42C76.8555 130.42 87.6465 127.295 96.9727 121.875L126.465 151.416C129.688 154.59 133.984 156.104 138.379 156.104C147.754 156.104 154.785 148.926 154.785 139.6C154.785 135.254 153.223 131.104 150.098 127.881L120.898 98.6328C126.953 88.9648 130.42 77.5391 130.42 65.2344C130.42 29.1992 101.27 0 65.2344 0C29.1992 0 0 29.1992 0 65.2344ZM23.4863 65.2344C23.4863 42.1387 42.1387 23.4863 65.2344 23.4863C88.2812 23.4863 106.982 42.1387 106.982 65.2344C106.982 88.2812 88.2812 106.982 65.2344 106.982C42.1387 106.982 23.4863 88.2812 23.4863 65.2344ZM45.4102 61.6211L85.5469 61.6211C89.1113 61.6211 91.8457 58.5449 91.8457 55.2246C91.8457 51.6113 89.1602 48.7793 85.5469 48.7793L45.4102 48.7793C41.7969 48.7793 39.1113 51.6602 39.1113 55.2246C39.1113 58.5938 41.8457 61.6211 45.4102 61.6211ZM45.4102 81.543L73.9258 81.543C77.4414 81.543 80.2246 78.6133 80.2246 75.1953C80.2246 71.6309 77.4902 68.7012 73.9258 68.7012L45.4102 68.7012C41.7969 68.7012 39.1113 71.6797 39.1113 75.1953C39.1113 78.6133 41.8457 81.543 45.4102 81.543Z' fill='%23ffffff' fill-opacity='0.85'/%3E%3C/g%3E%3C/svg%3E%0A");
+    --feather-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3CforeignObject width='100%25' height='100%25'%3E%3Cbody class='wrap' xmlns='http://www.w3.org/1999/xhtml'%3E%3Cstyle%3E.wrap%7Bbox-sizing:border-box;margin:0;height:100%25;padding:15px%7D.shadow%7Bheight:100%25;background:black;border-radius:10px;box-shadow:0 0 5px black, 0 0 10px black, 0 0 15px black %7D%3C/style%3E%3Cdiv class='shadow'/%3E%3C/body%3E%3C/foreignObject%3E%3C/svg%3E");
 }
 :root:lang(en) {
     --header-title: "SAMÏ Foundation";
@@ -435,6 +454,24 @@ ________________________________________________________________________________
     --orphant-txt: "(Unidirectional)";
     --drafts-txt: "(Drafts Remain)";
     --site-tools-txt: "———— Site Tools ————";
+    --edit-info-txt: "Short Comments: ";
+    --variation-txt: "Variations=\00a0";
+    --version-txt: "Version";
+    --flag-txt: "Flags";
+    --behavior-txt: "Behavior";
+    --editor-txt: "Editor";
+    --edit-time-txt: "Time";
+    --toc-txt: "Contents";
+
+    --waiting-txt: "Loading...";
+    --error-txt: "Error";
+    --note-txt: "Please note:";
+    --saving-page-txt: "Submitting to Ganglia...";
+    --saved-txt: "Submitted!";
+    --delete-draft-txt:"Cancel and delete draft";
+    --save-draft-txt:"Cancel and leave draft";
+    --edit-draft-txt:"Edit Draft";
+    --discard-draft-txt:"Edit Origin";
 }
 :root:lang(fr) {
     --header-title: "Sami Foundation";
@@ -446,6 +483,24 @@ ________________________________________________________________________________
     --orphant-txt: "(Page unidirectionnelle)";
     --drafts-txt: "(Les projets restent)";
     --site-tools-txt: "———— Outils du Site ————";
+    --edit-info-txt: "Commentaires courts:";
+    --variation-txt: "Les Variations=\00a0";
+    --version-txt: "Version en anglais";
+    --flag-txt: "Le marquage";
+    --behavior-txt: "Comportement";
+    --editor-txt: "Rédacteur en chef";
+    --edit-time-txt: "Le temps";
+    --toc-txt: "Catalogue";
+
+    --waiting-txt: "Chargement en cours...";
+    --error-txt: "Erreur";
+    --note-txt: "Veuillez noter:";
+    --saving-page-txt: "Soumission à Ganglia...";
+    --saved-txt: "Soumis!";
+    --delete-draft-txt:"Annuler et supprimer le brouillon";
+    --save-draft-txt:"Annuler et laisser draft";
+    --edit-draft-txt:"Modifier le brouillon";
+    --discard-draft-txt:"Modifier l’origine";
 }
 :root:lang(ja) {
     --header-title: "サーミ財団";
@@ -455,8 +510,26 @@ ________________________________________________________________________________
     --tags-tip-txt: "\2197異なるタグをスペースで区切ってください。";
     --wanted-txt: "（まだ作成されていない）";
     --orphant-txt: "（リンクはない）";
-    --drafts-txt: "（草稿が残っています）";
+    --drafts-txt: "（下書が残っています）";
     --site-tools-txt: "———— サイトツール ————";
+    --edit-info-txt: "簡単な説明：";
+    --variation-txt: "以下に変更します-\00a0";
+    --version-txt: "バージョン";
+    --flag-txt: "マークします";
+    --behavior-txt: "動作です";
+    --editor-txt: "編集者";
+    --edit-time-txt: "時間です";
+    --toc-txt: "目次";
+
+    --waiting-txt: "ロード中です……";
+    --error-txt: "ミスです";
+    --note-txt: "ご注意ください：";
+    --saving-page-txt: "神経中枢にフィードバックします……";
+    --saved-txt: "提出成功です！";
+    --delete-draft-txt:"草稿の編集を止めて削除します";
+    --save-draft-txt:"編集を止めて草稿を残します";
+    --edit-draft-txt:"前回の草稿を編集します";
+    --discard-draft-txt:"元の内容を編集します";
 }
 :root:lang(de) {
     --header-title: "Sami Foundation";
@@ -468,6 +541,24 @@ ________________________________________________________________________________
     --orphant-txt: "(Seite unidirectionnelle)";
     --drafts-txt: "(Entwürfe bleiben)";
     --site-tools-txt: "———— Site-Werkzeuge ————";
+    --edit-info-txt: "Kurzes statement: ";
+    --variation-txt: "Geändert=\00a0";
+    --version-txt: "Version";
+    --flag-txt: "Markierung";
+    --behavior-txt: "Betrieb";
+    --editor-txt: "Editor";
+    --edit-time-txt: "Zeit";
+    --toc-txt: "Inhalt";
+
+    --waiting-txt: "Geladen...";
+    --error-txt: "Falsch";
+    --note-txt: "Wir Bitten um eines:";
+    --saving-page-txt: "Unterwirf dich dem wahrsager...";
+    --saved-txt: "Wir übergeben sie!";
+    --delete-draft-txt:"Streichen und löschen Von manuskripten";
+    --save-draft-txt:"Stornieren sie und überweisen sie den scheck";
+    --edit-draft-txt:"Edit Gekritzel";
+    --discard-draft-txt:"Handlung eines redakteurs.";
 }
 :root:lang(ru) {
     --header-title: "фонд Лапландия";
@@ -479,6 +570,24 @@ ________________________________________________________________________________
     --orphant-txt: "(Изолированный)";
     --drafts-txt: "(Проекты остаются в силе)";
     --site-tools-txt: "———— Инструменты ————";
+    --edit-info-txt: "Краткие комментарии: ";
+    --variation-txt: "Изменения в программе=\00a0";
+    --version-txt: "Версия для печати";
+    --flag-txt: "Метк";
+    --behavior-txt: "Поведен";
+    --editor-txt: "Монтажник";
+    --edit-time-txt: "Время";
+    --toc-txt: "Каталог";
+
+    --waiting-txt: "Загрузка...";
+    --error-txt: "Oшибк";
+    --note-txt: "Пожалуйста, обратите внимание:";
+    --saving-page-txt: "Обратная связь к нерву";
+    --saved-txt: "Представлять успех!";
+    --delete-draft-txt:"Отменить и удалить проект";
+    --save-draft-txt:"Отмена и увольнение";
+    --edit-draft-txt:"Редактировать проект";
+    --discard-draft-txt:"Редактировать исходный код";
 }
 a {
     -webkit-font-smoothing: auto;
@@ -494,7 +603,7 @@ h1, #page-title {
     text-shadow: 0 0 5px #000, 0 0 10px #000;
 }
 #page-title {
-    margin-top: -1em;
+    margin-top: -1.2em;
 }
 h1 {
     margin-top: 0.7em;
@@ -510,21 +619,21 @@ h2 {
     font-family: 'zuijinregular', "Source Han Serif", "Source Han Serif CN", Songti SC, serif;
     color: rgb(var(--title-color));
     font-weight: 900;
-    text-shadow: 0 0 5px rgb(var(--title-shadow)), 0 0 10px rgb(var(--title-shadow));
+    text-shadow:0 0 4px rgb(var(--title-shadow)), 0 0 8px rgb(var(--title-shadow));
     letter-spacing: -.2rem;
     font-size: x-large;
 }
 h3 {
     font-family: 'Noto Serif SC', 'Noto Serif TC';
     font-weight: 900;
-    font-size: 130%;
+    font-size: 120%;
 }
 #page-title {
     font-family: 'zuijinregular', "Source Han Serif", "Source Han Serif CN", Songti SC, serif;
     color: rgb(var(--title-color));
     font-weight: 900;
     text-shadow: 0 0 5px rgb(var(--title-shadow)), 0 0 10px rgb(var(--title-shadow));
-    letter-spacing: -.4rem;
+    letter-spacing: -.25rem;
     font-size: xx-large;
     border-bottom: none;
     text-align: center;
@@ -570,6 +679,39 @@ a:hover {
     text-decoration: none;
     border-bottom: 1px solid rgb(var(--link-hover-color));
     background-color: transparent;
+}
+hr {
+    margin: 1em 1em;
+    padding: 0;
+    height: 1.5px;
+    border: none;
+    background: rgb(var(--lowlight-primary-color));
+    box-shadow: 0 0 2px rgb(var(--scale-0)), 0 0 16px 1px rgb(var(--scale-8));
+}
+tt {
+    font-family: var(--Mono-font)
+}
+blockquote {
+    border: 1px;
+    padding: 1em;
+    background: linear-gradient(to right, rgb(47, 54, 76, 0.96) , rgb(63, 47, 85, 0.96));
+    border-radius: 0.5px 3px 3px 0.5px;
+    box-shadow: 0 0 9px 0px #212121;
+    border-left: 5px #fddf4d solid;
+    color: #fdf7cf;
+    margin: 1em auto;
+}
+blockquote a, blockquote a:visited, blockquote a:hover {
+    color: rgb(253 237 159 / 95%);
+    text-shadow: none !important;
+}
+div.wiki-note {
+    width: auto;
+    margin: 0.5em 5em;
+    padding: .25rem 1rem;
+    border: 1px solid rgb(var(--scale-6-sup));
+    text-align: center;
+    background: repeating-linear-gradient(-45deg,rgb(var(--scale-7-sup)),rgb(var(--scale-7-sub)) 1px,rgb(var(--scale-7-sub)) 0,rgb(var(--scale-7-sup)) 2px);
 }
 /* HEADER ON DESKTOP */
 #header {
@@ -649,7 +791,6 @@ div#extra-div-3 {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-
 div#extra-div-5 {
     position: fixed;
     display: flex;
@@ -890,6 +1031,17 @@ body {
 	margin: 0 auto;
 	width: 75vw;
 }
+div#content-wrap:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 50%;
+    width: inherit;
+    backdrop-filter: blur(.5em);
+    margin-top: 10%;
+    mask: var(--feather-mask);
+    -webkit-mask: var(--feather-mask)
+}
 #action-area-top {
     display: none;
     grid-area: action-area-top;
@@ -983,7 +1135,6 @@ div#page-options-area-bottom {
     margin: auto;
     padding-top: 1em;
     line-height: 1;
-    white-space: nowrap;
     font-size: 110%;
     color: rgb(var(--secondary-accent));
 
@@ -1003,6 +1154,7 @@ div#page-options-area-bottom {
     -moz-transition: all .4s var(--standard-curve);
     -webkit-transition: all .4s var(--standard-curve);
     -o-transition: all .4s var(--standard-curve);
+    mix-blend-mode: screen;
 }
 #footer > a:hover, #footer > div.options > a:hover {
     color: rgb(var(--link-hover-color));
@@ -1024,7 +1176,8 @@ div#page-options-area-bottom {
     top: 0;
     left: 0;
     z-index: -1;
-}#license-area > a:hover:before {
+}
+#license-area > a:hover:before {
     background: rgb(var(--bright-primary-color),.1);
     width: 100%;
 }
@@ -1061,9 +1214,6 @@ div#page-options-area-bottom {
     -webkit-animation: merge 1s cubic-bezier(0,0,0,1);
     -o-animation: merge 2s cubic-bezier(0,0,0,1);
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    -webkit-backdrop-filter: blur(0.5em);
-    backdrop-filter: blur(0.5em);
 
     display: grid;
     grid-template-columns: repeat(7,1fr);
@@ -1404,7 +1554,6 @@ div#account-options>ul>li>a:is(:hover,:focus) {
     font-weight: var(--wght);
     background: rgb(var(--label-bg-hover-color));
 }
-
 .yui-navset .yui-nav a:before {
     z-index: 0;
     position: absolute;
@@ -1435,13 +1584,11 @@ div#account-options>ul>li>a:is(:hover,:focus) {
     clip-path: var(--label-hover-clip-path);
     background: rgb(var(--highlight-color))
 }
-
 .yui-navset .yui-nav li:focus-within a:before {
     -webkit-clip-path: var(--label-hover-clip-path);
     clip-path: var(--label-hover-clip-path);
     background: rgb(var(--highlight-color))
 }
-
 .yui-navset .yui-nav .selected a em,.yui-navset .yui-nav a em {
     top: 0;
     padding: .35em .75em;
@@ -1450,11 +1597,9 @@ div#account-options>ul>li>a:is(:hover,:focus) {
     text-overflow: ellipsis;
     white-space: nowrap
 }
-
 .yui-navset .yui-nav li em {
     border: unset !important
 }
-
 .yui-navset .yui-nav .selected {
     z-index: 10;
     margin: 0;
@@ -1462,11 +1607,9 @@ div#account-options>ul>li>a:is(:hover,:focus) {
     transform: scale(1.05);
     box-shadow:0 0 1px 1px #000;
 }
-
 .yui-navset .yui-nav .selected a,.yui-navset .yui-nav .selected a em {
     border: transparent
 }
-
 .yui-navset .yui-nav .selected a {
     --wght: var(--tab-title-weight);
     background-image: none;
@@ -1475,17 +1618,14 @@ div#account-options>ul>li>a:is(:hover,:focus) {
     font-weight: var(--wght);
     text-shadow: none;
 }
-
 .yui-navset .yui-nav .selected a:before,.yui-navset .yui-nav .selected:active a:before,.yui-navset .yui-nav .selected:focus a:before,.yui-navset .yui-nav .selected:hover a:before {
     --clip-path: polygon(0 0,calc(100% + 1rem) -1rem,calc(100% + 1rem) calc(100% + 1rem),0 calc(100% + 1rem));
     background: rgb(var(--lable-bg-selected-color))
 }
-
 .yui-navset .yui-nav .selected:focus-within a:before {
     --clip-path: polygon(0 0,calc(100% + 1rem) -1rem,calc(100% + 1rem) calc(100% + 1rem),0 calc(100% + 1rem));
     background: rgb(var(--lable-bg-selected-color))
 }
-
 .yui-navset .yui-nav .selected a:active,.yui-navset .yui-nav .selected a:hover {
     cursor: default;
     background: rgb(var(--lable-bg-selected-color));
@@ -1526,6 +1666,9 @@ div#account-options>ul>li>a:is(:hover,:focus) {
 #page-content .yui-navset .yui-content > div > * {
     transform-origin: 0 0;
     color: rgb(var(--tab-text-color));
+}
+#page-content .yui-navset .yui-content>div>h2 {
+    text-shadow: 0 0 1px rgb(var(--title-shadow));
 }
 #page-content .yui-navset .yui-content > div[style*="none"] {
     display: block !important;
@@ -1703,24 +1846,11 @@ div#account-options>ul>li>a:is(:hover,:focus) {
     border-color: rgb(var(--emerge-color));
     filter: brightness(1.1);
 }
-blockquote {
-    border: 1px;
-    padding: 1em;
-    background: linear-gradient(to right, rgb(47, 54, 76, 0.96) , rgb(63, 47, 85, 0.96));
-    border-radius: 0.5px 3px 3px 0.5px;
-    box-shadow: 0 0 9px 0px #212121;
-    border-left: 5px #fddf4d solid;
-    color: #fdf7cf;
-    margin: 1em auto;
-}
-blockquote a, blockquote a:visited, blockquote a:hover {
-    color: rgb(253 237 159 / 95%);
-    text-shadow: none !important;
-}
 /* RATE BOX */
 .page-rate-widget-box {
     display: inline-flex;
     height: 1.3125rem;
+    border: 1px solid rgb(var(--scale-2));
     border-right: 2px solid rgb(var(--bright-secondary-color));
     padding: 0px 0.125rem;
     border-radius: 2px 0 0 2px;
@@ -1817,13 +1947,13 @@ blockquote a, blockquote a:visited, blockquote a:hover {
 }
 /* IMAGES */
 .image-block {
-    border: solid 1px #c0c0c0;
-    box-shadow: 0 1px 6px rgb(0,0,0,.25);
+    border: 1px solid rgb(var(--scale-3));
+    box-shadow: 0 1px 4px rgb(var(--scale-3)),0 0 6px rgb(var(--scale-7));
 }
 .image-block.block-right {
     float: right;
     clear: right;
-    margin: 0 2em 1em 2em;
+    margin: 0;
 }
 .image-block.block-right > img {
     width:100%
@@ -1831,7 +1961,7 @@ blockquote a, blockquote a:visited, blockquote a:hover {
 .image-block.block-left {
     float: left;
     clear: left;
-    margin: 0 2em 1em 0;
+    margin: 0;
 }
 .image-block.block-left > img {
     width:100%
@@ -1845,16 +1975,16 @@ blockquote a, blockquote a:visited, blockquote a:hover {
     width: 100% !important;
 }
 .image-block .image-caption {
-    background-color: #eee;
-    border-top: solid 1px #666;
+    background-color: rgb(var(--dark-secondary-color));
+    outline: solid 1px rgb(var(--dark-primary-color));
+    outline-offset: -1px;
+    border: none;
     padding: 2px 0;
     font-size: 95%;
-    font-weight: bold;
+    font-weight: 700;
     text-align: center;
-    width: 100% !important;
-}
-.image-block > p {
-    margin: 0;
+    width: 100%!important;
+    color: rgb(var(--bright-primary-color));
 }
 .image-block .image-caption > p {
     margin: 0;
@@ -1864,13 +1994,6 @@ blockquote a, blockquote a:visited, blockquote a:hover {
 .footer-wikiwalk-nav {
     font-weight: bold;
     font-size: 75%;
-}
-div.wiki-note {
-    width: auto;
-    margin: 0.5em 5em;
-    border: 1px solid rgb(var(--scale-6-sup));
-    text-align: center;
-    background: repeating-linear-gradient(-45deg,rgb(var(--scale-7-sup)),rgb(var(--scale-7-sub)) 1px,rgb(var(--scale-7-sub)) 0,rgb(var(--scale-7-sup)) 2px);
 }
 /* GADGETS */
 #page-info {
@@ -1940,7 +2063,6 @@ div.wiki-note {
 #odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child~table tbody, #odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child~table tr {
     display: contents;
 }
-
 #odialog-container div.owindow {
     display: grid;
     position: fixed;
@@ -1962,7 +2084,7 @@ div.wiki-note {
     width: 100%;
     margin: 0;
     padding: 2.5ex 0;
-    background-image: linear-gradient(125deg,rgb(var(--modal-stripe)) 25%,transparent 25%,transparent 50%, rgb(var(--modal-stripe)) 50%, rgb(var(--modal-stripe)) 75%,transparent 75%,transparent 100%);
+    background-image: linear-gradient(125deg,rgb(var(--modal-stripe)) 25%,rgb(var(--modal-stripe),.75) 25%,rgb(var(--modal-stripe),.75) 50%,rgb(var(--modal-stripe)) 50%,rgb(var(--modal-stripe)) 75%,rgb(var(--modal-stripe),.75) 75%,rgb(var(--modal-stripe),.75) 100%);
     background-size: 3rem 4.35rem;
     background-color: rgb(var(--lowlight-secondary-color) / 75%);
     color: rgb(var(--scale-8));
@@ -1972,6 +2094,7 @@ div.wiki-note {
     font-family: 'Noto Serif SC';
     text-transform: uppercase;
     height: 100%;
+    min-height: 2rem;
     flex-direction: row;
     align-content: center;
     flex-wrap: nowrap;
@@ -2061,7 +2184,7 @@ div.wiki-note {
 #main-content .page-tags span a:not([href^="/system:page-tags/tag/_"])::before,
 #main-content .page-tags span a:visited:not([href^="/system:page-tags/tag/_"])::before {
 --clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-    content: " ";
+    content: "";
     position: absolute;
     z-index: -1;
     top: 0;
@@ -2158,6 +2281,25 @@ div[id*=page-options-bottom]:not(.page-rate-widget-box):not(#search-top-box-form
     cursor: pointer;
     border-color: rgb(var(--emerge-color));
     filter: brightness(1.1);
+}
+a.btn.btn-default.button.button-cancel-and-delete-draft,a.btn.btn-default.button.button-cancel-and-leave-draft,a.btn.btn-default.button.button-edit-original,a.btn.btn-default.button.button-edit-draft {
+    font-size: 0
+}
+a.btn.btn-default.button.button-edit-original:before,a.btn.btn-default.button.button-edit-draft:before,a.btn.btn-default.button.button-cancel-and-delete-draft:before,a.btn.btn-default.button.button-cancel-and-leave-draft:before {
+    font-size: 0.8rem;
+    padding: 2px
+}
+a.btn.btn-default.button.button-edit-original:before {
+    content: var(--discard-draft-txt)
+}
+a.btn.btn-default.button.button-edit-draft:before {
+    content: var(--edit-draft-txt)
+}
+a.btn.btn-default.button.button-cancel-and-delete-draft:before {
+    content: var(--delete-draft-txt)
+}
+a.btn.btn-default.button.button-cancel-and-leave-draft:before {
+    content: var(--save-draft-txt)
 }
 #more-options-button, #edit-save-continue-button, #edit-save-button {
     background-color: rgb(var(--rate-up-bg),.3) !important;
@@ -2307,8 +2449,14 @@ div#site-tools-box:before {
     overflow: hidden;
 }
 /* EDIT PAGE */
+div#st-action-area {
+    text-align: left;
+}
+div#st-action-area > span[style*="color: #999"] {
+    color: rgb(var(--scale-2)) !important;
+}
 #action-area h1 {
-    font-family: zuijinregular, "Noto Sans SC", serif;
+    font-family: var(--UI-font);
     display: flex;
     align-items: center;
     margin: 0;
@@ -2470,7 +2618,7 @@ form#edit-page-form .edit-page-bottomtable tr>td:first-of-type>div:first-of-type
     font-weight: var(--wght);
 }
 form#edit-page-form:lang(cn) .edit-page-bottomtable tr>td:first-of-type>div:first-of-type:before {
-    content: "简要修改说明：";
+    content: var(--edit-info-txt);
     color: #000;
     z-index: 2;
     position: absolute;
@@ -3035,6 +3183,25 @@ form#edit-page-form .wd-editor-toolbar-panel {
         box-shadow: none
     }
 /* SAVING PAGES */
+div#owindow-1.owindow.error > .title {
+    font-size:0
+}
+div#owindow-1.owindow.error > .title.modal-header {
+    height:2rem;
+}
+div#owindow-1.owindow.error > .title:before{
+    content: var(--error-txt);
+    font-size: 1.5rem;
+    color: rgb(var(--bright-secondary-color))
+}
+div#owindow-1.owindow.error > .content.modal-body h1 {
+    margin: 0;
+    font-size: 0;
+}
+div#owindow-1.owindow.error > .content.modal-body h1:before {
+    content: var(--note-txt);
+    font-size: 2rem;
+}
 .owindow.owait .content {
     display: flex;
     flex-wrap: wrap;
@@ -3052,6 +3219,28 @@ form#edit-page-form .wd-editor-toolbar-panel {
 #owindow-1 > div {
     padding: .5rem !important;
 }
+}
+div#owindow-1.owindow.owait > .content.modal-body,div#odialog-container > .owindow.osuccess > .content.modal-body {
+    line-height: 0;
+    color: transparent;
+}
+
+div#owindow-1.owindow.owait > .content.modal-body:before {
+    content: var(--saving-page-txt);
+    line-height: 1.5;
+    color: rgb(var(--dark-secondary-color));
+    font-family: var(--Serif-font);
+    display: inline-flex;
+    justify-content: center;
+}
+div#odialog-container > .owindow.osuccess > .content.modal-body::before {
+    content: var(--saved-txt);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: rgb(var(--dark-secondary-color));
+    font-family: var(--Serif-font);
+    display: inline-flex;
+    justify-content: center;
 }
 .owindow.owait .content::after {
    content: " ";
@@ -4202,7 +4391,7 @@ table.page-history tr td:nth-of-type(7) {
     justify-content: flex-end;
 }
 table.page-history tr td:nth-of-type(7):before {
-    content: "变更说明 =\00a0";
+    content: var(--variation-txt);
     text-align: left;
     display: flex;
     font-family: var(--Serif-font);
@@ -4289,12 +4478,14 @@ table.page-history tr:nth-of-type(2) td:not(:nth-of-type(7)):before {
     text-align: center;
     padding: .125em;
     margin: .125rem;
+    text-decoration: none;
     box-shadow: 0 0 3px rgb(var(--scale-0));
     -webkit-text-stroke: .5px #fff0;
     -webkit-transition: all .2s var(--standard-curve);
     transition: all .2s var(--standard-curve)
 }
 .spantip:hover {
+    text-decoration: none;
     background: rgb(var(--dark-primary-color));
     color: rgb(var(--scale-8));
     box-shadow: 0 0 2px rgb(var(--scale-0));
@@ -4592,22 +4783,22 @@ a.avatar-hover,a.avatar-hover:hover {
 }
 
 table.page-history tr:nth-of-type(2) td:first-of-type:before {
-    content: "版本"
+    content: var(--version-txt)
 }
 table.page-history tr:nth-of-type(2) td:nth-of-type(2):before {
     content: ""
 }
 table.page-history tr:nth-of-type(2) td:nth-of-type(3):before {
-    content: "标记"
+    content: var(--flag-txt)
 }
 table.page-history tr:nth-of-type(2) td:nth-of-type(4):before {
-    content: "操作"
+    content: var(--behavior-txt)
 }
 table.page-history tr:nth-of-type(2) td:nth-of-type(5):before {
-    content: "编辑者"
+    content: var(--editor-txt)
 }
 table.page-history tr:nth-of-type(2) td:nth-of-type(6):before {
-    content: "编辑时间"
+    content: var(--edit-time-txt)
 }
 div.inline-diff del {
     background-color: rgb(255 142 0 / 50%)
@@ -5108,7 +5299,7 @@ a.avatar-hover img {
     z-index: 0;
 }
 div#toc-action-bar:after {
-    content: "目录";
+    content: var(--toc-txt);
     padding: 0 .5em;
     color: rgb(var(--scale-8));
 }
@@ -5302,10 +5493,34 @@ tr:has(td[class*=title]) {
     padding:0 1em;
 }
 .comments:before {
-    content: "变更说明 =\00a0";
+    content: var(--variation-txt);
     text-align: left;
     display: flex;
     font-family: var(--Serif-font);
+}
+.wait-block {
+    background-repeat: no-repeat;
+    display: flex;
+    font-size: 0;
+    height: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0 35%;
+    background-image: none;
+}
+.wait-block:before {
+    content: "";
+    display: flex;
+    width: 1rem;
+    height: 1rem;
+    border: solid .2rem rgb(var(--undertone));
+    animation: diamond-load .75s linear infinite;
+    transform: rotate(45deg);
+}
+.wait-block:after {
+    content: var(--wating-txt);
+    font-size: 1rem !important;
+    padding-left: 1rem;
 }
 @media only screen and (max-width: 56.25rem) {
     :root {
