@@ -10,7 +10,7 @@
         仅用于Arknights.wikidot.com站点。
 
     === License //授权方式 ===
-        v0.6 released on 2024.01.22 on Github.
+        v0.9 released on 2024.02.01 on Github.
         All rights reserved, NO CC LICENSE THIS TIME, DO NOT USE THE THEME WITHOUT PERMISSION.
         Open source version will be released after completely developed.
 
@@ -60,10 +60,10 @@ ________________________________________________________________________________
         --presto-curve:cubic-bezier(.6,0,0,1);
     /* == FONTS == */
     --Deco-font:'Nova Cut', 'Noto Serif SC', serif;
-    --UI-font:'zuijinregular', 'Noto Sans SC', Apple LiGothic Medium, Microsoft JhengHei, sans-serif;
+    --UI-font:'Zuijin', 'Noto Sans SC', Apple LiGothic Medium, Microsoft JhengHei, sans-serif;
     --Sans-font:'Noto Sans SC', Apple LiGothic Medium, Microsoft JhengHei, sans-serif;
     --Serif-font:'Noto Serif SC','Noto Serif TC', STSong, SimSun, serif;
-    --Mono-font:'jetbrains_monoregular', STSong,fangsong, LiSong Pro Light, NSimSun, FangSong_GB2312, monospace;
+    --Mono-font:'Jetbrains Mono', STSong,fangsong, LiSong Pro Light, NSimSun, FangSong_GB2312, monospace;
     /* == SETTINGS == */
     --header-title:"萨米基金会";
     --header-subtitle:"引导，认知，祛魅";
@@ -1948,7 +1948,7 @@ div#account-options>ul>li>a:is(:hover,:focus) {
     background: rgb(var(--tab-bg-color));
     border: var(--tab-content-border-weight) solid transparent;
     border-image: radial-gradient(rgb(var(--border-line-gradient)) 70%, rgb(var(--border-angle-gradient)) 130%) 10;
-    padding: 0 1rem;
+    padding: 0;
     position: relative;
     margin-top: calc(var(--tab-content-border-weight) * 1/2);
     transform-origin: 0 0;
@@ -2814,7 +2814,7 @@ span#uploaderContainer:has(input#selectLink:hover):before {
 }
 #action-area > form > table > tbody > tr > td:nth-child(2) > div::before {
     content: var(--tags-tip-txt);
-    color: #222;
+    color: rgb(var(--scale-2));
     font-size: 1em;
 }
 #action-area > form > table.form td div.sub, form div.sub {
@@ -3628,6 +3628,7 @@ select#wd-ed-imagewizard-byfile-filename {
     display: inline-flex;
     border-radius: 0;
 }
+
 td:has(select#wd-ed-imagewizard-byfile-filename) {
     display:flex;
     width: fit-content;
@@ -3658,7 +3659,7 @@ div#rename-option-delete:before {
     text-align: left;
     text-indent: 2em;
 }
-div#ohandle-1:before {
+div#owindow-1:not([style^="width: 80%"]) > div#ohandle-1:before {
     content:var(--overwrite-txt);
 }
 div#owindow-1.owindow.error > .title,div#owindow-1.owindow.confirmation > .title, div#owindow-1[style*="width: 70%;"] > .title, div#owindow-1[style*="width: 60em;"] > .title {
@@ -3965,6 +3966,7 @@ to {opacity:1}
                 -webkit-transform .3s var(--standard-curve),
                 -moz-transform .3s var(--standard-curve),
                 -o-transform .3s var(--standard-curve);
+    
         -webkit-backdrop-filter: blur(1em);
         backdrop-filter: blur(1em);
     }
@@ -6150,7 +6152,7 @@ div.inline-diff ins {
     justify-content: flex-start;
     transform:translateX(-6px)
 }
-.page-compare td {
+.page-compare td, .page-compare th {
     border-color:rgb(var(--scale-2)) !important
 }
 table.page-files tbody {
