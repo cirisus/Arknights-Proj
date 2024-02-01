@@ -44,7 +44,7 @@ ________________________________________________________________________________
 
 @charset "utf-8";
 @import url(https://cdn.jsdelivr.net/gh/cirisus/l-arca/font-face.css);
-@import url(https://fonts.font.im/css?family=Nova+Cut);
+@import url(https://fonts.googleapis.com/css2?family=Asul&display=swap);
 @import url(https://use.typekit.net/tqr1skr.css);
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+SC&family=Noto+Sans+TC&family=Noto+Serif&family=Noto+Serif+SC&family=Noto+Serif+TC&display=swap);
 @import url(https://fonts.font.im/css?family=Cinzel|Cinzel+Decorative|Julius+Sans+One);
@@ -59,8 +59,8 @@ ________________________________________________________________________________
         --standard-curve:cubic-bezier(.4,0,.2,1);
         --presto-curve:cubic-bezier(.6,0,0,1);
     /* == FONTS == */
-    --Deco-font:'Nova Cut', 'Noto Serif SC', serif;
-    --UI-font:'Zuijin', 'Noto Sans SC', Apple LiGothic Medium, Microsoft JhengHei, sans-serif;
+    --Deco-font:'Asul','Noto Serif SC',serif;
+    --UI-font:'Zuijin','Asul','Noto Sans SC', Apple LiGothic Medium, Microsoft JhengHei, sans-serif;
     --Sans-font:'Noto Sans SC', Apple LiGothic Medium, Microsoft JhengHei, sans-serif;
     --Serif-font:'Noto Serif SC','Noto Serif TC', STSong, SimSun, serif;
     --Mono-font:'Jetbrains Mono', STSong,fangsong, LiSong Pro Light, NSimSun, FangSong_GB2312, monospace;
@@ -233,7 +233,7 @@ ________________________________________________________________________________
     --ui-button-txt:var(--scale-2);
     --ui-button-hover-txt:var(--bright-third-color);
  
-    --hoverblock-bg:var(--scale-7),0;
+    --hoverblock-bg:var(--scale-7),.3;
     --hoverblock-txt:var(--dark-secondary-color);
     --hoverblock-header-bg:var(--hoverblock-border);
     --hoverblock-header-txt:var(--scale-7);
@@ -375,7 +375,7 @@ ________________________________________________________________________________
     --editor-icon-hover-bg:var(--scale-0);
 
 
-    --mo--content-bg:var(--scale-8), 0;
+    --mo-content-bg:var(--scale-8), 0;
     --mobile-topmenu-sidebar-button-color:var(--lowlight-primary-color);
     --mobile-topmenu-sidebar-button-hover-color:var(--scale-8);
     --gradient-topmenu-mobile:var(--secondary-accent);
@@ -5362,7 +5362,7 @@ body {
     height: fit-content;
     margin: 1rem auto;
     padding: 0;
-    background-color: rgb(var(--mo--content-bg));
+    background-color: rgb(var(--mo-content-bg));
     box-shadow: none;
  
     display: grid;
