@@ -1056,6 +1056,7 @@ div.wiki-note {
     align-items: center;
     justify-items: start;
 }
+@media only screen and (min-width:767px) {
 #header h1 {
     display: flex;
     position: absolute;
@@ -1094,6 +1095,7 @@ div.wiki-note {
     -webkit-backdrop-filter: blur(1px);
     backdrop-filter: blur(1px);
     border-bottom: none;
+}
 }
 #header h2 {
     clear: left;
