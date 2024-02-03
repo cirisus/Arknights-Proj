@@ -4954,6 +4954,7 @@ padding: 0.5em 1em;
         content: var(--header-title);
     }
     #header h2 {
+        font-size: 0;
         clear: left;
         float: left;
         display: flex;
