@@ -4984,6 +4984,7 @@ padding: 0.5em 1em;
         width: 100vw !important;
         height: 1rem;
         justify-content: center;
+        letter-spacing: -.1rem;
     }
     #header > h2 > span:not(::before) {
         display: none
