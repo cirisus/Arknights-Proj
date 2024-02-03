@@ -1123,7 +1123,7 @@ div#extra-div-1 {
     width: 100%;
     top: 0px;
     background:  var(--banner-left) left top no-repeat, var(--banner-right) right top repeat-x;
-    z-index: -1;
+    z-index: 1;
     box-shadow: 0 1px 4px 0.5px rgb(var(--frame-shadow));
     position: fixed;
     overflow: visible;
