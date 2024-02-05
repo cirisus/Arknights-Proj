@@ -3331,132 +3331,175 @@ form#edit-page-form .wd-editor-toolbar-panel {
     form#edit-page-form .wd-editor-toolbar-panel div:first-of-type>ul>li:nth-of-type(7) {
         grid-area: quote-block
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:first-of-type>ul>li:nth-of-type(8) {
         grid-area: super-txt
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:first-of-type>ul>li:nth-of-type(9) {
         grid-area: sub-txt
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:first-of-type>ul>li:nth-of-type(10) {
         grid-area: raw-txt
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:first-of-type {
         grid-area: hr-txt
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(2) {
         grid-area: div-block
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(3) {
         grid-area: clear-all-fl
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(4) {
         grid-area: create-table
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(5) {
         grid-area: create-toc
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(7) {
         grid-area: code-block
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(8) {
         grid-area: code-wizard
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(10) {
         grid-area: url-txt
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(11) {
         grid-area: url-wizard
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(12) {
         grid-area: page-link-txt
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(13) {
         grid-area: page-link-wizard
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(15) {
         grid-area: image-block
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(16) {
         grid-area: image-wizard
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(18) {
         grid-area: html-block
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:first-of-type {
         grid-area: ordered-list
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:nth-of-type(2) {
         grid-area: unordered-list
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:nth-of-type(3) {
         grid-area: increment-list
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:nth-of-type(4) {
         grid-area: decrement-list
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:nth-of-type(5) {
         grid-area: definition-list
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:nth-of-type(6) {
         grid-area: create-footnote
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:nth-of-type(8) {
         grid-area: math-block
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:nth-of-type(9) {
         grid-area: math-inline
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:nth-of-type(10) {
         grid-area: equation-ref
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:nth-of-type(12) {
         grid-area: bibliography
     }
+
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:nth-of-type(13) {
         grid-area: bib-cite
     }
+
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-h1:before {
         --edit-menu-mask: var(--h1-mask)
     }
+
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-h2:before {
         --edit-menu-mask: var(--h2-mask)
     }
+
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-h3:before {
         --edit-menu-mask: var(--h3-mask)
     }
+
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-h4:before {
         --edit-menu-mask: var(--h4-mask)
     }
+
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-h5:before {
         --edit-menu-mask: var(--h5-mask)
     }
+
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-h6:before {
         --edit-menu-mask: var(--h6-mask)
     }
+
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-bold:before {
         --edit-menu-mask: var(--bold-mask)
     }
+
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-italic:before {
         --edit-menu-mask: var(--italic-mask)
     }
+
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-underline:before {
         --edit-menu-mask: var(--underline-mask)
     }
+
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-strikethrough:before {
         --edit-menu-mask: var(--strikethrough-mask)
     }
+
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-teletype:before {
         --edit-menu-mask: var(--teletype-mask)
     }
+
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-quote:before {
         --edit-menu-mask: var(--quote-mask)
     }
+
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-superscript:before {
         --edit-menu-mask: var(--superscript-mask)
     }
+
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-subscript:before {
         --edit-menu-mask: var(--subscript-mask)
     }
+
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-raw:before {
         --edit-menu-mask: var(--rawtext-mask)
     }
