@@ -67,7 +67,7 @@ div#extra-div-5::after {
     }
  
 div#extra-div-5::before {
-    content: " ";
+    content: "";
     background-color: black;
     position: fixed;
     top: 0%;
