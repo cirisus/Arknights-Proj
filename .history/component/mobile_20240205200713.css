@@ -277,7 +277,7 @@
         flex-wrap: nowrap;
         justify-content: flex-start;
         height: var(--header-height-on-mobile);
-        width: 0;
+        width: 100%;
         align-items: center;
     }
     #header h2 span {

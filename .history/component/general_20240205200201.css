@@ -257,8 +257,8 @@ div.wiki-note {
     font-family:var(--Serif-font);
 }
 div#header h2 span {
-    font-size:0;
-    padding: 0;
+    font-size:0px;
+    padding: 4px;
 }
 div#header h2:after {
     content: var(--header-subtitle);
@@ -266,7 +266,7 @@ div#header h2:after {
 div#extra-div-1 {
     height: var(--banner-height);
     width: 100%;
-    top: 0;
+    top: 0px;
     background:  var(--banner-left) left top no-repeat, var(--banner-right) right top repeat-x;
     z-index: 1;
     box-shadow: 0 1px 4px 0.5px rgb(var(--frame-shadow));
