@@ -93,13 +93,13 @@ a.footnoteref:hover, a.bibcite:hover {
 .bibitems .bibitem:first-letter {
     font-size: 0
 }
-.bibitems .bibitem:after, .footnotes-footer a[onclick*=WIKIDOT i] {
+.bibitems .bibitem:after, .footnotes-footer a[href*=javascript] {
     border-left: 0px solid transparent;
     border-bottom: none;transition: all .4s var(--standard-curve);
     -webkit-transition: all .2s var(--standard-curve);
     transition: all .2s var(--standard-curve)
 }
-.bibitems .bibitem:hover:after, .footnotes-footer a[onclick*=WIKIDOT i]:hover {
+.bibitems .bibitem:hover:after, .footnotes-footer a[href*=javascript]:hover {
     border-left: .25rem solid rgb(var(--link-hover-color));
     border-bottom: none;
     -webkit-transition: all .2s var(--standard-curve);
@@ -110,7 +110,7 @@ a.footnoteref:hover, a.bibcite:hover {
     -webkit-transition: all .2s var(--standard-curve);
     transition: all .2s var(--standard-curve);
 }
-.footnotes-footer a[onclick*=WIKIDOT i],.footnotes-footer a[onclick*=WIKIDOT i]:visited {
+.footnotes-footer a[href*=javascript],.footnotes-footer a[href*=javascript]:visited {
     --MONO: 1;
     --wght: calc(var(--ui-wght) + 100);
     display: inline-flex;
@@ -121,7 +121,7 @@ a.footnoteref:hover, a.bibcite:hover {
     font-weight: var(--wght);
     font-family: var(--Mono-font)
 }
-.bibitems .bibitem:after, .footnotes-footer a[onclick*=WIKIDOT i]:before {
+.bibitems .bibitem:after, .footnotes-footer a[href*=javascript]:before {
     --wght: calc(var(--ui-wght) + 100);
     display: inline-flex;
     z-index: 2;
@@ -133,7 +133,7 @@ a.footnoteref:hover, a.bibcite:hover {
     font-weight: var(--wght);
     font-family: var(--Mono-font);
 }
-.footnotes-footer a[onclick*=WIKIDOT i]:before {
+.footnotes-footer a[href*=javascript]:before {
     display: inline-flex;
     justify-content: flex-end;
     content: counter(footnotes) ".";
@@ -142,11 +142,11 @@ a.footnoteref:hover, a.bibcite:hover {
     transition: color .15s var(--standard-curve),font-weight .2s var(--standard-curve)
 }
 @supports (font-feature-settings: inherit) {
-    .footnotes-footer a[onclick*=WIKIDOT i]:before {
+    .footnotes-footer a[href*=javascript]:before {
         transition:color .15s var(--standard-curve),font-variation-settings .2s var(--standard-curve)
     }
 }
-.footnotes-footer a[onclick*=WIKIDOT i]:active:before,.footnotes-footer a[onclick*=WIKIDOT i]:hover:before {
+.footnotes-footer a[href*=javascript]:active:before,.footnotes-footer a[href*=javascript]:hover:before {
     --wght: calc(var(--ui-hvr-wght) + 100);
     color: rgb(var(--footnotes-footer-num-hover-color));
     font-weight: var(--wght)
@@ -159,7 +159,7 @@ a.footnoteref:hover, a.bibcite:hover {
 .bibitems .bibitem {
     position: relative
 }
-.bibitems .bibitem[onclick*=WIKIDOT i]:after {
+.bibitems .bibitem:after {
     left: 0;
     width: -webkit-min-content;
     width: -moz-min-content;
@@ -170,7 +170,7 @@ a.footnoteref:hover, a.bibcite:hover {
     color: rgb(var(--footnotes-footer-num-color));
     counter-increment: bibitems
 }
-.bibitems .bibitem[onclick*=WIKIDOT i]:hover:after {
+.bibitems .bibitem:hover:after {
     cursor: pointer;
     color: rgb(var(--footnotes-footer-num-hover-color))
 }
