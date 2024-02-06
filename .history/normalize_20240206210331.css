@@ -5582,7 +5582,7 @@ a.footnoteref:hover, a.bibcite:hover {
     color: rgb(var(--footnotes-footer-num-hover-color));
     font-weight: var(--wght)
 }
-.footnotes-footer a[onclick*=WIKIDOT i]:focus-within:before {
+.footnotes-footer a[href*=javascript]:focus-within:before {
     --wght: calc(var(--ui-hvr-wght) + 100);
     color: rgb(var(--footnotes-footer-num-hover-color));
     font-weight: var(--wght)
@@ -5590,7 +5590,7 @@ a.footnoteref:hover, a.bibcite:hover {
 .bibitems .bibitem {
     position: relative
 }
-.bibitems .bibitem:after {
+.bibitems .bibitem[onclick*=WIKIDOT i]:after {
     left: 0;
     width: -webkit-min-content;
     width: -moz-min-content;
@@ -5601,7 +5601,7 @@ a.footnoteref:hover, a.bibcite:hover {
     color: rgb(var(--footnotes-footer-num-color));
     counter-increment: bibitems
 }
-.bibitems .bibitem:hover:after {
+.bibitems .bibitem[onclick*=WIKIDOT i]:hover:after {
     cursor: pointer;
     color: rgb(var(--footnotes-footer-num-hover-color))
 }
@@ -5609,7 +5609,6 @@ a.footnoteref:hover, a.bibcite:hover {
     width: calc(1em + .75ch);
     margin: 0 0 0 -2em
 }
-/* History Panel */
 #history-form-1 {
     margin-top: 1.5rem
 }
