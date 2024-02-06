@@ -1,0 +1,5 @@
+.q,.a {
+    --red-accent: rgb(228, 93, 93);
+    display: block;
+    border: 2px solid var(--red-accent)
+}

@@ -1,0 +1,9 @@
+@charset "utf-8";
+.q,.a {
+    --red-accent: rgb(228, 93, 93);
+    display: block;
+    margin: .5rem;
+    padding: .5rem;
+    color: var(--scale-2);
+    border: 2px solid var(--red-accent);
+}
