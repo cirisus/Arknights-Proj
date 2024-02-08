@@ -10,7 +10,7 @@
         仅用于Arknights.wikidot.com站点。
 
     === License //授权方式 ===
-        v1.4 released on 2024.02.10 on Github.
+        v1.3 released on 2024.02.07 on Github.
         All rights reserved, NO CC LICENSE THIS TIME, DO NOT USE THE THEME WITHOUT PERMISSION.
         Open source version will be released after completely developed.
 
@@ -5527,13 +5527,13 @@ a.footnoteref:hover, a.bibcite:hover {
 .bibitems .bibitem:first-letter {
     font-size: 0
 }
-.bibitems .bibitem:after, .footnotes-footer a[onclick*=scrollToReference i] {
+.bibitems .bibitem:after, .footnotes-footer a[onclick*=WIKIDOT i] {
     border-left: 0px solid transparent;
     border-bottom: none;transition: all .4s var(--standard-curve);
     -webkit-transition: all .2s var(--standard-curve);
     transition: all .2s var(--standard-curve)
 }
-.bibitems .bibitem:hover:after, .footnotes-footer a[onclick*=scrollToReference i]:hover {
+.bibitems .bibitem:hover:after, .footnotes-footer a[onclick*=WIKIDOT i]:hover {
     border-left: .25rem solid rgb(var(--link-hover-color));
     border-bottom: none;
     -webkit-transition: all .2s var(--standard-curve);
@@ -5544,7 +5544,7 @@ a.footnoteref:hover, a.bibcite:hover {
     -webkit-transition: all .2s var(--standard-curve);
     transition: all .2s var(--standard-curve);
 }
-.footnotes-footer a[onclick*=scrollToReference i],.footnotes-footer a[onclick*=scrollToReference i]:visited {
+.footnotes-footer a[onclick*=WIKIDOT i],.footnotes-footer a[onclick*=WIKIDOT i]:visited {
     --MONO: 1;
     --wght: calc(var(--ui-wght) + 100);
     display: inline-flex;
@@ -5555,7 +5555,7 @@ a.footnoteref:hover, a.bibcite:hover {
     font-weight: var(--wght);
     font-family: var(--Mono-font)
 }
-.bibitems .bibitem:after, .footnotes-footer a[onclick*=scrollToReference i]:before {
+.bibitems .bibitem:after, .footnotes-footer a[onclick*=WIKIDOT i]:before {
     --wght: calc(var(--ui-wght) + 100);
     display: inline-flex;
     z-index: 2;
@@ -5567,7 +5567,7 @@ a.footnoteref:hover, a.bibcite:hover {
     font-weight: var(--wght);
     font-family: var(--Mono-font);
 }
-.footnotes-footer a[onclick*=scrollToReference i]:before {
+.footnotes-footer a[onclick*=WIKIDOT i]:before {
     display: inline-flex;
     justify-content: flex-end;
     content: counter(footnotes) ".";
@@ -5576,16 +5576,16 @@ a.footnoteref:hover, a.bibcite:hover {
     transition: color .15s var(--standard-curve),font-weight .2s var(--standard-curve)
 }
 @supports (font-feature-settings: inherit) {
-    .footnotes-footer a[onclick*=scrollToReference i]:before {
+    .footnotes-footer a[onclick*=WIKIDOT i]:before {
         transition:color .15s var(--standard-curve),font-variation-settings .2s var(--standard-curve)
     }
 }
-.footnotes-footer a[onclick*=scrollToReference i]:active:before,.footnotes-footer a[onclick*=scrollToReference i]:hover:before {
+.footnotes-footer a[onclick*=WIKIDOT i]:active:before,.footnotes-footer a[onclick*=WIKIDOT i]:hover:before {
     --wght: calc(var(--ui-hvr-wght) + 100);
     color: rgb(var(--footnotes-footer-num-hover-color));
     font-weight: var(--wght)
 }
-.footnotes-footer a[onclick*=scrollToReference i]:focus-within:before {
+.footnotes-footer a[onclick*=WIKIDOT i]:focus-within:before {
     --wght: calc(var(--ui-hvr-wght) + 100);
     color: rgb(var(--footnotes-footer-num-hover-color));
     font-weight: var(--wght)

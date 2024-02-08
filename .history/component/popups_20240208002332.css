@@ -1246,9 +1246,6 @@ img#wd-ed-imagewizard-byfile-preview {
     content:var(--img-size-txt);
     font-size: .85rem
 }
-div#wd-ed-imagewizard-checkresult ~ table.form input {
-    max-width: max(25vw,10rem);
-}
 div#rename-option-delete p {
     font-size:0;
 }
