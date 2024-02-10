@@ -5518,9 +5518,6 @@ a.footnoteref:hover, a.bibcite:hover {
 .footnotes-footer .footnote-footer {
     margin: .25em 0 0 6ch
 }
-.footnotes-footer .footnote-footer:nth-child(n+11) > :is(.footnotes-footer a[onclick*=scrollToReference i], .footnotes-footer a[onclick*=scrollToReference i]:visited) {
-    padding-left: calc(1ch - 0.15em);
-}
 .bibitems .bibitem {
     margin: .5em 0 0 5ch;
     padding-left:0;

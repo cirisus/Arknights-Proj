@@ -156,9 +156,6 @@ a.footnoteref:hover, a.bibcite:hover {
     color: rgb(var(--footnotes-footer-num-hover-color));
     font-weight: var(--wght)
 }
-.footnotes-footer .footnote-footer:nth-child(n+11) > :is(.footnotes-footer a[onclick*=scrollToReference i], .footnotes-footer a[onclick*=scrollToReference i]:visited) {
-    padding-left: calc(1ch - 0.15em);
-}
 .bibitems .bibitem {
     position: relative
 }

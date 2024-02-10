@@ -1,0 +1,308 @@
+[[include :arknights:theme:rhodes]]
+[[include :arknights:component:scroll-progress-base |arcaea-type=--]
+]]
+[[include :arknights:component:end-shortcut-base
+|default=true
+]]
+[[module css]]
+.code-sample {background: #fff; padding: .5rem;margin: 0 0.25rem; border: 2px solid #333}
+span.not-langcn {letter-spacing: -.01em}
+span.codeslot {
+    display: inline-block;
+    vertical-align: baseline;
+    padding: 1px 2px;
+    margin: 1px 2px;
+    border: 1px #AAA solid;
+    border-radius: 2px;
+    font-family: var(--Mono-font);
+    color: #333;
+    background-color: #eaeaea;
+    text-indent:0
+}
+div.wiki-note {margin: 0.5rem}
+.Media_SelectorPC {display:initial}
+.Media_SelectorMobile {display:none}
+@media (max-width:767px) {
+.Media_SelectorPC {display:none}
+.Media_SelectorMobile {display:initial}
+}
+@media (min-width:767px) {
+.plcholder > .collapsible-block {min-height:7rem}
+}
+[[/module]]
+[[toc]]
+如果你已经不再满足于朴实无华的一般页面和平淡乏味的普通文字呈现方式，希望基于站点提供的功能为你的文章或者页面添加更多实用或者花哨的效果——在大多数情况下，Wikidot能实现相当多复杂的功能。在Wikidot过去的二十年里，几个相当活跃的维基社区集结了许多有才华的Wikidot开发者，他们通过Wikidot提供的[[span class="codeslot"]][[include]][[/span]]与[[span class="codeslot"]][[module]][[/span]]功能，实现了相当多现代化的样式和功能。
+
+如果你也希望了解如何自行研发或者搬运一些功能，你可以参考在这个页面中列出来的相当多文章。然而这些文章是由各国开发者分别撰写的，而且大多数侧重于功能的实现而不涉及原理的解析，使得复制粘贴的成本大大降低，但一定程度上提高了希望自行开发某些组件的用户进行参考学习的难度。
+
+基于上述情况，笔者希望通过此篇Wikidot进阶教程，系统地总结前人成果中使用到的技术，并且介绍它们的开发方法以及一些Wikidot的不常用功能，希望能对你有所帮助。
+
+值得注意的是，Wikidot的功能在超过十年前就停止了更新，Wikidot垂垂老矣，但是仍然能够为你提供相当多的可能性。只要你想。
+
+现在让我们开始吧。
+-----
+[[=]]
++++* 注意！
+[[/=]]
+> 在阅读本文前，笔者默认你已经：
+> * 阅读过[[[guide:basis|Wikidot使用说明]]]，[[[guide:syntax|Wikidot语法]]]，并且基本熟练Wikidot的使用方式。
+> * 初步了解了部分前端知识，包括{{HTML}}，{{JavaScript}}和{{CSS}}，它们在一般网页中的作用和调用方式。
+> * 至少了解了浏览器的运作方式，包括事件循环原理和渲染进程。
+> ----
+> 上述内容按照重要性降序排列，对于涉及上述内容的术语（即非Wikidot专用的网络技术），本文将不会单独阐述。
+> * 如果你尚未满足第一项条件，你很难看懂这篇文章；
+> * 如果你尚未满足第二项条件，你可能在某些环节有些困惑，建议你自行百度相关术语；
+> * 如果你只是不了解最后一项，你可以阅读本文的绝大多数内容。
+
++ Wikidot方法
+> 这部分的内容是可以通过维基语法或者其他方式调用的Wikidot功能。且不包含在常用[[[guide:syntax|Wikidot语法]]]之内。这部分的内容来自 [*https://www.wikidot.com/doc:start Wikidot Documentation]，并且结合实际使用情况作了补充。
+++ 概念：Wikidot标签和模组
+Wikidot内置了许多操纵与构建{{HTML}}元素的方法，Wikidot语法实质是一种简化的标记语言。它们一般通过[[span class="codeslot"]]方块(Blocks)[[/span]]和[[span class="codeslot"]]模组(Modules)[[/span]]两类标签来调用。
+: 方块标签 : 一般是以两对方括号[[span class="codeslot"]][[]][[/span]]扩起的内容，方块的结构如下（以[[span class="codeslot"]][[div]][[/span]]方块为例）：
+[[=]]
+**开始标签：**[[span class="codeslot"]][[span class="ruby"]][[span class="rt"]]方块名(name)[[/span]][[div[[/span]] [[span class="codeslot"]][[span class="ruby"]][[span class="rt"]]方块体(body)[[/span]]id="" style="" data-value=""]][[/span]][[/span]][[/span]]
+**结束标签：**[[span class="codeslot"]][[/div]][[/span]]
+[[/=]]
+: 模组标签 : 模组标签可以看作是一类特殊的方块标签，共同特征是方块名均为[[span class="codeslot"]][[module[[/span]]，方块体为Wikidot允许的特定字符串，如[[span class="codeslot"]]Listpages]][[/span]]
++++* 注意
+* 方块名可能会以下划线（_）结尾，这表明这是一个非换行标签[[footnote]] 此符号会调用js的[[span class="codeslot"]]String.prototype.trim()[[/span]]方法，截断标签两侧的空白字符 [[/footnote]]；
+* 大多数标签都允许通过**方块体传入额外参数**，请查阅下方表格以获取特定标签的参数范围；
+* 部分标签不需要同名的结束标签，请查阅下方表格获取特定标签的闭合性；
++++ 标签参照表
+[[collapsible show="+ 展开方块标签列表" hide="- 收起"]]
+* 如无备注，此方块为非自闭合标签，即**需要同名的结束标签**构成完整方块。
+* 如备注为“自闭合”，此方块为自闭合标签，**不需要同名的结束标签**即可构建完整方块。
+||~ 标签名||~ 默认类型||~ 行为||~ 方块体属性范围||~ 备注||
+||[[span class="codeslot"]]@@[[a]]@@[[/span]]||行盒||创建链接方块||全局属性||N/A||
+||[[span class="codeslot"]][[bibliography]][[/span]]||块盒||创建参考文献方块||{{<title>}}||N/A||
+||[[span class="codeslot"]][[button]][[/span]]||行盒||创建按钮方块||{{<type>}}[[footnote]] 详见附表1，L1 [[/footnote]]，全局属性||自闭合||
+||[[span class="codeslot"]][[code]][[/span]]||块盒||创建代码方块||{{<type>}}[[footnote]] 完整参数列表参见代码块向导 [[/footnote]]||N/A||
+||[[span class="codeslot"]][[collapsible]][[/span]]||块盒||创建折叠方块||{{<show><hide><folded><hideLocation>}}[[footnote]] 详见附表1，L2 [[/footnote]]||N/A||
+||[[span class="codeslot"]][[date]][[/span]]||行盒||创建日期方块||专用属性[[footnote]] 详见附表1，L3 [[/footnote]]||N/A||
+||[[span class="codeslot"]][[div]][[/span]]||块盒||创建块状容器||全局属性||N/A||
+||[[span class="codeslot"]][[eref]][[/span]]||行盒||创建公式指针||{{<define-label>}}[[footnote]] 详见下文[#toc4 数学表达式] [[/footnote]]||自闭合||
+||[[span class="codeslot"]][[embed]][[/span]]|| || || ||N/A||
+||[[span class="codeslot"]][[embedaudio]][[/span]]|| || || ||N/A||
+||[[span class="codeslot"]][[embedvideo]][[/span]]|| || || ||N/A||
+||[[span class="codeslot"]]@@[[footnote]]@@[[/span]]||行盒||创建脚注指针||❌||N/A||
+||[[span class="codeslot"]]@@[[footnoteblock]]@@[[/span]]||块盒||创建脚注方块||{{<title>}}||N/A||
+||[[span class="codeslot"]][[file]][[/span]]|| || || ||N/A||
+||[[span class="codeslot"]]@@[[gallery]]@@[[/span]]||块盒||创建画廊方块||{{<size><value><viewer>}}[[footnote]] 详见附表1，L4 [[/footnote]]||N/A||
+||[[span class="codeslot"]][[html]][[/span]]||块盒||创建内联{{HTML}}文档||❌||N/A||
+||[[span class="codeslot"]]@@[[iftags]]@@[[/span]]||N/A||详见[#toc11 选择性呈现]||N/A||N/A||
+||[[span class="codeslot"]][[iframe]][[/span]]||块盒||创建内联{{HTML}}文档||全局属性[[footnote]] 详见附表1，L5 [[/footnote]]||N/A||
+||[[span class="codeslot"]]@@[[image]]@@[[/span]]||块盒||创建图片方块||全局属性||自闭合||
+||[[span class="codeslot"]]@@[[include]]@@[[/span]]||N/A||详见[[a href="#toc19"]]基础[[include]]方法[[/a]]||N/A||自闭合||
+||[[span class="codeslot"]][[note]][[/span]]||块盒||创建笔记方块||❌||N/A||
+||[[span class="codeslot"]][[math]][[/span]]||块盒||创建表达式方块||{{<defined-label>}}[[footnote]] 详见下文[#toc4 数学表达式] [[/footnote]]||N/A||
+||[[span class="codeslot"]][[tab]][[/span]]|| || || ||N/A||
+||[[span class="codeslot"]][[tabview]][[/span]]|| || || ||N/A||
+||[[span class="codeslot"]][[table]][[/span]]|| || || ||N/A||
+||[[span class="codeslot"]][[toc]][[/span]]||块盒||创建标题目录||❌[[footnote]] 详见附表1，L6 [[/footnote]]||自闭合||
+||[[span class="codeslot"]][[size]][[/span]]||行盒||修改盒内字体大小||{{<size>}}||N/A||
+||[[span class="codeslot"]]@@[[social]]@@[[/span]]|| || || ||自闭合||
+||[[span class="codeslot"]]@@[[span]]@@[[/span]]||行盒||创建行内容器||全局属性||N/A||
+||[[span class="codeslot"]][[user]][[/span]]||行盒||创建用户指针||{{<username>}}||自闭合||
+||[[span class="codeslot"]][[ul]][[ol]][[li]][[/span]]||块盒||创建表格||全局属性||N/A||
+||||||||||~ 以下为非常规方块（不以[[span class="codeslot"]][[]][[/span]]括起）||
+||[[span class="codeslot"]][[/span]]|| || || ||N/A||
+[!--||[[span class="codeslot"]] [[/span]]|| || || ||N/A||--]
+[[/collapsible]]
+[[collapsible show="+ 展开模组标签列表" hide="- 收起"]]
+[[/collapsible]]
+[[tabview]]
+[[tab 单页面使用]]
+[[note]]
+这部分功能通常在一个标准Wikidot页面内使用。用法和功能比较单一。
+[[/note]]
+++ 概念：行内标签和块状标签
+> 如果你了解什么是CSS盒模型以及行盒、块盒、行块盒，这部分则相当易于理解。
+你可能已经见过了[[span class="codeslot"]][[div]][[/span]]方块和[[span class="codeslot"]]@@[[span]]@@[[/span]]元素。它们的区别在于，[[span class="codeslot"]][[div]][[/span]]及其结束标签[[span class="codeslot"]][[/div]][[/span]]都需要单独成行，否则无法成功创建一个[[span class="codeslot"]][[div]][[/span]]方块；而[[span class="codeslot"]]@@[[span]]@@[[/span]]及其结束标签[[span class="codeslot"]]@@[[/span]]@@[[/span]]则可以在一行内使用。这就是行盒与块盒的区别。
+
+: 块状标签 : 在Wikidot中，有些标签（例如[[span class="codeslot"]][[code]][[/span]][[span class="codeslot"]][[div]][[/span]][[span class="codeslot"]][[HTML]][[/span]][[span class="codeslot"]][[iframe]][[/span]][[span class="codeslot"]]@@[[iftags]]@@[[/span]][[span class="codeslot"]][[math]][[/span]]等）具有类似的性质，他们都具有结束标签并且两个标签都需要独占一行，仿照{{HTML}}的术语，这些标签应当为块状标签。块状标签的性质有：
+* 标签成对出现，语法成对；
+* 标签需要独占一行，前后都不能有任何字符；
+* 可以嵌套；
+* 可以包含行内标签；
+
+: 行内标签 : 而有些标签（例如[[span class="codeslot"]][[a]][[/span]][[span class="codeslot"]]@@[[span]]@@[[/span]]以及大多数Wikidot行内语法）则不要求两个标签都位于独立行中才能发挥作用，这些标签应当为行内标签。行内标签的性质有：
+* 标签成对出现，语法成对；
+* **标签不需要独占一行，前后都可以有字符**；
+* 部分行内标签可以嵌套；
+* **不能包含块状标签**；
+: 特殊标签 : 和{{HTML}}类似，有些标签是自闭合标签（或者空标签），没有结束符。例如：
+* [[span class="codeslot"]][[image]][[/span]]；
+* 四个连用的@（{{@@@@@@@@}}，等效于[[span class="codeslot"]]<br>[[/span]]）；
+* 四个及以上连用的“-”（@@-----@@，等效于[[span class="codeslot"]]<hr>[[/span]]）。
++++* 注意
+* 上述Wikidot的标签说明只是阐述调用方式，并不等效于浏览器文本流的生成方式以及渲染方式。例如，你可以规定一个[[span class="codeslot"]]@@[[span]]@@[[/span]]块具有{{display: block}}样式，这会覆盖掉默认的[[span class="codeslot"]]inline[[/span]]样式并且呈现为块级元素并截断文本流。
+* 与{{HTML}}类似，大部分开始标签可以直接声明参数，这在制作[[span class="codeslot"]][[include]][[/span]]组件时很有帮助。例如，你可以通过为[[span class="codeslot"]][[div]][[/span]]方块设定不同的{{<data-value>}}值以便在CSS中更好地利用属性选择器来分配不同样式。
+* 特别地，{{<style>}}参数同样会直接指定元素内联样式；{{<class>}}属性会指定站点或者页面应用的CSS文件中已经定义的类。
+++ 参考文献
+参考文献的组件包括两个部分：**参考文献方块**（[[span class="codeslot"]]@@[[bibliography]]@@[[/span]][[span class="codeslot"]]@@[[/bibliography]]@@[[/span]]}}）与**引用位点**（{{@@[((bibcite label))]@@}}），**两个部分必需同时使用**，否则你无法得到正确的参考文献格式。例如：
+[[div class="code-sample"]]
+……在实际的生产环境和过程中，创作者往往还需要考虑作品阅读对象的问题。标题的目的性专门用以解释标题在实际用途中显示出来的某些特点。标题的目的性通常与作品的用途及领域强相关。例如，在学术领域中的论文文体，其标题通常采用复式结构，如《起伏不定的情感：生命历程视域下的粉丝持续性认同研究》[((bibcite 1))]以及 《“理想批评家”与当代文学研究的新范式——以《路遥的哈姆雷特与莎士比亚》为考察对象》[((bibcite 2))]。通常而言，这类题目具有如下特征：
+----
+
+[[bibliography title="参考文献"]]
+: 1 : 晏青,宋宝儿.起伏不定的情感：生命历程视域下的粉丝持续性认同研究[J/OL].现代出版:1-20[2024-02-06].
+: 2 : 王鹏程.“理想批评家”与当代文学研究的新范式——以《路遥的哈姆雷特与莎士比亚》为考察对象[J].中国当代文学研究,2024(011):206-213.
+[[/bibliography]]
+
+[[/div]]
+[[code]]
+……在实际的生产环境和过程中，创作者往往还需要考虑作品阅读对象的问题。标题的目的性专门用以解释标题在实际用途中显示出来的某些特点。标题的目的性通常与作品的用途及领域强相关。例如，在学术领域中的论文文体，其标题通常采用复式结构，如《起伏不定的情感：生命历程视域下的粉丝持续性认同研究》[((bibcite 1))]以及《“理想批评家”与当代文学研究的新范式——以《路遥的哈姆雷特与莎士比亚》为考察对象》[((bibcite 2))]。通常而言，这类题目具有如下特征：
+----
+[[bibliography title="参考文献"]]
+: 1 : 晏青,宋宝儿.起伏不定的情感：生命历程视域下的粉丝持续性认同研究[J/OL].现代出版:1-20[2024-02-06].
+: 2 : 王鹏程.“理想批评家”与当代文学研究的新范式——以《路遥的哈姆雷特与莎士比亚》为考察对象[J].中国当代文学研究,2024(011):206-213.
+[[/bibliography]]
+[[/code]]
++++* 使用方式：
+* 在需要插入参考文献的地方插入{{@@[((bibcite label))]@@}}，然后把{{label}}改成这个引用的名字（类似于锚点名称），不能使用汉字；
+* 插入数学表达式方块，在两个冒号中间填入已经创建的引用名称，两个冒号后面填入你的引用文献格式和doi等；
+* 大功告成！现在，脚注方块应该会按照你填入的标签名称显示出你创建的引用文献。
+* {{@@[[bibliography]]@@}}方块和脚注方块有些类似：在一个页面中只能有一个参考文献方块，可以接收{{title=""}}参数修改参考文献方块标题。
+* 你不应该在脚注方块中使用参考文献，尽管在一般网站上它们可以显示，但是在这个网站上不行。这不规范。
+++ 数学表达式
+数学表达式有两种：块级数学表达式（{{@@[[math]]@@}}）和行内数学表达式（{{@@[[$ LaTeX $]]@@}}）。数学表达式必需与LaTeX[[footnote]] 音译“拉泰赫”。是一种基于Τ,,Ε,,Χ的排版系统。在理论与工程学科中应用广泛。 [[/footnote]]代码联用，否则你无法得到正确的数学表达式。例如：
+[[div class="code-sample"]]
+[[math]]
+e^{i\pi}+1=0
+[[/math]]
+或者
+[[$ e^{i\pi}+1=0 $]]
+[[/div]]
+[[code]]
+[[math]]
+e^{i\pi}+1=0
+[[/math]]
+或者：
+[[$ e^{i\pi}+1=0 $]]
+[[/code]]
+这二者的区别是，使用块级数学表达式创建的式子允许你通过直接在开始标签后为某个数学表达式命名（如{{@@[[math xxx]]@@}}），从而能够使用公式引用向导识别到此式，在正文需要的位置引用它，例如：
+[[div class="code-sample"]]
+Here, for a lattice [[$L \subset \mathbb{R}^{n}$]] and [[$s>0$]],
+
+[[math equation]]
+\rho_{s}(L):=\sum_{\boldsymbol{y} \in L} e^{-\pi\|\boldsymbol{y}\|^{2} / s^{2}}
+[[/math]]
+
+is the Gaussian mass of the lattice with parameter [[$s$]]. This can be seen as a smooth version of the point-counting function [[$r \mapsto\left|L \cap r B_{2}^{n}\right|$]], with the parameter [[$s$]] playing the role of the radius [[$r$]], and it arises naturally in a number of contexts (often in the form of the theta function, [[$\Theta_{\mathcal{L}}(i y):=\rho_{1 / \sqrt{y}}(\mathcal{L})$]] ). In particular, Theorem 1.2 immediately implies that [[$\left|L \cap r B_{2}^{n}\right| \leq 3 e^{\pi t^{2} r^{2}} / 2$]] for any radius [[$r>0$]]. (We note that the constant [[$3 / 2$]] in this bound and the theorem statement is chosen for convenience, and a similar statement holds with any constant strictly bigger than 1.)
+....
+----
+参照表达式[[eref equation]]（Eq.([[eref equation]])），可知：
+[[/div]]
+[[code]]
+Here, for a lattice [[$L \subset \mathbb{R}^{n}$]] and [[$s>0$]],
+
+[[math equation]]
+\rho_{s}(L):=\sum_{\boldsymbol{y} \in L} e^{-\pi\|\boldsymbol{y}\|^{2} / s^{2}}
+[[/math]]
+
+is the Gaussian mass of the lattice with parameter [[$s$]]. This can be seen as a smooth version of the point-counting function [[$r \mapsto\left|L \cap r B_{2}^{n}\right|$]], with the parameter [[$s$]] playing the role of the radius [[$r$]], and it arises naturally in a number of contexts (often in the form of the theta function, [[$\Theta_{\mathcal{L}}(i y):=\rho_{1 / \sqrt{y}}(\mathcal{L})$]] ). In particular, Theorem 1.2 immediately implies that [[$\left|L \cap r B_{2}^{n}\right| \leq 3 e^{\pi t^{2} r^{2}} / 2$]] for any radius [[$r>0$]]. (We note that the constant [[$3 / 2$]] in this bound and the theorem statement is chosen for convenience, and a similar statement holds with any constant strictly bigger than 1.)
+....
+----
+参照表达式[[eref equation]]（Eq.([[eref equation]])），可知：
+[[/code]]
+除非你的正文中已经有正确命名（不能使用汉字）的块级数学表达式，否则公式引用向导不会正常工作，你也可以使用{{@@[[eref xxx]]@@}}手动创建指向被标记为{{xxx}}的数学表达式。
+
+实际上，与LateX语法相比，Wikidot语法只做了如下改动：
+* 在行内表达式中，用两对方括号包围了以{{$}}做标识符的LaTeX语句；
+* 在块级表达式中，用{{[[math]][[/math]]}}替代了{{$$}}作为开始和结束标签；
+这在你进行LaTeX-Wikidot语法转换时可能有用。
+++ 按钮
+++ 内[[span class="not-langcn"]]联HTML文[[/span]]档[[span class="not-langcn"]]（iframe）[[/span]]
+++ 内联插件[[span class="not-langcn"]]（embed）[[/span]]
+[[/tab]]
+[[tab 跨页面使用]]
+[[note]]
+这部分功能通常用于多页面交互的组件，例如{{[[include]]}}组件中。在单一页面内，它们的用处一般不大。
+[[/note]]
+++ ##red|表达式与逻辑语句##
+# Wikidot内置了几类数学函数，并允许通过表达式语句调用这些函数。这些函数包括：
+ * 基础数学运算[[span class="codeslot"]]+[[/span]][[span class="codeslot"]]-[[/span]][[span class="codeslot"]]*[[/span]][[span class="codeslot"]]/[[/span]][[span class="codeslot"]]%[[/span]][[span class="codeslot"]]^[[/span]][[span class="codeslot"]][[/span]]
+ * 基础逻辑运算[[span class="codeslot"]]<[[/span]][[span class="codeslot"]]>[[/span]][[span class="codeslot"]]==[[/span]][[span class="codeslot"]]>=[[/span]][[span class="codeslot"]]<=[[/span]][[span class="codeslot"]]&&[[/span]][[span class="codeslot"]]||[[/span]][[span class="codeslot"]]![[/span]]
+ * 绝对值函数[[span class="codeslot"]]abs()[[/span]]
+ * 最值函数[[span class="codeslot"]]min(a,b,...)[[/span]][[span class="codeslot"]]max(a,b,...)[[/span]]
+# Wikidot允许使用简单的逻辑判断语句，并且根据布尔值决定呈现的内容。
+# 这两种语句可以混用。
+共有三类调用方法：
+
+||~ 语法 ||~ 语句行为与返回值 ||~ 备注 ||
+|| {{@@[[#expr <valid expression>]]@@}} || 返回计算结果 || 可以调用上述函数，返回值不包括整型和布尔型。 ||
+|| {{@@[[#if <value> |return true|return false]]@@}} || 判断{{value}}，返回两个值之一 ||= N/A ||
+|||||| 以下值会判定为**{{false}}**：字符串[[span class="codeslot"]]false[[/span]][[span class="codeslot"]]null[[/span]]；空字符（{{&nbsp}}）；数值[[span class="codeslot"]]0[[/span]]； _
+其余任何类型的值均会被判定为{{true}}。 ||
+|| {{@@[[#ifexpr <valid expression>|return true|return false]]@@}} || 计算并传入结果，判断传入值并返回值 || 采用上述的计算逻辑和判断逻辑 ||
++++* 注意：
+* 表达式的运算结果范围是{{[-2^^1024^^+1,2^^1024^^-1]}}；
+* 单个表达式长度不得大于{{256}}字节；
+* 已经定义的常量仅有[[span class="codeslot"]]π=3.14159265359[[/span]]
+* 上述语法可以接受来自[[span class="codeslot"]]Listpages[[/span]]与[[span class="codeslot"]]Listusers[[/span]]模组的参数。
+++ ##red|逻辑注释语句##
+++ ##red|选择性呈现##
+[[/tab]]
+[[tab 非页面正文使用]]
+++ 功能[[span class="not-langcn"]]性URI[[/span]]
+对任何一个Wikidot页面的链接，在其URL后增加以{{#}}开头的特殊标识符，Wikidot引擎就能执行特殊的调用函数，即使它们的接口是隐藏的。
+||~ #标识符 ||~ 调用的功能||
+|| #_sitetools || 打开“网站工具”界面 ||
+|| #_wantedpages || 列出网站的待建立页面 ||
+|| #_orphanedpages || 列出网站的孤立页面 ||
+|| #_draftpages || 列出网站的存稿页面 ||
+|| #_editpage || 打开编辑器（需要编辑权限） ||
+|| #_edittags || 打开标签栏（需要编辑权限） ||
+|| #_history || 展开页面编辑记录 ||
+|| #_files || 列出本页附件 ||
+++ 解析[[span class="not-langcn"]]类URI[[/span]]
+[[/tab]]
+[[tab 网站结构及方法]]
+++ 页面布局
+++ 特殊类
+[[/tab]]
+[[/tabview]]
++ 可用模组
++ 基础[[span class="not-langcn"]]CSS[[/span]]操作方法
+++ 更好的编辑方式
+必须承认的一点是，在进行繁重的代码编辑任务时，Wikidot的编辑器是十分匮乏的。没有同步修改，没有多视图编辑，没有高亮显示、括号检查和极其有限的自动补全，使得纯Wikidot的编辑方式效率受到了严重的限制。
+
+在行业中，我们一般使用集成开发环境（IDE）[[footnote]] 例如Webstorm、Visual Studio Code (VS Code)、Sublime和Atom等 [[/footnote]]完成代码编辑和调试任务，并且使用版本控制系统[[footnote]] 一般使用Git [[/footnote]]和代码托管平台[[footnote]] 例如Github/gitte [[/footnote]]管理项目的多人协作以及分发需求。在基于Wikidot的开发场景中，Wikidot本身就具有一定程度的**代码托管**与**版本控制功能**，理想的状态下，还应当有**远程拉取/上传**与类似Git的**本地分支暂存与发布**的功能。
+[[div class="Media_SelectorMobile"]]
+[[include component:image-features-source |hover-enlarge=--]
+|enlarge-amount=1
+|speed=500
+|float=true
+|align=right
+|width=50% 
+|url=ftml-function.png
+|alt=alt|alt-text=移动端功能说明
+|add-caption=true
+|caption=插件的功能清单（{{v0.2.4}}）
+]]
+[[/div]]
+[[div class="Media_SelectorPC"]]
+[[include component:image-features-source |hover-enlarge=--]
+|enlarge-amount=1
+|speed=500
+|float=true
+|align=right
+|width=300px 
+|url=ftml-function.png
+|alt=alt|alt-text=功能说明
+|add-caption=true
+|caption=插件的功能清单（{{v0.2.4}}）
+]]
+[[/div]]
+@@@@
+为了弥补Wikidot编辑器缺失的重要功能，我推荐你使用VScode进行代码编辑，并安装由[[*user Jochoi]]（Zokhoi，或称鑿海）开发的VScode插件：[[span class="codeslot"]]**FTML/Wikidot Workshop**[[/span]][[footnote]] 在VScode的扩展直接搜索关键词{{Wikidot}}即可 [[/footnote]]。
+
+根据作者在插件主页的说明，此插件的功能有：
+* 语法高亮（对于具有下列扩展后缀名的文件生效：[[span class="codeslot"]].ftml[[/span]]、[[span class="codeslot"]].wd[[/span]]、[[span class="codeslot"]].wikidot[[/span]]、[[span class="codeslot"]].wj[[/span]]、[[span class="codeslot"]].wikijump[[/span]]）
+* Wikidot语法预览（使用内部窗口，无需连接Wikidot）；
+以下功能需要桌面版VScode：
+* 拉取Wikidot页面源代码与元信息[[footnote]] 包括站点名称、页面名称、页面标题与标签、关联页面、页面版本 [[/footnote]]；
+* 检视本地代码与远程代码差异；
+* 推送本地更改。
++ 基础[[span class="not-langcn"]] [[include]][[/span]]方法
++ 基础[[span class="not-langcn"]] Wikidot[[/span]]表单[[span class="not-langcn"]]（Form）[[/span]]
