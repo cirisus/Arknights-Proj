@@ -91,7 +91,6 @@ ________________________________________________________________________________
     --note-txt:"注意：";
     --saving-page-txt:"提交反馈至神经中枢……";
     --saved-txt:"提交成功！";
-    --draft-options-txt:"当前页面存在您（或者他人）保存的草稿，请选择一个选项以处理草稿。";
     --delete-draft-txt:"停止编辑并删除草稿";
     --save-draft-txt:"停止编辑并保留草稿";
     --edit-draft-txt:"编辑上次草稿";
@@ -113,9 +112,7 @@ ________________________________________________________________________________
 
     --image-wizard-title:"图片插入向导";
     --choose-img-txt:"从本页以下附件中选取一张图片。";
-    --choose-img-txt-alt: "本页没有附件。";
     --img-size-txt:"图片尺寸：";
-    --img-check-txt:"输入链接不是有效的Flickr.com图片。";
     --file-information-title:"文件信息";
     --info-title:"信息";
     --permarnent-link-title:"永久链接地址";
@@ -373,9 +370,9 @@ ________________________________________________________________________________
 
     --editor-icon-bg:var(--scale-8);
     --editor-icon-submenu-bg:var(--editor-icon-bg);
-    --editor-icon-color: var(--dark-primary-color);
-    --editor-icon-hover-color: var(--bright-third-color);
-    --editor-icon-hover-bg: var(--dark-primary-color);
+    --editor-icon-color:var(--scale-0);
+    --editor-icon-hover-color:var(--scale-8);
+    --editor-icon-hover-bg:var(--scale-0);
 
 
     --mo-content-bg:var(--scale-8), 0;
@@ -474,7 +471,6 @@ ________________________________________________________________________________
     --note-txt:"Please note:";
     --saving-page-txt:"Submitting to Ganglia...";
     --saved-txt:"Submitted!";
-    --draft-options-txt: "There is a draft saved for this page, either by you or by someone else. Please choose an option to manage the draft.";
     --delete-draft-txt:"Cancel and delete draft";
     --save-draft-txt:"Cancel and leave draft";
     --edit-draft-txt:"Edit Draft";
@@ -496,9 +492,7 @@ ________________________________________________________________________________
 
     --image-wizard-title:"Image Wizard";
     --choose-img-txt:"Please slect one of the files of the page.";
-    --choose-img-txt-alt: "No files attached.";
     --img-size-txt:"Image size:";
-    --img-check-txt:"Not a valid input for the flickr.com image.";
     --file-information-title:"File information";
     --info-title:"Info";
     --permarnent-link-title:"Permanent Link";
@@ -535,7 +529,6 @@ ________________________________________________________________________________
     --note-txt:"Veuillez noter:";
     --saving-page-txt:"Soumission à Ganglia...";
     --saved-txt:"Soumis!";
-    --draft-options-txt: "Il y a un brouillon enregistré pour cette page, soit par vous-même, soit par quelqu'un d'autre. Veuillez choisir une option pour gérer le brouillon.";
     --delete-draft-txt:"Annuler et supprimer le brouillon";
     --save-draft-txt:"Annuler et laisser draft";
     --edit-draft-txt:"Modifier le brouillon";
@@ -557,9 +550,7 @@ ________________________________________________________________________________
 
     --image-wizard-title:"Assistant d'Image";
     --choose-img-txt:"Veuillez sélectionner l'un des fichiers de la page.";
-    --choose-img-txt-alt: "Aucun fichier joint.";
     --img-size-txt:"Taille de l'image :";
-    --img-check-txt: "Pas une entrée valide pour l'image flickr.com.";
     --file-information-title:"Informations sur le fichier";
     --info-title:"Info";
     --permarnent-link-title:"Lien Permanent";
@@ -596,7 +587,6 @@ ________________________________________________________________________________
     --note-txt:"ご注意ください：";
     --saving-page-txt:"神経中枢にフィードバックします……";
     --saved-txt:"提出成功です！";
-    --draft-options-txt: "このページには下書きが保存されています。下書きはあなた自身か他の誰かによって保存されています。 下書きを処理するオプションを選択してください。";
     --delete-draft-txt:"草稿の編集を止めて削除します";
     --save-draft-txt:"編集を止めて草稿を残します";
     --edit-draft-txt:"前回の草稿を編集します";
@@ -618,9 +608,7 @@ ________________________________________________________________________________
 
     --image-wizard-title:"画像ウィザード";
     --choose-img-txt:"ページのファイルから1つ選択してください。";
-    --choose-img-txt-alt: "ファイルが添付されていません。";
     --img-size-txt:"画像サイズ：";
-    --img-check-txt: "Flickr.comの画像の有効な入力ではありません。";
     --file-information-title:"ファイル情報";
     --info-title:"情報";
     --permarnent-link-title:"永続リンク";
@@ -657,7 +645,6 @@ ________________________________________________________________________________
     --note-txt:"Wir bitten um eines:";
     --saving-page-txt:"Unterwirf dich dem Wahrsager...";
     --saved-txt:"Wir übergeben sie!";
-    --draft-options-txt: "Es gibt einen Entwurf für diese Seite, entweder von Ihnen oder von jemand anderem gespeichert. Bitte wählen Sie eine Option, um den Entwurf zu bearbeiten.";
     --delete-draft-txt:"Streichen und Löschen von Manuskripten";
     --save-draft-txt:"Stornieren Sie und überweisen Sie den Scheck";
     --edit-draft-txt:"Edit Gekritzel";
@@ -679,9 +666,7 @@ ________________________________________________________________________________
 
     --image-wizard-title:"Bild-Assistent";
     --choose-img-txt:"Bitte wählen Sie eine der Dateien der Seite aus.";
-    --choose-img-txt-alt: "Keine Dateien angehängt.";
     --img-size-txt:"Bildgröße:";
-    --img-check-txt: "Keine gültige Eingabe für das flickr.com-Bild.";
     --file-information-title:"Dateiinformation";
     --info-title:"Info";
     --permarnent-link-title:"Permanenter Link";
@@ -718,7 +703,6 @@ ________________________________________________________________________________
     --note-txt:"Пожалуйста, обратите внимание:";
     --saving-page-txt:"Отправка обратной связи в Ганглий...";
     --saved-txt:"Успешно отправлено!";
-    --draft-options-txt: "На этой странице есть сохраненный черновик, либо вами, либо кем-то еще. Пожалуйста, выберите вариант для управления черновиком.";
     --delete-draft-txt:"Отменить и удалить черновик";
     --save-draft-txt:"Отменить и сохранить черновик";
     --edit-draft-txt:"Редактировать черновик";
@@ -740,9 +724,7 @@ ________________________________________________________________________________
 
     --image-wizard-title:"Мастер изображений";
     --choose-img-txt:"Пожалуйста, выберите один из файлов страницы.";
-    --choose-img-txt-alt: "Файлы не прикреплены.";
     --img-size-txt:"Размер изображения:";
-    --img-check-txt: "Недопустимый ввод для изображения flickr.com.";
     --file-information-title:"Информация о файле";
     --info-title:"Инфо";
     --permarnent-link-title:"Постоянная ссылка";
@@ -779,7 +761,6 @@ ________________________________________________________________________________
     --note-txt:"Si prega di notare:";
     --saving-page-txt:"Invio feedback a Ganglia...";
     --saved-txt:"Inviato con successo!";
-    --draft-options-txt: "C'è una bozza salvata per questa pagina, sia da te che da qualcun altro. Scegli un'opzione per gestire la bozza.";
     --delete-draft-txt:"Annulla e elimina bozza";
     --save-draft-txt:"Annulla e lascia bozza";
     --edit-draft-txt:"Modifica bozza";
@@ -801,9 +782,7 @@ ________________________________________________________________________________
 
     --image-wizard-title:"Assistente Immagine";
     --choose-img-txt:"Seleziona uno dei file della pagina.";
-    --choose-img-txt-alt: "Nessun file allegato.";
     --img-size-txt:"Dimensione immagine:";
-    --img-check-txt: "Non è un input valido per l'immagine flickr.com.";
     --file-information-title:"Informazioni sul File";
     --info-title:"Info";
     --permarnent-link-title:"Link Permanente";
@@ -840,7 +819,6 @@ ________________________________________________________________________________
     --note-txt:"Por favor, ten en cuenta:";
     --saving-page-txt:"Enviando retroalimentación a Ganglia...";
     --saved-txt:"¡Enviado exitosamente!";
-    --draft-options-txt: "Hay un borrador guardado para esta página, ya sea por usted o por otra persona. Por favor, elija una opción para gestionar el borrador.";
     --delete-draft-txt:"Cancelar y eliminar borrador";
     --save-draft-txt:"Cancelar y dejar borrador";
     --edit-draft-txt:"Editar borrador";
@@ -862,9 +840,7 @@ ________________________________________________________________________________
 
     --image-wizard-title:"Asistente de Imágenes";
     --choose-img-txt:"Por favor, selecciona uno de los archivos de la página.";
-    --choose-img-txt-alt: "No hay archivos adjuntos.";
     --img-size-txt:"Tamaño de la imagen:";
-    --img-check-txt: "No es una entrada válida para la imagen de flickr.com.";
     --file-information-title:"Información del Archivo";
     --info-title:"Info";
     --permarnent-link-title:"Enlace Permanente";
@@ -2738,10 +2714,6 @@ a.btn.btn-default.button.button-no\,-cancel:before {
 a.btn.btn-default.button.button-yes\,-delete:before {
     content: var(--yes-delete-txt)
 }
-a.btn.btn-primary[onclick*=forcePageEditLockRemove],a#edit-recheck-lock {
-    width: fit-content;
-    width: -webkit-fit-content;
-}
 input#selectLink {
     color: transparent !important;
 }
@@ -2980,7 +2952,7 @@ form#edit-page-form table.form:first-of-type td:last-of-type input {
     border: none;
     outline: 0 solid #000;
     background-color: rgb(var(--scale-8));
-    box-shadow: 0 0 0 2px rgb(var(--focus-border),1);
+    box-shadow: 0 0 0 3px transparent;
     font-weight: var(--wght);
     transition: box-shadow .2s var(--standard-curve),color .15s var(--standard-curve),background-color .15s var(--standard-curve),transform .2s var(--standard-curve),font-weight .2s var(--standard-curve),font-variation-settings .2s var(--standard-curve);
     will-change: box-shadow,color,background-color,transform,font-weight,font-variation-settings;
@@ -2996,7 +2968,15 @@ form#edit-page-form table.form:first-of-type tr:focus-within td:first-of-type {
     z-index: -1;
     padding: 2px;
 }
-form#edit-page-form table.form:first-of-type td:last-of-type input:focus-within,form#edit-page-form table.form:first-of-type td:last-of-type input:focus-visible {
+form#edit-page-form table.form:first-of-type td:last-of-type input:focus-within {
+    --wght: 500;
+    border: none;
+    outline: 0 solid rgb(var(--focus-border),1);
+    background-color: rgb(var(--scale-8));
+    box-shadow: 0 0 0 2px rgb(var(--focus-border),1);
+    font-weight: var(--wght);
+}
+form#edit-page-form table.form:first-of-type td:last-of-type input:focus-visible {
     --wght: 500;
     border: none;
     outline: 0 solid rgb(var(--focus-border),1);
@@ -3004,6 +2984,7 @@ form#edit-page-form table.form:first-of-type td:last-of-type input:focus-within,
     box-shadow: 0 0 0 3px rgb(var(--focus-border),1);
     font-weight: var(--wght);
 }
+
 form#edit-page-form #wd-editor-toolbar-panel+div {
     position: relative;
     grid-area: editbox;
@@ -3054,7 +3035,8 @@ form#edit-page-form .edit-page-bottomtable div.sub {
     z-index: 5;
     grid-area: descsub;
     height: 1rem;
-    margin: -1.5em 0 0 0;
+    margin: -1.5em 1rem 0 0;
+    padding: 0 1.25em 0 0;
     font-size: .8em;
     text-align: right;
 }
@@ -3097,20 +3079,20 @@ form#edit-page-form .edit-page-bottomtable tr>td:first-of-type>div:first-of-type
     height: 100%;
     min-height: 5rem;
     margin: -1.325em auto 0;
-    padding: .25rem;
+    padding: .75em 0;
     outline: 0 solid rgb(var(--focus-border),1);
-    box-shadow: 0 0 0 1.5px rgb(var(--focus-border),1);
+    box-shadow: 0 0 0 0 rgb(var(--focus-border),1);
     color: #333;
     font-weight: var(--wght);
     resize: none;
     transition: box-shadow .2s var(--standard-curve),background-color .15s var(--standard-curve);
     will-change: box-shadow, background-color;
 }
-form#edit-page-form .edit-page-bottomtable tr>td:first-of-type>div:first-of-type:focus-within textarea,form#edit-page-form .edit-page-bottomtable tr>td:first-of-type>div:first-of-type:focus-visible textarea {
+form#edit-page-form .edit-page-bottomtable tr>td:first-of-type>div:first-of-type:focus-within textarea {
     border: none;
     outline: 0 solid rgb(var(--focus-border),1);
     background-color: rgb(252, 252, 252, 1);
-    box-shadow: 0 0 0 2.5px rgb(var(--focus-border),1);
+    box-shadow: 0 0 0 .125rem rgb(var(--focus-border),1);
     color: #111;
 }
 form#edit-page-form:not(.data-form)>table, form#edit-page-form:not(.data-form)>table tbody, form#edit-page-form:not(.data-form)>table tr, form#edit-page-form:not(.data-form)>table:not(.form) td {
@@ -3125,8 +3107,7 @@ form#edit-page-form #lock-info {
     text-align: center;
     background-color: rgb(var(--scale-8));
     padding: 0.5em 1em;
-    box-shadow: 0 0 2.5px rgb(var(--scale-0));
-    font-family: var(--Serif-font);
+    font-family: 'Noto Serif SC';
     color:rgb(var(--scale-0));
     text-shadow: none;
     font-weight: 600;
@@ -3350,175 +3331,132 @@ form#edit-page-form .wd-editor-toolbar-panel {
     form#edit-page-form .wd-editor-toolbar-panel div:first-of-type>ul>li:nth-of-type(7) {
         grid-area: quote-block
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:first-of-type>ul>li:nth-of-type(8) {
         grid-area: super-txt
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:first-of-type>ul>li:nth-of-type(9) {
         grid-area: sub-txt
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:first-of-type>ul>li:nth-of-type(10) {
         grid-area: raw-txt
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:first-of-type {
         grid-area: hr-txt
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(2) {
         grid-area: div-block
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(3) {
         grid-area: clear-all-fl
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(4) {
         grid-area: create-table
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(5) {
         grid-area: create-toc
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(7) {
         grid-area: code-block
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(8) {
         grid-area: code-wizard
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(10) {
         grid-area: url-txt
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(11) {
         grid-area: url-wizard
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(12) {
         grid-area: page-link-txt
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(13) {
         grid-area: page-link-wizard
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(15) {
         grid-area: image-block
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(16) {
         grid-area: image-wizard
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(2)>ul>li:nth-of-type(18) {
         grid-area: html-block
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:first-of-type {
         grid-area: ordered-list
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:nth-of-type(2) {
         grid-area: unordered-list
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:nth-of-type(3) {
         grid-area: increment-list
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:nth-of-type(4) {
         grid-area: decrement-list
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:nth-of-type(5) {
         grid-area: definition-list
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:nth-of-type(6) {
         grid-area: create-footnote
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:nth-of-type(8) {
         grid-area: math-block
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:nth-of-type(9) {
         grid-area: math-inline
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:nth-of-type(10) {
         grid-area: equation-ref
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:nth-of-type(12) {
         grid-area: bibliography
     }
-
     form#edit-page-form .wd-editor-toolbar-panel div:nth-of-type(3)>ul>li:nth-of-type(13) {
         grid-area: bib-cite
     }
-
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-h1:before {
         --edit-menu-mask: var(--h1-mask)
     }
-
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-h2:before {
         --edit-menu-mask: var(--h2-mask)
     }
-
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-h3:before {
         --edit-menu-mask: var(--h3-mask)
     }
-
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-h4:before {
         --edit-menu-mask: var(--h4-mask)
     }
-
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-h5:before {
         --edit-menu-mask: var(--h5-mask)
     }
-
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-h6:before {
         --edit-menu-mask: var(--h6-mask)
     }
-
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-bold:before {
         --edit-menu-mask: var(--bold-mask)
     }
-
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-italic:before {
         --edit-menu-mask: var(--italic-mask)
     }
-
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-underline:before {
         --edit-menu-mask: var(--underline-mask)
     }
-
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-strikethrough:before {
         --edit-menu-mask: var(--strikethrough-mask)
     }
-
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-teletype:before {
         --edit-menu-mask: var(--teletype-mask)
     }
-
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-quote:before {
         --edit-menu-mask: var(--quote-mask)
     }
-
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-superscript:before {
         --edit-menu-mask: var(--superscript-mask)
     }
-
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-subscript:before {
         --edit-menu-mask: var(--subscript-mask)
     }
-
     form#edit-page-form .wd-editor-toolbar-panel a.weditor-raw:before {
         --edit-menu-mask: var(--rawtext-mask)
     }
@@ -3650,6 +3588,11 @@ div#wd-ed-imagewizard-byfile-list > p:before {
     font-size: .85rem;
     line-height: 2rem;
 }
+div#wd-ed-imagewizard-byfile-list > p:only-child:before {
+    content: var(--choose-img-txt-alt);
+    font-size: .85rem;
+    line-height: 2rem;
+}
 @media only screen and (min-width: 767px) {
 td:has(span.image-wizard-source-attached) {
     display: flex;
@@ -3689,22 +3632,11 @@ img#wd-ed-imagewizard-byfile-preview {
     content:var(--img-size-txt);
     font-size: .85rem
 }
-div#wd-ed-imagewizard-checkresult ~ table.form input,input#wd-ed-imagewizard-flickr {
-    max-width: max(25vw,10rem);
-}
-div#wd-ed-imagewizard-checkresult p[style*=red] {
-    font-size: 0;
-}
-div#wd-ed-imagewizard-checkresult p[style*=red]:before {
-    content: var(--img-check-txt);
-    font-size: 0.8rem;
-    line-height: 130%;
-    display: flex;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-}
 div#rename-option-delete p {
     font-size:0;
+}
+div#wd-ed-imagewizard-checkresult ~ table.form input {
+    max-width: max(25vw,10rem);
 }
 div#rename-option-delete:before {
     content:var(--delete-confirm-txt);
@@ -3787,7 +3719,7 @@ div#owindow-1[style*="width: 60em;"]:not([class*="info"]) .content.modal-body td
     margin: 10px;
     background-repeat: no-repeat;
     background-position: bottom center;
-    background-image: none !important;
+    background-image: none !important; 
 }
 #owindow-1 > div {
     padding: 1rem 2rem !important;
@@ -3818,23 +3750,6 @@ div#odialog-container > .owindow.osuccess > .content.modal-body::before {
     font-family: var(--Serif-font);
     display: inline-flex;
     justify-content: center;
-}
-div#owindow-1.owindow > div.content.modal-body:has(p:only-child):not(:has(table,form)) > p {
-    font-size:0
-}
-div#owindow-1.owindow > div.content.modal-body:has(p:only-child):not(:has(table,form)) > p:before {
-    content: var(--draft-options-txt);
-    display: block;
-    font-size: 0.8rem;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    line-height: 130%;
-}
-.button-bar.modal-fotoer {
-    font-size: 0;
-}
-.button-bar.modal-fotoer a {
-    font-size: 0.8rem;
 }
 .owindow.owait .content::after {
    content: " ";
@@ -4156,11 +4071,11 @@ to {opacity:1}
 #new-thread-form > table.form {
     grid-area: title;
 }
-form#new-thread-form div.sub div.sub {
+table.form td div.sub, form div.sub {
     font-size: 80%;
-    color: #444;
+    color: #777;
     margin-left: 0.5rem;
-    margin-top: 0rem;
+    margin-top: -1.5rem;
     text-align: left;
 }
 #new-thread-form > div:nth-child(4) {
@@ -4200,112 +4115,7 @@ form#new-thread-form div.sub div.sub {
     grid-area: buttons-center;
     text-align: center;
 }
-.thread-container .post .long .changes {
-    color: rgb(var(--plain-secondary-color));
-}
-.thread-container .post .long .changes > span.odate:after {
-    content: " ;";
-}
-.thread-container .post .long .revisions:not([style*="none"]) {
-    display: grid !important;
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 1fr;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1em 0 1fr;
-    gap: 2px 1px;
-    grid-template-areas:
-        "history-toggle"
-        "history-title"
-        "post-history";
-    max-width: min(100vw,30rem);
-    margin: 0 0 0 auto;
-}
-.thread-container .post .long .changes a,.thread-container .post .long .revisions a {
-    color: rgb(var(--lowlight-secondary-color));
-    border-bottom: none;
-}
-.thread-container .post .long .changes a:hover,.thread-container .post .long .revisions a:hover {
-    color: rgb(var(--lowlight-primary-color));
-}
-a[onclick*="showHistory"] {
-    position: relative;
-    padding: 2px;
-}
-a[onclick*="hideHistory"] {
-    position: relative;
-    display: inline-flex;
-    grid-area: history-toggle;
-    height: fit-content;
-    width: fit-content;
-    padding: 2px;
-    transform: translate(3px,-7px);
-    margin: 0 0 0 auto;
-}
-:is(a[onclick*="hideHistory"],a[onclick*="showHistory"]):after {
-    z-index: -1;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    content: "";
-    width: 101%;
-    height: 100%;
-    background: rgb(var(--plain-secondary-color));
-    box-shadow: 0 0 1px 1px rgb(var(--plain-third-color));
-    transform: scaleX(0);
-    transform-origin: right top;
-    transition: transform .3s;
-}
-:is(a[onclick*="hideHistory"],a[onclick*="showHistory"]):hover {
-    color: rgb(var(--scale-7-sub)) !important
-}
-:is(a[onclick*="hideHistory"],a[onclick*="showHistory"]):hover:after {
-    transform-origin: left top;
-    transform: scale(1);
-}
-.thread-container .post .long .revisions .title {
-    z-index:1;
-    grid-area: post-history/history-toggle;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    background: rgb(var(--dark-primary-color));
-    color: rgb(var(--scale-8));
-    box-shadow: 2px 0 0 2px rgb(var(--dark-primary-color)), -2px 0 0 2px rgb(var(--dark-primary-color)),0 0 3px 2px rgb(var(--dark-primary-color));
-}
-.thread-container .post .long .revisions table {
-    z-index: 2;
-    border-spacing: 0 2px;
-    grid-area: post-history;
-    width: 100%;
-    margin-top: calc(1rem + 6px);
-}
-.thread-container .post .long .revisions td {
-    position:relative;
-    background-color: #fff;
-    box-shadow: 0px 0 3px 0px white;
-    padding: 1px 2px;
-    transition: background-color .2s var(--moderato-curve);
-}
-.thread-container .post .long .revisions td:after {
-    position: absolute;
-    bottom: -1px;
-    left: -1px;
-    content: "";
-    width: 101%;
-    height: 2px;
-    background: rgb(var(--plain-third-color));
-    transform: scaleX(0);
-    transform-origin: right top;
-    transition: transform .3s;
-}
-.thread-container .post .long .revisions td:hover:after {
-    transform-origin: left top;
-    transform: scale(1);
-}
-.thread-container .post .long .revisions table tr.active td {
-    background-color: rgb(var(--bright-secondary-color));
-    border: 1px solid rgb(var(--bright-secondary-color));
-}
+
 /* OWINDOW */
 #new-thread-form > table > tbody > tr:nth-child(1) > td:nth-child(1), #new-thread-form > table > tbody > tr:nth-child(2) > td:nth-child(1) {
     width: 6em;
@@ -6925,18 +6735,12 @@ select {
     -webkit-transition: all .2s var(--standard-curve);
     transition: all .2s var(--standard-curve)
 }
-select:is(:focus-within,:focus-visible),input:is(:focus-within,:focus-visible) {
+select:is(:focus-within,:focus-visible) {
+    border: none;
     background-color: rgb(var(--scale-8));
     box-shadow: 0 0 0 2px rgb(var(--focus-border),1);
     -webkit-transition: all .2s var(--standard-curve);
     transition: all .2s var(--standard-curve)
-}
-input.text {
-    border: 1px solid rgb(var(--scale-2));
-    margin: 0;
-    padding: 2px;
-    background-color: rgb(var(--scale-8));
-    color: rgb(var(--plain-primary-color));
 }
 .changes-list-item table {
     width: -webkit-fill-available;

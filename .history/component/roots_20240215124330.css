@@ -373,9 +373,9 @@ ________________________________________________________________________________
 
     --editor-icon-bg:var(--scale-8);
     --editor-icon-submenu-bg:var(--editor-icon-bg);
-    --editor-icon-color: var(--dark-primary-color);
-    --editor-icon-hover-color: var(--bright-third-color);
-    --editor-icon-hover-bg: var(--dark-primary-color);
+    --editor-icon-color:var(--scale-0);
+    --editor-icon-hover-color:var(--scale-8);
+    --editor-icon-hover-bg:var(--scale-0);
 
 
     --mo-content-bg:var(--scale-8), 0;

@@ -4156,11 +4156,11 @@ to {opacity:1}
 #new-thread-form > table.form {
     grid-area: title;
 }
-form#new-thread-form div.sub div.sub {
+table.form td div.sub, form div.sub {
     font-size: 80%;
-    color: #444;
+    color: #777;
     margin-left: 0.5rem;
-    margin-top: 0rem;
+    margin-top: -1.5rem;
     text-align: left;
 }
 #new-thread-form > div:nth-child(4) {

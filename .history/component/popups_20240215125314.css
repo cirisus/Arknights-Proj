@@ -290,10 +290,6 @@ a.btn.btn-default.button.button-no\,-cancel:before {
 a.btn.btn-default.button.button-yes\,-delete:before {
     content: var(--yes-delete-txt)
 }
-a.btn.btn-primary[onclick*=forcePageEditLockRemove],a#edit-recheck-lock {
-    width: fit-content;
-    width: -webkit-fit-content;
-}
 input#selectLink {
     color: transparent !important;
 }
@@ -532,7 +528,7 @@ form#edit-page-form table.form:first-of-type td:last-of-type input {
     border: none;
     outline: 0 solid #000;
     background-color: rgb(var(--scale-8));
-    box-shadow: 0 0 0 2px rgb(var(--focus-border),1);
+    box-shadow: 0 0 0 3px transparent;
     font-weight: var(--wght);
     transition: box-shadow .2s var(--standard-curve),color .15s var(--standard-curve),background-color .15s var(--standard-curve),transform .2s var(--standard-curve),font-weight .2s var(--standard-curve),font-variation-settings .2s var(--standard-curve);
     will-change: box-shadow,color,background-color,transform,font-weight,font-variation-settings;
@@ -548,7 +544,15 @@ form#edit-page-form table.form:first-of-type tr:focus-within td:first-of-type {
     z-index: -1;
     padding: 2px;
 }
-form#edit-page-form table.form:first-of-type td:last-of-type input:focus-within,form#edit-page-form table.form:first-of-type td:last-of-type input:focus-visible {
+form#edit-page-form table.form:first-of-type td:last-of-type input:focus-within {
+    --wght: 500;
+    border: none;
+    outline: 0 solid rgb(var(--focus-border),1);
+    background-color: rgb(var(--scale-8));
+    box-shadow: 0 0 0 2px rgb(var(--focus-border),1);
+    font-weight: var(--wght);
+}
+form#edit-page-form table.form:first-of-type td:last-of-type input:focus-visible {
     --wght: 500;
     border: none;
     outline: 0 solid rgb(var(--focus-border),1);
@@ -556,6 +560,7 @@ form#edit-page-form table.form:first-of-type td:last-of-type input:focus-within,
     box-shadow: 0 0 0 3px rgb(var(--focus-border),1);
     font-weight: var(--wght);
 }
+
 form#edit-page-form #wd-editor-toolbar-panel+div {
     position: relative;
     grid-area: editbox;
@@ -606,7 +611,8 @@ form#edit-page-form .edit-page-bottomtable div.sub {
     z-index: 5;
     grid-area: descsub;
     height: 1rem;
-    margin: -1.5em 0 0 0;
+    margin: -1.5em 1rem 0 0;
+    padding: 0 1.25em 0 0;
     font-size: .8em;
     text-align: right;
 }
@@ -649,20 +655,20 @@ form#edit-page-form .edit-page-bottomtable tr>td:first-of-type>div:first-of-type
     height: 100%;
     min-height: 5rem;
     margin: -1.325em auto 0;
-    padding: .25rem;
+    padding: .75em 0;
     outline: 0 solid rgb(var(--focus-border),1);
-    box-shadow: 0 0 0 1.5px rgb(var(--focus-border),1);
+    box-shadow: 0 0 0 0 rgb(var(--focus-border),1);
     color: #333;
     font-weight: var(--wght);
     resize: none;
     transition: box-shadow .2s var(--standard-curve),background-color .15s var(--standard-curve);
     will-change: box-shadow, background-color;
 }
-form#edit-page-form .edit-page-bottomtable tr>td:first-of-type>div:first-of-type:focus-within textarea,form#edit-page-form .edit-page-bottomtable tr>td:first-of-type>div:first-of-type:focus-visible textarea {
+form#edit-page-form .edit-page-bottomtable tr>td:first-of-type>div:first-of-type:focus-within textarea {
     border: none;
     outline: 0 solid rgb(var(--focus-border),1);
     background-color: rgb(252, 252, 252, 1);
-    box-shadow: 0 0 0 2.5px rgb(var(--focus-border),1);
+    box-shadow: 0 0 0 .125rem rgb(var(--focus-border),1);
     color: #111;
 }
 form#edit-page-form:not(.data-form)>table, form#edit-page-form:not(.data-form)>table tbody, form#edit-page-form:not(.data-form)>table tr, form#edit-page-form:not(.data-form)>table:not(.form) td {
@@ -677,8 +683,7 @@ form#edit-page-form #lock-info {
     text-align: center;
     background-color: rgb(var(--scale-8));
     padding: 0.5em 1em;
-    box-shadow: 0 0 2.5px rgb(var(--scale-0));
-    font-family: var(--Serif-font);
+    font-family: 'Noto Serif SC';
     color:rgb(var(--scale-0));
     text-shadow: none;
     font-weight: 600;

@@ -113,7 +113,6 @@ ________________________________________________________________________________
 
     --image-wizard-title:"图片插入向导";
     --choose-img-txt:"从本页以下附件中选取一张图片。";
-    --choose-img-txt-alt: "本页没有附件。";
     --img-size-txt:"图片尺寸：";
     --img-check-txt:"输入链接不是有效的Flickr.com图片。";
     --file-information-title:"文件信息";
@@ -373,9 +372,9 @@ ________________________________________________________________________________
 
     --editor-icon-bg:var(--scale-8);
     --editor-icon-submenu-bg:var(--editor-icon-bg);
-    --editor-icon-color: var(--dark-primary-color);
-    --editor-icon-hover-color: var(--bright-third-color);
-    --editor-icon-hover-bg: var(--dark-primary-color);
+    --editor-icon-color:var(--scale-0);
+    --editor-icon-hover-color:var(--scale-8);
+    --editor-icon-hover-bg:var(--scale-0);
 
 
     --mo-content-bg:var(--scale-8), 0;
@@ -474,7 +473,7 @@ ________________________________________________________________________________
     --note-txt:"Please note:";
     --saving-page-txt:"Submitting to Ganglia...";
     --saved-txt:"Submitted!";
-    --draft-options-txt: "There is a draft saved for this page, either by you or by someone else. Please choose an option to manage the draft.";
+    --draft-options-txt: "There is a draft saved for this page. Please choose an option to handle the draft.";
     --delete-draft-txt:"Cancel and delete draft";
     --save-draft-txt:"Cancel and leave draft";
     --edit-draft-txt:"Edit Draft";
@@ -496,7 +495,6 @@ ________________________________________________________________________________
 
     --image-wizard-title:"Image Wizard";
     --choose-img-txt:"Please slect one of the files of the page.";
-    --choose-img-txt-alt: "No files attached.";
     --img-size-txt:"Image size:";
     --img-check-txt:"Not a valid input for the flickr.com image.";
     --file-information-title:"File information";
@@ -535,7 +533,6 @@ ________________________________________________________________________________
     --note-txt:"Veuillez noter:";
     --saving-page-txt:"Soumission à Ganglia...";
     --saved-txt:"Soumis!";
-    --draft-options-txt: "Il y a un brouillon enregistré pour cette page, soit par vous-même, soit par quelqu'un d'autre. Veuillez choisir une option pour gérer le brouillon.";
     --delete-draft-txt:"Annuler et supprimer le brouillon";
     --save-draft-txt:"Annuler et laisser draft";
     --edit-draft-txt:"Modifier le brouillon";
@@ -557,9 +554,7 @@ ________________________________________________________________________________
 
     --image-wizard-title:"Assistant d'Image";
     --choose-img-txt:"Veuillez sélectionner l'un des fichiers de la page.";
-    --choose-img-txt-alt: "Aucun fichier joint.";
     --img-size-txt:"Taille de l'image :";
-    --img-check-txt: "Pas une entrée valide pour l'image flickr.com.";
     --file-information-title:"Informations sur le fichier";
     --info-title:"Info";
     --permarnent-link-title:"Lien Permanent";
@@ -596,7 +591,6 @@ ________________________________________________________________________________
     --note-txt:"ご注意ください：";
     --saving-page-txt:"神経中枢にフィードバックします……";
     --saved-txt:"提出成功です！";
-    --draft-options-txt: "このページには下書きが保存されています。下書きはあなた自身か他の誰かによって保存されています。 下書きを処理するオプションを選択してください。";
     --delete-draft-txt:"草稿の編集を止めて削除します";
     --save-draft-txt:"編集を止めて草稿を残します";
     --edit-draft-txt:"前回の草稿を編集します";
@@ -618,9 +612,7 @@ ________________________________________________________________________________
 
     --image-wizard-title:"画像ウィザード";
     --choose-img-txt:"ページのファイルから1つ選択してください。";
-    --choose-img-txt-alt: "ファイルが添付されていません。";
     --img-size-txt:"画像サイズ：";
-    --img-check-txt: "Flickr.comの画像の有効な入力ではありません。";
     --file-information-title:"ファイル情報";
     --info-title:"情報";
     --permarnent-link-title:"永続リンク";
@@ -657,7 +649,6 @@ ________________________________________________________________________________
     --note-txt:"Wir bitten um eines:";
     --saving-page-txt:"Unterwirf dich dem Wahrsager...";
     --saved-txt:"Wir übergeben sie!";
-    --draft-options-txt: "Es gibt einen Entwurf für diese Seite, entweder von Ihnen oder von jemand anderem gespeichert. Bitte wählen Sie eine Option, um den Entwurf zu bearbeiten.";
     --delete-draft-txt:"Streichen und Löschen von Manuskripten";
     --save-draft-txt:"Stornieren Sie und überweisen Sie den Scheck";
     --edit-draft-txt:"Edit Gekritzel";
@@ -679,9 +670,7 @@ ________________________________________________________________________________
 
     --image-wizard-title:"Bild-Assistent";
     --choose-img-txt:"Bitte wählen Sie eine der Dateien der Seite aus.";
-    --choose-img-txt-alt: "Keine Dateien angehängt.";
     --img-size-txt:"Bildgröße:";
-    --img-check-txt: "Keine gültige Eingabe für das flickr.com-Bild.";
     --file-information-title:"Dateiinformation";
     --info-title:"Info";
     --permarnent-link-title:"Permanenter Link";
@@ -718,7 +707,6 @@ ________________________________________________________________________________
     --note-txt:"Пожалуйста, обратите внимание:";
     --saving-page-txt:"Отправка обратной связи в Ганглий...";
     --saved-txt:"Успешно отправлено!";
-    --draft-options-txt: "На этой странице есть сохраненный черновик, либо вами, либо кем-то еще. Пожалуйста, выберите вариант для управления черновиком.";
     --delete-draft-txt:"Отменить и удалить черновик";
     --save-draft-txt:"Отменить и сохранить черновик";
     --edit-draft-txt:"Редактировать черновик";
@@ -740,9 +728,7 @@ ________________________________________________________________________________
 
     --image-wizard-title:"Мастер изображений";
     --choose-img-txt:"Пожалуйста, выберите один из файлов страницы.";
-    --choose-img-txt-alt: "Файлы не прикреплены.";
     --img-size-txt:"Размер изображения:";
-    --img-check-txt: "Недопустимый ввод для изображения flickr.com.";
     --file-information-title:"Информация о файле";
     --info-title:"Инфо";
     --permarnent-link-title:"Постоянная ссылка";
@@ -779,7 +765,6 @@ ________________________________________________________________________________
     --note-txt:"Si prega di notare:";
     --saving-page-txt:"Invio feedback a Ganglia...";
     --saved-txt:"Inviato con successo!";
-    --draft-options-txt: "C'è una bozza salvata per questa pagina, sia da te che da qualcun altro. Scegli un'opzione per gestire la bozza.";
     --delete-draft-txt:"Annulla e elimina bozza";
     --save-draft-txt:"Annulla e lascia bozza";
     --edit-draft-txt:"Modifica bozza";
@@ -801,9 +786,7 @@ ________________________________________________________________________________
 
     --image-wizard-title:"Assistente Immagine";
     --choose-img-txt:"Seleziona uno dei file della pagina.";
-    --choose-img-txt-alt: "Nessun file allegato.";
     --img-size-txt:"Dimensione immagine:";
-    --img-check-txt: "Non è un input valido per l'immagine flickr.com.";
     --file-information-title:"Informazioni sul File";
     --info-title:"Info";
     --permarnent-link-title:"Link Permanente";
@@ -840,7 +823,6 @@ ________________________________________________________________________________
     --note-txt:"Por favor, ten en cuenta:";
     --saving-page-txt:"Enviando retroalimentación a Ganglia...";
     --saved-txt:"¡Enviado exitosamente!";
-    --draft-options-txt: "Hay un borrador guardado para esta página, ya sea por usted o por otra persona. Por favor, elija una opción para gestionar el borrador.";
     --delete-draft-txt:"Cancelar y eliminar borrador";
     --save-draft-txt:"Cancelar y dejar borrador";
     --edit-draft-txt:"Editar borrador";
@@ -862,9 +844,7 @@ ________________________________________________________________________________
 
     --image-wizard-title:"Asistente de Imágenes";
     --choose-img-txt:"Por favor, selecciona uno de los archivos de la página.";
-    --choose-img-txt-alt: "No hay archivos adjuntos.";
     --img-size-txt:"Tamaño de la imagen:";
-    --img-check-txt: "No es una entrada válida para la imagen de flickr.com.";
     --file-information-title:"Información del Archivo";
     --info-title:"Info";
     --permarnent-link-title:"Enlace Permanente";
