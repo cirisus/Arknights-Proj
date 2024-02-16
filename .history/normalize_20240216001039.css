@@ -91,8 +91,6 @@ ________________________________________________________________________________
     --note-txt:"注意：";
     --saving-page-txt:"提交反馈至神经中枢……";
     --saved-txt:"提交成功！";
-    --more-options-txt:"+ 更多选项";
-    --less-options-txt:"- 收起选项";
     --draft-options-txt:"当前页面存在您（或者他人）保存的草稿，请选择一个选项以处理草稿。";
     --delete-draft-txt:"停止编辑并删除草稿";
     --save-draft-txt:"停止编辑并保留草稿";
@@ -122,8 +120,6 @@ ________________________________________________________________________________
     --info-title:"信息";
     --permarnent-link-title:"永久链接地址";
     --permarnent-link-txt:"该帖文的永久链接地址如下：";
-    --multiple-editor-txt:"你已经打开了一个编辑窗口，无法同时进行多窗口编辑。";
-    --scroll-txt:"（滚动到当前编辑窗口）";
 
     --warning-title:"警告！";
     --forum-para-1:"此页面对于论坛功能的正常运行极其重要。";
@@ -507,8 +503,6 @@ ________________________________________________________________________________
     --info-title:"Info";
     --permarnent-link-title:"Permanent Link";
     --permarnent-link-txt:"Following is the permanent link of the post";
-    --multiple-editor-txt:"You have an active editor somewhere already and it is not possible to edit multiple elements at once.";
-    --scroll-txt:"Scroll to active editor";
 
     --warning-title:"Warning!";
     --forum-para-1:"This page might be important for proper functioning of the discussion forum.";
@@ -2748,19 +2742,6 @@ a.btn.btn-primary[onclick*=forcePageEditLockRemove],a#edit-recheck-lock {
     width: fit-content;
     width: -webkit-fit-content;
 }
-:is(.forum-thread-box:has(div#thread-options-2:not([style*="display: none"])),.forum-thread-box:has(div#thread-options-2:not([style*="display: block"]))) .options a#thread-toggle-options {
-    font-size: 0;
-}
-:is(.forum-thread-box:has(div#thread-options-2:not([style*="display: none"])),.forum-thread-box:has(div#thread-options-2:not([style*="display: block"]))) .options a#thread-toggle-options:before {
-    font-size: 0.9rem;
-    padding: 2px 6px;
-}
-.forum-thread-box:has(div#thread-options-2:not([style*="display: none"])) .options a#thread-toggle-options:before {
-    content: var(--less-options-txt);
-}
-.forum-thread-box:has(div#thread-options-2:not([style*="display: block"])) .options a#thread-toggle-options:before {
-    content: var(--more-options-txt);
-}
 input#selectLink {
     color: transparent !important;
 }
@@ -3761,36 +3742,6 @@ div#owindow-1.owindow.error > .content.modal-body h1 {
 div#owindow-1.owindow.error > .content.modal-body h1:before {
     content: var(--note-txt);
     font-size: 2rem;
-}
-div#owindow-1.owindow.error > .content.modal-body:has(a[onclick*="scrollTo('np-text')"]) {
-    font-size:0;
-}
-div#owindow-1.owindow.error > .content.modal-body:has(a[onclick*="scrollTo('np-text')"]):before {
-    content: var(--multiple-editor-txt);
-    font-size: .8rem;
-}
-a[onclick*="scrollTo('np-text')"] {
-    font-size: 0.8rem;
-    color: transparent;
-    width: fit-content;
-    position: relative;
-}
-a[onclick*="scrollTo('np-text')"]:before {
-    z-index:-1;
-    position: absolute;
-    display:block;
-    content: var(--scroll-txt);
-    color: rgb(var(--link-color));
-    transition: all .4s var(--standard-curve);
-    border-bottom: 1px solid transparent;
-    -moz-transition: all .4s var(--standard-curve);
-    -webkit-transition: all .4s var(--standard-curve);
-    -o-transition: all .4s var(--standard-curve);
-}
-a[onclick*="scrollTo('np-text')"]:hover:before {
-    color: rgb(var(--link-hover-color));
-    text-decoration: none;
-    border-bottom: 1px solid currentColor;
 }
 div#owindow-1[style*="width: 70%;"] > .title:before {
     content: var(--image-wizard-title);

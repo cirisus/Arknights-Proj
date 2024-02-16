@@ -2748,19 +2748,6 @@ a.btn.btn-primary[onclick*=forcePageEditLockRemove],a#edit-recheck-lock {
     width: fit-content;
     width: -webkit-fit-content;
 }
-:is(.forum-thread-box:has(div#thread-options-2:not([style*="display: none"])),.forum-thread-box:has(div#thread-options-2:not([style*="display: block"]))) .options a#thread-toggle-options {
-    font-size: 0;
-}
-:is(.forum-thread-box:has(div#thread-options-2:not([style*="display: none"])),.forum-thread-box:has(div#thread-options-2:not([style*="display: block"]))) .options a#thread-toggle-options:before {
-    font-size: 0.9rem;
-    padding: 2px 6px;
-}
-.forum-thread-box:has(div#thread-options-2:not([style*="display: none"])) .options a#thread-toggle-options:before {
-    content: var(--less-options-txt);
-}
-.forum-thread-box:has(div#thread-options-2:not([style*="display: block"])) .options a#thread-toggle-options:before {
-    content: var(--more-options-txt);
-}
 input#selectLink {
     color: transparent !important;
 }
@@ -3761,36 +3748,6 @@ div#owindow-1.owindow.error > .content.modal-body h1 {
 div#owindow-1.owindow.error > .content.modal-body h1:before {
     content: var(--note-txt);
     font-size: 2rem;
-}
-div#owindow-1.owindow.error > .content.modal-body:has(a[onclick*="scrollTo('np-text')"]) {
-    font-size:0;
-}
-div#owindow-1.owindow.error > .content.modal-body:has(a[onclick*="scrollTo('np-text')"]):before {
-    content: var(--multiple-editor-txt);
-    font-size: .8rem;
-}
-a[onclick*="scrollTo('np-text')"] {
-    font-size: 0.8rem;
-    color: transparent;
-    width: fit-content;
-    position: relative;
-}
-a[onclick*="scrollTo('np-text')"]:before {
-    z-index:-1;
-    position: absolute;
-    display:block;
-    content: var(--scroll-txt);
-    color: rgb(var(--link-color));
-    transition: all .4s var(--standard-curve);
-    border-bottom: 1px solid transparent;
-    -moz-transition: all .4s var(--standard-curve);
-    -webkit-transition: all .4s var(--standard-curve);
-    -o-transition: all .4s var(--standard-curve);
-}
-a[onclick*="scrollTo('np-text')"]:hover:before {
-    color: rgb(var(--link-hover-color));
-    text-decoration: none;
-    border-bottom: 1px solid currentColor;
 }
 div#owindow-1[style*="width: 70%;"] > .title:before {
     content: var(--image-wizard-title);
