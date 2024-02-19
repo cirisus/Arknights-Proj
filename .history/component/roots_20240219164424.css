@@ -680,12 +680,6 @@ ________________________________________________________________________________
     --delete-file-confirm-txt:"このファイルを削除してもよろしいですか？復元はできません";
     --overwrite-txt:"上書き";
     --select-txt:"選択";
-    --revert-confirm-title: "ページバージョンのリバートを確認しますか？";
-    --revert-txt-1: "現在のページをバージョンに戻すことを確認しますか";
-    --revert-no: "№";
-    --revert-question: "？";
-    --revert-txt-2: "ページバージョンのリバートは、ページのソースコードおよび/またはタイトルのみを変更し、添付ファイル、ページアドレス、またはその他のメタデータはリバートされません。";
-    --revert-txt-3: "リバートを確認すると、対応するバージョンと同じタイトルとソースコードを持つ新しいページバージョンを公開します。";
 
     --code-wizard-title:"コードブロックウィザード";
     --table-wizard-title:"テーブルウィザード";
@@ -759,12 +753,6 @@ ________________________________________________________________________________
     --delete-file-confirm-txt:"Möchten Sie diese Datei wirklich löschen? Eine Wiederherstellung ist nicht möglich";
     --overwrite-txt:"Überschreiben";
     --select-txt:"Auswählen";
-    --revert-confirm-title: "Bestätigen Sie das Zurücksetzen der Seitenversion?";
-    --revert-txt-1: "Sind Sie sicher, dass Sie die aktuelle Seite auf die Version zurücksetzen möchten";
-    --revert-no: "№";
-    --revert-question: "?";
-    --revert-txt-2: "Das Zurücksetzen der Seitenversion ändert nur den Quellcode und/oder den Titel der Seite, während Anhänge, Seitenadressen oder andere Metadaten nicht zurückgesetzt werden.";
-    --revert-txt-3: "Wenn Sie das Zurücksetzen bestätigen, veröffentlichen Sie eine neue Seitenversion mit dem gleichen Titel und Quellcode wie die entsprechende Version.";
 
     --code-wizard-title:"Code-Block-Assistent";
     --table-wizard-title:"Tabellen-Assistent";
@@ -838,12 +826,6 @@ ________________________________________________________________________________
     --delete-file-confirm-txt:"Вы уверены, что хотите удалить этот файл? Восстановление невозможно";
     --overwrite-txt:"Перезаписать";
     --select-txt:"Выбрать";
-    --revert-confirm-title: "Подтвердить возврат версии страницы?";
-    --revert-txt-1: "Вы уверены, что хотите вернуть текущую страницу к версии";
-    --revert-no: "№";
-    --revert-question: "?";
-    --revert-txt-2: "Возврат версии страницы изменит только исходный код и/или заголовок страницы, в то время как вложения, адреса страниц или другие метаданные не будут возвращены.";
-    --revert-txt-3: "Если вы подтвердите возврат, вы опубликуете новую версию страницы с тем же заголовком и исходным кодом, что и соответствующая версия.";
 
     --code-wizard-title:"Мастер блока кода";
     --table-wizard-title:"Мастер таблицы";
@@ -917,12 +899,6 @@ ________________________________________________________________________________
     --yes-delete-txt:"Sì, Elimina";
     --overwrite-txt:"Sovrascrivi";
     --select-txt:"Seleziona";
-    --revert-confirm-title: "Confermare il ripristino della versione della pagina?";
-    --revert-txt-1: "Sei sicuro di voler ripristinare la pagina corrente alla versione";
-    --revert-no: "№";
-    --revert-question: "?";
-    --revert-txt-2: "Il ripristino della versione della pagina cambierà solo il codice sorgente e/o il titolo della pagina, mentre gli allegati, gli indirizzi delle pagine o altri metadati non verranno ripristinati.";
-    --revert-txt-3: "Se confermi il ripristino, pubblicherai una nuova versione della pagina con lo stesso titolo e codice sorgente della versione corrispondente.";
 
     --code-wizard-title:"Assistente del blocco di codice";
     --table-wizard-title:"Assistente della tabella";
@@ -996,12 +972,6 @@ ________________________________________________________________________________
     --delete-file-confirm-txt:"¿Está seguro de que desea eliminar este archivo? No se puede recuperar";
     --overwrite-txt:"Sobrescribir";
     --select-txt:"Seleccionar";
-    --revert-confirm-title: "¿Confirmar la reversión de la versión de la página?";
-    --revert-txt-1: "¿Estás seguro de que quieres revertir la página actual a la versión";
-    --revert-no: "№";
-    --revert-question: "?";
-    --revert-txt-2: "Revertir la versión de la página solo cambiará el código fuente y/o el título de la página, mientras que los adjuntos, las direcciones de las páginas u otros metadatos no se revertirán.";
-    --revert-txt-3: "Si confirmas la reversión, publicarás una nueva versión de la página con el mismo título y código fuente que la versión correspondiente.";
 
     --code-wizard-title:"Asistente de bloque de código";
     --table-wizard-title:"Asistente de tabla";

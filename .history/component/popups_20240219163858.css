@@ -1455,7 +1455,7 @@ div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-rev
     content:var(--revert-txt-2)
 }
 div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(4):before {
-    content:var(--revert-txt-3)
+    content:var(--rever)
 }
 .owindow.owait .content {
     display: flex;

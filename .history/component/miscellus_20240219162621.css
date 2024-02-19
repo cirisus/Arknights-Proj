@@ -537,19 +537,6 @@ input[type=radio]:checked:before {
     justify-self: flex-start;
     text-transform: uppercase
 }
-.pager span.pager-no + .target a[onclick*="updatePagedList"], .pager .target:last-of-type a[onclick*="updatePagedList"] {
-    font-size:0;
-}
-.pager span.pager-no + .target a[onclick*="updatePagedList"]:before {
-    content: "\25C0 \25C0";
-    font-size: 0.7rem;
-    letter-spacing: -.4rem;
-}
-.pager .target:last-of-type a[onclick*="updatePagedList"]:before {
-    content: "\25B6 \25B6";
-    font-size: 0.7rem;
-    letter-spacing: -.4rem;
-}
 .pager .current {
     --wght: var(--ui-hvr-wght);
     color: rgb(var(--pager-selected-link));

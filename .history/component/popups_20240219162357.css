@@ -274,7 +274,7 @@ a.btn.btn-default.button.button-insert-code:before {
 a.btn.btn-default.button.button-close-message:before,a.btn.btn-default.button.button-close:before {
     content: var(--close-message-txt)
 }
-a.action-area-close:before,a.action-area-close.btn.btn-danger:before {
+a.action-area-close.btn.btn-danger:before {
     content: var(--close-txt)
 }
 a.btn.btn-default.button.button-rename:before {
@@ -1424,38 +1424,6 @@ div#owindow-1[style*="width: 60em;"]:not([class*="info"]) .content.modal-body td
 }
 div#owindow-1[style*="width: 60em;"]:not([class*="info"]) .content.modal-body td:nth-child(even) {
     backdrop-filter: blur(2px)
-}
-div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body :is(h1,p) {
-    font-size: 0
-}
-div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body h1:before {
-    content: var(--revert-confirm-title);
-    font-size: 1.5rem;
-}
-div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:before {
-    display: inline-flex;
-    margin-block-start: 1rem;
-    font-size: 0.8rem;
-    line-height: 1.3;
-}
-div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(2):before {
-    content:var(--revert-txt-1)
-}
-div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(2) strong {
-    font-size: 0.8rem;
-}
-div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(2) strong:before {
-    content:var(--revert-no)
-}
-div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(2):after {
-    font-size: 0.8rem;
-    content:var(--revert-question)
-}
-div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(3):before {
-    content:var(--revert-txt-2)
-}
-div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(4):before {
-    content:var(--revert-txt-3)
 }
 .owindow.owait .content {
     display: flex;

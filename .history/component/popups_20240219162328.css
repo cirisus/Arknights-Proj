@@ -240,10 +240,10 @@ div#history-subarea a.action-area-close:hover,:not(.page-rate-widget-box):not(#s
     border-color: rgb(var(--emerge-color));
     filter: brightness(1.1);
 }
-a.action-area-close,a.btn.btn-default.button.button-cancel-and-delete-draft,a.btn.btn-default.button.button-cancel-and-leave-draft,a.btn.btn-default.button.button-edit-original,a.btn.btn-default.button.button-edit-draft,a.btn.btn-default.button.button-cancel,a.btn.btn-default.button.button-yes\,-revert,a.btn.btn-default.button.button-insert-code,a.btn.btn-default.button.button-close-message,a.edit-section-button,a.action-area-close.btn.btn-danger,a.btn.btn-default.button.button-rename,a.btn.btn-default.button.button-move,a.btn.btn-default.button.button-no\,-cancel,a.btn.btn-default.button.button-yes\,-delete,a.btn.btn-default.button.button-close {
+a.btn.btn-default.button.button-cancel-and-delete-draft,a.btn.btn-default.button.button-cancel-and-leave-draft,a.btn.btn-default.button.button-edit-original,a.btn.btn-default.button.button-edit-draft,a.btn.btn-default.button.button-cancel,a.btn.btn-default.button.button-yes\,-revert,a.btn.btn-default.button.button-insert-code,a.btn.btn-default.button.button-close-message,a.edit-section-button,a.action-area-close.btn.btn-danger,a.btn.btn-default.button.button-rename,a.btn.btn-default.button.button-move,a.btn.btn-default.button.button-no\,-cancel,a.btn.btn-default.button.button-yes\,-delete,a.btn.btn-default.button.button-close {
     font-size: 0;
 }
-:is(a.action-area-close,a.btn.btn-default.button.button-cancel-and-delete-draft,a.btn.btn-default.button.button-cancel-and-leave-draft,a.btn.btn-default.button.button-edit-original,a.btn.btn-default.button.button-edit-draft,a.btn.btn-default.button.button-cancel,a.btn.btn-default.button.button-yes\,-revert,a.btn.btn-default.button.button-insert-code,a.btn.btn-default.button.button-close-message,a.edit-section-button,a.action-area-close.btn.btn-danger,a.btn.btn-default.button.button-rename,a.btn.btn-default.button.button-move,a.btn.btn-default.button.button-no\,-cancel,a.btn.btn-default.button.button-yes\,-delete,a.btn.btn-default.button.button-close):before {
+:is(a.btn.btn-default.button.button-cancel-and-delete-draft,a.btn.btn-default.button.button-cancel-and-leave-draft,a.btn.btn-default.button.button-edit-original,a.btn.btn-default.button.button-edit-draft,a.btn.btn-default.button.button-cancel,a.btn.btn-default.button.button-yes\,-revert,a.btn.btn-default.button.button-insert-code,a.btn.btn-default.button.button-close-message,a.edit-section-button,a.action-area-close.btn.btn-danger,a.btn.btn-default.button.button-rename,a.btn.btn-default.button.button-move,a.btn.btn-default.button.button-no\,-cancel,a.btn.btn-default.button.button-yes\,-delete,a.btn.btn-default.button.button-close):before {
     font-size: 0.9rem;
     padding: 2px 6px;
 }
@@ -274,7 +274,7 @@ a.btn.btn-default.button.button-insert-code:before {
 a.btn.btn-default.button.button-close-message:before,a.btn.btn-default.button.button-close:before {
     content: var(--close-message-txt)
 }
-a.action-area-close:before,a.action-area-close.btn.btn-danger:before {
+a.action-area-close.btn.btn-danger:before {
     content: var(--close-txt)
 }
 a.btn.btn-default.button.button-rename:before {
@@ -1424,38 +1424,6 @@ div#owindow-1[style*="width: 60em;"]:not([class*="info"]) .content.modal-body td
 }
 div#owindow-1[style*="width: 60em;"]:not([class*="info"]) .content.modal-body td:nth-child(even) {
     backdrop-filter: blur(2px)
-}
-div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body :is(h1,p) {
-    font-size: 0
-}
-div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body h1:before {
-    content: var(--revert-confirm-title);
-    font-size: 1.5rem;
-}
-div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:before {
-    display: inline-flex;
-    margin-block-start: 1rem;
-    font-size: 0.8rem;
-    line-height: 1.3;
-}
-div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(2):before {
-    content:var(--revert-txt-1)
-}
-div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(2) strong {
-    font-size: 0.8rem;
-}
-div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(2) strong:before {
-    content:var(--revert-no)
-}
-div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(2):after {
-    font-size: 0.8rem;
-    content:var(--revert-question)
-}
-div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(3):before {
-    content:var(--revert-txt-2)
-}
-div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(4):before {
-    content:var(--revert-txt-3)
 }
 .owindow.owait .content {
     display: flex;

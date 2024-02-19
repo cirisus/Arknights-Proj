@@ -1439,7 +1439,7 @@ div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-rev
     line-height: 1.3;
 }
 div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(2):before {
-    content:var(--revert-txt-1)
+    content:var(--revert-confirm-txt-1)
 }
 div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(2) strong {
     font-size: 0.8rem;
@@ -1455,7 +1455,7 @@ div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-rev
     content:var(--revert-txt-2)
 }
 div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(4):before {
-    content:var(--revert-txt-3)
+    content:var(--re)
 }
 .owindow.owait .content {
     display: flex;

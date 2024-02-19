@@ -1439,23 +1439,23 @@ div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-rev
     line-height: 1.3;
 }
 div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(2):before {
-    content:var(--revert-txt-1)
+    content:var(--revert-confirm-txt-1)
 }
 div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(2) strong {
     font-size: 0.8rem;
 }
 div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(2) strong:before {
-    content:var(--revert-no)
+    content:var(0)
 }
 div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(2):after {
     font-size: 0.8rem;
-    content:var(--revert-question)
+    content:"吗？"
 }
 div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(3):before {
-    content:var(--revert-txt-2)
+    content:"回覆页面版本的操作只会更改页面的源代码和/或标题，而附件、页面地址或者其他元信息不会被回覆。"
 }
 div#owindow-1.owindow.confirmation:has(a.btn.btn-default.button.button-yes\,-revert) .content.modal-body p:nth-child(4):before {
-    content:var(--revert-txt-3)
+    content:"如果确认回覆，你将发布一个与对应版本具有相同标题与源代码的新页面版本。"
 }
 .owindow.owait .content {
     display: flex;
