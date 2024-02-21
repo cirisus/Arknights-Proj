@@ -20,12 +20,6 @@
 #odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child~table tbody, #odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child~table tr {
     display: contents;
 }
-#odialog-container .content, #odialog-container .modal-body {
-    display: grid;
-    margin: 0 1rem;
-    padding: 0;
-    word-break: break-all
-}
 #odialog-container div.owindow {
     display: grid;
     position: fixed;
