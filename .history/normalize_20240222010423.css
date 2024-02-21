@@ -2742,17 +2742,13 @@ pre {
     letter-spacing: -0.1rem;
     background-color: rgb(var(--bright-secondary-color),0.2);
 }
-@media only screen and (max-width:767px) {
-    #odialog-container .owindow:has(a[onclick*="flagUser" i])>div.modal-body>img[style*="padding: 2px 8px;"]:first-child+h1 {
-        width: webkit-fill-available;
-    }
-}
 #odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child~table {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column: 1/span 2;
     margin-top: .25rem
 }
+
 #odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child~table+div {
     display: grid;
     grid-template-rows: -webkit-min-content;
@@ -4212,8 +4208,8 @@ div#dialog-clone-wait.wait-progress {
   }
 }
 @keyframes fountain {
-    from {opacity:0}
-    to {opacity:1}
+from {opacity:0}
+to {opacity:1}
 }
 #odialog-container {
     animation: fountain .75s cubic-bezier(0.25, 0.46, 0.45, 0.94 );

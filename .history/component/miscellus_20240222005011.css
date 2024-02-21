@@ -1006,36 +1006,12 @@ table.page-files tbody tr td:not(.page-rate-widget-box):not(#search-top-box-form
 #who-rated-page-area > div {
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(12.5rem,1fr) 1.75rem);
-    font-size: 0.9rem;
+    font-size: calc(var(--true-font-size)*.925);
 }
-#who-rated-page-area>div span:nth-of-type(odd) {
-    padding: 0.2rem 0;
-    padding-inline-start: 0.75rem;
-    border-inline-start: solid 0.075rem rgb(var(--scale-2));
-    transition: background-color 175ms ease-out;
-    position: relative;
-    align-items: center;
-    min-width: -webkit-fill-available;
-}
-#who-rated-page-area>div span:nth-of-type(odd):is(:hover,:focus-within), #who-rated-page-area>div span:nth-of-type(odd):is(:hover,:focus-within)+span[style*=color] {
-    background-color: rgb(var(--liltone));
-}
-#who-rated-page-area>div span:nth-of-type(odd)::after {
-    content: "";
-    display: block;
-    position: absolute;
-    inset-block-start: 0;
-    inset-inline-start: 100%;
-    width: 1.75rem;
-    height: 100%;
-}
-#who-rated-page-area>div span[style*=color] {
-    display: grid;
-    place-items: center;
-    text-align: center;
+#who-rated-page-area h2 + div[style="-moz-column-count:3"] span[style="color:#777"] {
     color: rgb(var(--scale-2)) !important;
     font-size: 1.25rem;
-    transition: background-color 175ms ease-out;
+    vertical-align: sub;
 }
 #action-area>form:nth-child(4)>table:first-child>tbody:first-child>tr:first-child {
     display: flex;

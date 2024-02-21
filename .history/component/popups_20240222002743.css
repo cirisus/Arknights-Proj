@@ -118,6 +118,7 @@
         width: webkit-fill-available;
     }
 }
+
 #odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child~table {
     display: grid;
     grid-template-columns: 1fr 1fr;

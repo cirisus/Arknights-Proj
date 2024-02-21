@@ -866,6 +866,7 @@ ________________________________________________________________________________
     --revert-question: "?";
     --revert-txt-2: "Возврат версии страницы изменит только исходный код и/или заголовок страницы, в то время как вложения, адреса страниц или другие метаданные не будут возвращены.";
     --revert-txt-3: "Если вы подтвердите возврат, вы опубликуете новую версию страницы с тем же заголовком и исходным кодом, что и соответствующая версия.";
+    /* Russian */
     --wanted-hovertip: "Список адресов страниц, на которые есть ссылки, но которые еще не созданы.";
     --orphant-hovertip: "Список адресов страниц, на которые нет ссылок.";
     --draft-hovertip: "Список адресов страниц, на которых сохранены черновики.";
@@ -949,9 +950,6 @@ ________________________________________________________________________________
     --revert-question: "?";
     --revert-txt-2: "Il ripristino della versione della pagina cambierà solo il codice sorgente e/o il titolo della pagina, mentre gli allegati, gli indirizzi delle pagine o altri metadati non verranno ripristinati.";
     --revert-txt-3: "Se confermi il ripristino, pubblicherai una nuova versione della pagina con lo stesso titolo e codice sorgente della versione corrispondente.";
-    --wanted-hovertip: "Elenca gli indirizzi delle pagine a cui puntano i link ma che non sono state create.";
-    --orphant-hovertip: "Elenca gli indirizzi delle pagine a cui non puntano link.";
-    --draft-hovertip: "Elenca gli indirizzi delle pagine che hanno bozze salvate.";
 
     --code-wizard-title:"Assistente del blocco di codice";
     --table-wizard-title:"Assistente della tabella";
@@ -1032,9 +1030,6 @@ ________________________________________________________________________________
     --revert-question: "?";
     --revert-txt-2: "Revertir la versión de la página solo cambiará el código fuente y/o el título de la página, mientras que los adjuntos, las direcciones de las páginas u otros metadatos no se revertirán.";
     --revert-txt-3: "Si confirmas la reversión, publicarás una nueva versión de la página con el mismo título y código fuente que la versión correspondiente.";
-    --wanted-hovertip: "Enumera las direcciones de las páginas a las que se apuntan con enlaces pero que no se han creado.";
-    --orphant-hovertip: "Enumera las direcciones de las páginas a las que no se apuntan con ningún enlace.";
-    --draft-hovertip: "Enumera las direcciones de las páginas que tienen borradores guardados.";
 
     --code-wizard-title:"Asistente de bloque de código";
     --table-wizard-title:"Asistente de tabla";

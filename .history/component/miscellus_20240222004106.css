@@ -1003,39 +1003,15 @@ table.page-files tbody tr td:not(.page-rate-widget-box):not(#search-top-box-form
     content: var(--watchers-txt);
     font-size: 0.85rem;
 }
-#who-rated-page-area > div {
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(12.5rem,1fr) 1.75rem);
-    font-size: 0.9rem;
+#who-rated-page-area h2 + div[style="-moz-column-count:3"] {
+    -webkit-column-count: 4;
+    -moz-column-count:4 !important;
+    column-count: 4;
 }
-#who-rated-page-area>div span:nth-of-type(odd) {
-    padding: 0.2rem 0;
-    padding-inline-start: 0.75rem;
-    border-inline-start: solid 0.075rem rgb(var(--scale-2));
-    transition: background-color 175ms ease-out;
-    position: relative;
-    align-items: center;
-    min-width: -webkit-fill-available;
-}
-#who-rated-page-area>div span:nth-of-type(odd):is(:hover,:focus-within), #who-rated-page-area>div span:nth-of-type(odd):is(:hover,:focus-within)+span[style*=color] {
-    background-color: rgb(var(--liltone));
-}
-#who-rated-page-area>div span:nth-of-type(odd)::after {
-    content: "";
-    display: block;
-    position: absolute;
-    inset-block-start: 0;
-    inset-inline-start: 100%;
-    width: 1.75rem;
-    height: 100%;
-}
-#who-rated-page-area>div span[style*=color] {
-    display: grid;
-    place-items: center;
-    text-align: center;
+#who-rated-page-area h2 + div[style="-moz-column-count:3"] span[style="color:#777"] {
     color: rgb(var(--scale-2)) !important;
     font-size: 1.25rem;
-    transition: background-color 175ms ease-out;
+    vertical-align: sub;
 }
 #action-area>form:nth-child(4)>table:first-child>tbody:first-child>tr:first-child {
     display: flex;
@@ -1196,13 +1172,13 @@ div#rename-option-rename {
     padding: 2px 0
 }
 div#st-wanted-pages-button-hovertip.hovertip > .content:before {
-    content:var(--wanted-hovertip)
+    content:var(--)
 }
 div#st-orphaned-pages-button-hovertip.hovertip > .content:before {
-    content:var(--orphant-hovertip)
+    content:"列出没有任何链接指向它们的页面地址。"
 }
 div#st-draft-pages-button-hovertip.hovertip > .content:before {
-    content:var(--draft-hovertip)
+    content:"列出保存有草稿的页面地址。"
 }
 a.avatar-hover, a.avatar-hover:hover {
     -webkit-backdrop-filter: drop-shadow(2px 4px 3px rgb(var(--scale-0))) blur(1px);

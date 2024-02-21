@@ -125,9 +125,7 @@ ________________________________________________________________________________
     --revert-question:"吗？";
     --revert-txt-2:"回覆页面版本的操作只会更改页面的源代码和/或标题，而附件、页面地址或者其他元信息不会被回覆。";
     --revert-txt-3:"如果确认回覆，你将发布一个与对应版本具有相同标题与源代码的新页面版本。";
-    --wanted-hovertip:"列出有链接指向但是尚未创建的页面地址。";
-    --orphant-hovertip:"列出没有任何链接指向它们的页面地址。";
-    --draft-hovertip:"列出保存有草稿的页面地址。";
+    
 
     --code-wizard-title:"代码方块向导";
     --table-wizard-title:"表格向导";
@@ -532,9 +530,6 @@ ________________________________________________________________________________
     --revert-question: "?";
     --revert-txt-2: "Reverting the page version will only change the source code and/or title of the page, while attachments, page addresses or other metadata will not be reverted.";
     --revert-txt-3: "If you confirm the revert, you will publish a new page version with the same title and source code as the corresponding version.";
-    --wanted-hovertip:"List pages that are wanted but not created yet.";
-    --orphant-hovertip:"List pages that are not linked from any other page.";
-    --draft-hovertip:"List pages that have drafts saved.";
 
     --code-wizard-title:"Code block Wizard";
     --table-wizard-title:"Table Wizard";
@@ -617,9 +612,6 @@ ________________________________________________________________________________
     --revert-question: "?";
     --revert-txt-2: "La réversion de la version de la page ne changera que le code source et/ou le titre de la page, tandis que les pièces jointes, les adresses de page ou autres métadonnées ne seront pas rétablies.";
     --revert-txt-3: "Si vous confirmez la réversion, vous publierez une nouvelle version de la page avec le même titre et le même code source que la version correspondante.";
-    --wanted-hovertip: "Liste les adresses des pages qui ont des liens pointant vers elles mais qui n'ont pas été créées.";
-    --orphant-hovertip: "Liste les adresses des pages qui n'ont aucun lien pointant vers elles.";
-    --draft-hovertip: "Liste les adresses des pages qui ont des brouillons enregistrés.";
 
     --image-wizard-title:"Assistant d'Image";
     --choose-img-txt:"Veuillez sélectionner l'un des fichiers de la page.";
@@ -700,9 +692,6 @@ ________________________________________________________________________________
     --revert-question: "？";
     --revert-txt-2: "ページバージョンのリバートは、ページのソースコードおよび/またはタイトルのみを変更し、添付ファイル、ページアドレス、またはその他のメタデータはリバートされません。";
     --revert-txt-3: "リバートを確認すると、対応するバージョンと同じタイトルとソースコードを持つ新しいページバージョンを公開します。";
-    --wanted-hovertip: "リンクが指しているがまだ作成されていないページのアドレスをリストアップします。";
-    --orphant-hovertip: "リンクが指していないページのアドレスをリストアップします。";
-    --draft-hovertip: "ドラフトが保存されているページのアドレスをリストアップします。";
 
     --code-wizard-title:"コードブロックウィザード";
     --table-wizard-title:"テーブルウィザード";
@@ -783,9 +772,6 @@ ________________________________________________________________________________
     --revert-question: "?";
     --revert-txt-2: "Das Zurücksetzen der Seitenversion ändert nur den Quellcode und/oder den Titel der Seite, während Anhänge, Seitenadressen oder andere Metadaten nicht zurückgesetzt werden.";
     --revert-txt-3: "Wenn Sie das Zurücksetzen bestätigen, veröffentlichen Sie eine neue Seitenversion mit dem gleichen Titel und Quellcode wie die entsprechende Version.";
-    --wanted-hovertip: "Listet die Adressen der Seiten auf, auf die Links verweisen, die jedoch noch nicht erstellt wurden.";
-    --orphant-hovertip: "Listet die Adressen der Seiten auf, auf die keine Links verweisen.";
-    --draft-hovertip: "Listet die Adressen der Seiten auf, die Entwürfe gespeichert haben.";
 
     --code-wizard-title:"Code-Block-Assistent";
     --table-wizard-title:"Tabellen-Assistent";
@@ -866,9 +852,6 @@ ________________________________________________________________________________
     --revert-question: "?";
     --revert-txt-2: "Возврат версии страницы изменит только исходный код и/или заголовок страницы, в то время как вложения, адреса страниц или другие метаданные не будут возвращены.";
     --revert-txt-3: "Если вы подтвердите возврат, вы опубликуете новую версию страницы с тем же заголовком и исходным кодом, что и соответствующая версия.";
-    --wanted-hovertip: "Список адресов страниц, на которые есть ссылки, но которые еще не созданы.";
-    --orphant-hovertip: "Список адресов страниц, на которые нет ссылок.";
-    --draft-hovertip: "Список адресов страниц, на которых сохранены черновики.";
 
     --code-wizard-title:"Мастер блока кода";
     --table-wizard-title:"Мастер таблицы";
@@ -949,9 +932,6 @@ ________________________________________________________________________________
     --revert-question: "?";
     --revert-txt-2: "Il ripristino della versione della pagina cambierà solo il codice sorgente e/o il titolo della pagina, mentre gli allegati, gli indirizzi delle pagine o altri metadati non verranno ripristinati.";
     --revert-txt-3: "Se confermi il ripristino, pubblicherai una nuova versione della pagina con lo stesso titolo e codice sorgente della versione corrispondente.";
-    --wanted-hovertip: "Elenca gli indirizzi delle pagine a cui puntano i link ma che non sono state create.";
-    --orphant-hovertip: "Elenca gli indirizzi delle pagine a cui non puntano link.";
-    --draft-hovertip: "Elenca gli indirizzi delle pagine che hanno bozze salvate.";
 
     --code-wizard-title:"Assistente del blocco di codice";
     --table-wizard-title:"Assistente della tabella";
@@ -1032,9 +1012,6 @@ ________________________________________________________________________________
     --revert-question: "?";
     --revert-txt-2: "Revertir la versión de la página solo cambiará el código fuente y/o el título de la página, mientras que los adjuntos, las direcciones de las páginas u otros metadatos no se revertirán.";
     --revert-txt-3: "Si confirmas la reversión, publicarás una nueva versión de la página con el mismo título y código fuente que la versión correspondiente.";
-    --wanted-hovertip: "Enumera las direcciones de las páginas a las que se apuntan con enlaces pero que no se han creado.";
-    --orphant-hovertip: "Enumera las direcciones de las páginas a las que no se apuntan con ningún enlace.";
-    --draft-hovertip: "Enumera las direcciones de las páginas que tienen borradores guardados.";
 
     --code-wizard-title:"Asistente de bloque de código";
     --table-wizard-title:"Asistente de tabla";
