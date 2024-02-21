@@ -1,0 +1,62 @@
+:root {
+    --type-developer-border:55,113,163;
+    --type-developer-bg:211,225,255;
+    --type-developer-txt:0,28,85;
+
+    --type-artist-border:228,73,55;
+    --type-artist-bg:255,223,211;
+    --type-artist-txt:53,5,5;
+
+    --type-writer-border:237,182,0;
+    --type-writer-bg:255,227,183;
+    --type-writer-txt:48,43,30;
+
+    --type-admin-border:96,96,96;
+    --type-admin-bg:235,235,235;
+    --type-admin-txt:22,22,22;
+}
+@import url;https://cdn.jsdelivr.net/gh/cirisus/Arknights-Proj/component/credits-font.css
+/* == Template == */
+/*
+#odialog-container .owindow:has(a[onclick*="flagUser" i]):has(a[href*="******"])>div.modal-body>img[style*="padding: 2px 8px;"]:first-child+h1:after {
+    display: flex;
+    font-family: 'Latienne_Pro','Noto Serif SC';
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+    margin: 0 0 2px 0;
+    font-size: 1rem;
+    text-shadow: none;
+    color: rgb(var(--scale-2));
+    letter-spacing: -0.025rem;
+}
+#odialog-container .owindow:has(a[onclick*="flagUser" i]):has(a[href*="******"])>div.modal-body>img[style*="padding: 2px 8px;"]:first-child+h1:after {
+    content: '认证信息：';
+    border-top: 2px solid rgb(var());
+    border-bottom: 2px solid rgb(var());
+    background-color: rgb(var());
+}
+*/
+#odialog-container .owindow:has(a[onclick*="flagUser" i]):has(a[href*="7180920"])>div.modal-body>img[style*="padding: 2px 8px;"]:first-child+h1:after {
+    display: flex;
+    font-family: 'Latienne_Pro','Noto Serif SC';
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+    margin: 0 0 2px 0;
+    font-size: 1rem;
+    text-shadow: none;
+    color: rgb(var(--scale-2));
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    background-color: #fff;
+    letter-spacing: -0.025rem;
+}
+/* == CREDITS == */
+#odialog-container .owindow:has(a[onclick*="flagUser" i]):has(a[href*="7180920"])>div.modal-body>img[style*="padding: 2px 8px;"]:first-child+h1:after {
+    content: "认证信息：站务组组长｜Wikidot开发";
+    color: rgb(var(--type-developer-txt));
+    border-top: 2px solid rgb(var(--type-developer-border));
+    border-bottom: 2px solid rgb(var(--type-developer-border));
+    background-color: rgb(var(--type-developer-bg));
+}

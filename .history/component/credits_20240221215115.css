@@ -1,0 +1,57 @@
+:root {
+    --type-developer-border:55,113,163;
+    --type-developer-bg:211,225,255;
+    --type-developer-txt:0,28,85;
+
+    --type-artist-border:228 73 55;
+    --type-artist-bg:;
+    --type-artist-txt:53,5,5;
+    --type-writer-border:;
+    --type-writer-bg:;
+    --type-writer-txt:;
+    --type-admin-border:;
+    --type-admin-bg:;
+    --type-admin-txt:;
+}
+@import url(../component/credits-font.css);
+/* == Template == */
+/*
+#odialog-container .owindow:has(a[onclick*="flagUser" i]):has(a[href*="******"])>div.modal-body>img[style*="padding: 2px 8px;"]:first-child+h1:after {
+    display: flex;
+    font-family: 'Latienne_Pro','Noto Serif SC';
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+    margin: 0 0 2px 0;
+    font-size: 1rem;
+    text-shadow: none;
+    color: rgb(var(--scale-2));
+}
+#odialog-container .owindow:has(a[onclick*="flagUser" i]):has(a[href*="******"])>div.modal-body>img[style*="padding: 2px 8px;"]:first-child+h1:after {
+    content: '认证信息：';
+    border-top: 2px solid rgb(var());
+    border-bottom: 2px solid rgb(var());
+    background-color: rgb(var());
+}
+*/
+#odialog-container .owindow:has(a[onclick*="flagUser" i]):has(a[href*="7180920"])>div.modal-body>img[style*="padding: 2px 8px;"]:first-child+h1:after {
+    display: flex;
+    font-family: 'Latienne_Pro','Noto Serif SC';
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+    margin: 0 0 2px 0;
+    font-size: 1rem;
+    text-shadow: none;
+    color: rgb(var(--scale-2));
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    background-color: #fff;
+}
+/* == CREDITS == */
+#odialog-container .owindow:has(a[onclick*="flagUser" i]):has(a[href*="7180920"])>div.modal-body>img[style*="padding: 2px 8px;"]:first-child+h1:after {
+    content: '认证信息：';
+    border-top: 2px solid rgb(var());
+    border-bottom: 2px solid rgb(var());
+    background-color: rgb(var());
+}
