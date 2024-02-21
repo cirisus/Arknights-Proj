@@ -5,4 +5,4 @@
 
   Background & logo provided by Pixel-Dream.
 
-  SVG icons from google/Apple SF icons. All the icons are made to be used freely.
+  SVG icons from google/Apple SF/Bootstrap icons. All the icons are made to be used freely.

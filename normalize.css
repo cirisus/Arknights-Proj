@@ -10,7 +10,7 @@
         仅用于Arknights.wikidot.com站点。
 
     === License //授权方式 ===
-        v1.4 released on 2024.02.15 on Github.
+        v1.5 released on 2024.02.20 on Github.
         All rights reserved, NO CC LICENSE THIS TIME, DO NOT USE THE THEME WITHOUT PERMISSION.
         Open source version will be released after completely developed.
 
@@ -72,6 +72,7 @@ ________________________________________________________________________________
 
     --tags-label:"页面标签 \25bc";
     --tags-tip-txt:"\2197以空格分离不同的标签。";
+    --watchers-txt:"以下用户关注了此页面，这表明他们曾经访问过此网站或者详细查看过站点内容。";
     --wanted-txt:"（待建页面）";
     --orphant-txt:"（孤立页面）";
     --drafts-txt:"（存稿页面）";
@@ -476,6 +477,7 @@ ________________________________________________________________________________
 
     --tags-label:"Page Tags\25bc";
     --tags-tip-txt:"\2197Seperate different tags with a Space.";
+    --watchers-txt:"The watchers of the site is listed below. Becoming a watcher means that they may visited the site frequently or once checked a page.";
     --wanted-txt:"(To Be Created)";
     --orphant-txt:"(Unidirectional)";
     --drafts-txt:"(Drafts Remain)";
@@ -557,6 +559,7 @@ ________________________________________________________________________________
 
     --tags-label:"Balises de page\25bc";
     --tags-tip-txt:"\2197Séparer les différentes balises avec un espace.";
+    --watchers-txt:"Les observateurs du site sont listés ci-dessous. Devenir un observateur signifie qu'ils peuvent visiter le site fréquemment ou avoir vérifié une page une fois.";
     --wanted-txt:"(À créer)";
     --orphant-txt:"(Page unidirectionnelle)";
     --drafts-txt:"(Les projets restent)";
@@ -636,6 +639,7 @@ ________________________________________________________________________________
 
     --tags-label:"ページタグ";
     --tags-tip-txt:"\2197異なるタグをスペースで区切ってください。";
+    --watchers-txt:"サイトのウォッチャーは以下にリストされています。ウォッチャーになるということは、頻繁にサイトを訪れたり、一度ページをチェックしたりすることがあります。";
     --wanted-txt:"（まだ作成されていない）";
     --orphant-txt:"（リンクはない）";
     --drafts-txt:"（下書が残っています）";
@@ -715,6 +719,7 @@ ________________________________________________________________________________
 
     --tags-label:"Seitenetiketten \25bc";
     --tags-tip-txt:"\2197 Etiketten durch Leerzeichen getrennt verschieben";
+    --watchers-txt:"Die Beobachter der Website sind unten aufgeführt. Beobachter zu werden bedeutet, dass sie die Website häufig besuchen oder einmal eine Seite überprüft haben könnten.";
     --wanted-txt:"(Noch zu erstellen)";
     --orphant-txt:"(Einseitige Seite)";
     --drafts-txt:"(Entwürfe bleiben)";
@@ -794,6 +799,7 @@ ________________________________________________________________________________
 
     --tags-label:"Хэштеги страницы \25bc";
     --tags-tip-txt:"\2197 Разделите различные теги пробелами";
+    --watchers-txt:"Наблюдатели сайта перечислены ниже. Стать наблюдателем означает, что они могут часто посещать сайт или однажды проверили страницу.";
     --wanted-txt:"(Будет создано позднее)";
     --orphant-txt:"(Изолированная)";
     --drafts-txt:"(Проекты остаются)";
@@ -873,6 +879,7 @@ ________________________________________________________________________________
 
     --tags-label:"Etichette Pagina \25bc";
     --tags-tip-txt:"\2197 Separare diverse etichette con uno spazio";
+    --watchers-txt:"Gli osservatori del sito sono elencati di seguito. Diventare un osservatore significa che potrebbero visitare il sito frequentemente o aver controllato una pagina una volta.";
     --wanted-txt:"(Da Creare)";
     --orphant-txt:"(Isolato)";
     --drafts-txt:"(Progetti Rimangono)";
@@ -952,6 +959,7 @@ ________________________________________________________________________________
 
     --tags-label:"Etiquetas de página \25bc";
     --tags-tip-txt:"\2197 Separar diferentes etiquetas con un espacio";
+    --watchers-txt:"Los observadores del sitio se enumeran a continuación. Convertirse en un observador significa que podrían visitar el sitio con frecuencia o haber revisado una página una vez.";
     --wanted-txt:"(Por Crear)";
     --orphant-txt:"(Aislado)";
     --drafts-txt:"(Proyectos Permanecen)";
@@ -2836,10 +2844,10 @@ div#history-subarea a.action-area-close:hover,:not(.page-rate-widget-box):not(#s
     border-color: rgb(var(--emerge-color));
     filter: brightness(1.1);
 }
-a.action-area-close,a.btn.btn-default.button.button-cancel-and-delete-draft,a.btn.btn-default.button.button-cancel-and-leave-draft,a.btn.btn-default.button.button-edit-original,a.btn.btn-default.button.button-edit-draft,a.btn.btn-default.button.button-cancel,a.btn.btn-default.button.button-yes\,-revert,a.btn.btn-default.button.button-insert-code,a.btn.btn-default.button.button-close-message,a.edit-section-button,a.action-area-close.btn.btn-danger,a.btn.btn-default.button.button-rename,a.btn.btn-default.button.button-move,a.btn.btn-default.button.button-no\,-cancel,a.btn.btn-default.button.button-yes\,-delete,a.btn.btn-default.button.button-close {
+a.wiki-standalone-button,a.action-area-close,a.btn.btn-default.button.button-cancel-and-delete-draft,a.btn.btn-default.button.button-cancel-and-leave-draft,a.btn.btn-default.button.button-edit-original,a.btn.btn-default.button.button-edit-draft,a.btn.btn-default.button.button-cancel,a.btn.btn-default.button.button-yes\,-revert,a.btn.btn-default.button.button-insert-code,a.btn.btn-default.button.button-close-message,a.edit-section-button,a.action-area-close.btn.btn-danger,a.btn.btn-default.button.button-rename,a.btn.btn-default.button.button-move,a.btn.btn-default.button.button-no\,-cancel,a.btn.btn-default.button.button-yes\,-delete,a.btn.btn-default.button.button-close {
     font-size: 0;
 }
-:is(a.action-area-close,a.btn.btn-default.button.button-cancel-and-delete-draft,a.btn.btn-default.button.button-cancel-and-leave-draft,a.btn.btn-default.button.button-edit-original,a.btn.btn-default.button.button-edit-draft,a.btn.btn-default.button.button-cancel,a.btn.btn-default.button.button-yes\,-revert,a.btn.btn-default.button.button-insert-code,a.btn.btn-default.button.button-close-message,a.edit-section-button,a.action-area-close.btn.btn-danger,a.btn.btn-default.button.button-rename,a.btn.btn-default.button.button-move,a.btn.btn-default.button.button-no\,-cancel,a.btn.btn-default.button.button-yes\,-delete,a.btn.btn-default.button.button-close):before {
+:is(a.wiki-standalone-button,a.action-area-close,a.btn.btn-default.button.button-cancel-and-delete-draft,a.btn.btn-default.button.button-cancel-and-leave-draft,a.btn.btn-default.button.button-edit-original,a.btn.btn-default.button.button-edit-draft,a.btn.btn-default.button.button-cancel,a.btn.btn-default.button.button-yes\,-revert,a.btn.btn-default.button.button-insert-code,a.btn.btn-default.button.button-close-message,a.edit-section-button,a.action-area-close.btn.btn-danger,a.btn.btn-default.button.button-rename,a.btn.btn-default.button.button-move,a.btn.btn-default.button.button-no\,-cancel,a.btn.btn-default.button.button-yes\,-delete,a.btn.btn-default.button.button-close):before {
     font-size: 0.9rem;
     padding: 2px 6px;
 }
@@ -3896,13 +3904,16 @@ div#owindow-1.owindow.confirmation > .title:before{
 div#owindow-1.owindow.info > .title:before {
     content: var(--info-title)
 }
-div#owindow-1.owindow:has(a.btn.btn-default.button.button-insert-code,a.btn.btn-default.button.button-move,a.btn.btn-default.button.button-rename)  .title.modal-header {
+div#owindow-1.owindow:has(a.btn.btn-default.button.button-edit-original,a.btn.btn-default.button.button-cancel-and-delete-draft,a.btn.btn-default.button.button-insert-code,a.btn.btn-default.button.button-move,a.btn.btn-default.button.button-rename)  .title.modal-header {
     font-size: 0;
     height:2.25rem;
 }
-div#owindow-1.owindow:has(a.btn.btn-default.button.button-insert-code,a.btn.btn-default.button.button-move,a.btn.btn-default.button.button-rename)  .title.modal-header:before {
+div#owindow-1.owindow:has(a.btn.btn-default.button.button-edit-original,a.btn.btn-default.button.button-cancel-and-delete-draft,a.btn.btn-default.button.button-insert-code,a.btn.btn-default.button.button-move,a.btn.btn-default.button.button-rename)  .title.modal-header:before {
     font-size: 1.2rem;
     color: rgb(var(--scale-8));
+}
+div#owindow-1.owindow:has(a.btn.btn-default.button.button-cancel-and-delete-draft,a.btn.btn-default.button.button-edit-original) .title.modal-header:before {
+    content: var(--draft-title)
 }
 div#owindow-1.owindow:has(select#wd-ed-codewizard-type) .title.modal-header:before {
     content:var(--code-wizard-title)
@@ -6444,15 +6455,15 @@ input[type=radio]:checked:before {
     justify-self: flex-start;
     text-transform: uppercase
 }
-.pager span.pager-no + .target a[onclick*="updatePagedList"], .pager .target:last-of-type a[onclick*="updatePagedList"] {
+.pager span.pager-no + .target a:is([onclick*="updatePagedList" i],[onclick*="updateList" i],[onclick*="updateMemberList" i]), .pager .target:last-of-type a:is([onclick*="updatePagedList" i],[onclick*="updateList" i]) {
     font-size:0;
 }
-.pager span.pager-no + .target a[onclick*="updatePagedList"]:before {
+.pager span.pager-no + .target a:is([onclick*="updatePagedList" i],[onclick*="updateList" i],[onclick*="updateMemberList" i]):before {
     content: "\25C0 \25C0";
     font-size: 0.7rem;
     letter-spacing: -.4rem;
 }
-.pager .target:last-of-type a[onclick*="updatePagedList"]:before {
+.pager .target:last-of-type a:is([onclick*="updatePagedList" i],[onclick*="updateList" i],[onclick*="updateMemberList" i]):before {
     content: "\25B6 \25B6";
     font-size: 0.7rem;
     letter-spacing: -.4rem;
@@ -6548,7 +6559,7 @@ span.printuser {
     margin-right: 0
 }
 #main-content span.printuser {
-    align-items: baseline;
+    align-items: flex-start;
     text-indent: 0;
 }
 span.printuser a:first-of-type,span.printuser.deleted img {
@@ -6902,6 +6913,23 @@ table.page-files tbody tr td:not(.page-rate-widget-box):not(#search-top-box-form
     margin-block-end: 0;
     padding-inline-start: 20px;
     gap: 1em;
+}
+#action-area p:has(+ul[style="list-style: none"]) {
+    font-size: 0;
+}
+#action-area p:has(+ul[style="list-style: none"]):before {
+    content: var(--watchers-txt);
+    font-size: 0.85rem;
+}
+#who-rated-page-area h2 + div[style="-moz-column-count:3"] {
+    -webkit-column-count: 4;
+    -moz-column-count:4 !important;
+    column-count: 4;
+}
+#who-rated-page-area h2 + div[style="-moz-column-count:3"] span[style="color:#777"] {
+    color: rgb(var(--scale-2)) !important;
+    font-size: 1.25rem;
+    vertical-align: sub;
 }
 #action-area>form:nth-child(4)>table:first-child>tbody:first-child>tr:first-child {
     display: flex;

@@ -240,10 +240,10 @@ div#history-subarea a.action-area-close:hover,:not(.page-rate-widget-box):not(#s
     border-color: rgb(var(--emerge-color));
     filter: brightness(1.1);
 }
-a.action-area-close,a.btn.btn-default.button.button-cancel-and-delete-draft,a.btn.btn-default.button.button-cancel-and-leave-draft,a.btn.btn-default.button.button-edit-original,a.btn.btn-default.button.button-edit-draft,a.btn.btn-default.button.button-cancel,a.btn.btn-default.button.button-yes\,-revert,a.btn.btn-default.button.button-insert-code,a.btn.btn-default.button.button-close-message,a.edit-section-button,a.action-area-close.btn.btn-danger,a.btn.btn-default.button.button-rename,a.btn.btn-default.button.button-move,a.btn.btn-default.button.button-no\,-cancel,a.btn.btn-default.button.button-yes\,-delete,a.btn.btn-default.button.button-close {
+a.wiki-standalone-button,a.action-area-close,a.btn.btn-default.button.button-cancel-and-delete-draft,a.btn.btn-default.button.button-cancel-and-leave-draft,a.btn.btn-default.button.button-edit-original,a.btn.btn-default.button.button-edit-draft,a.btn.btn-default.button.button-cancel,a.btn.btn-default.button.button-yes\,-revert,a.btn.btn-default.button.button-insert-code,a.btn.btn-default.button.button-close-message,a.edit-section-button,a.action-area-close.btn.btn-danger,a.btn.btn-default.button.button-rename,a.btn.btn-default.button.button-move,a.btn.btn-default.button.button-no\,-cancel,a.btn.btn-default.button.button-yes\,-delete,a.btn.btn-default.button.button-close {
     font-size: 0;
 }
-:is(a.action-area-close,a.btn.btn-default.button.button-cancel-and-delete-draft,a.btn.btn-default.button.button-cancel-and-leave-draft,a.btn.btn-default.button.button-edit-original,a.btn.btn-default.button.button-edit-draft,a.btn.btn-default.button.button-cancel,a.btn.btn-default.button.button-yes\,-revert,a.btn.btn-default.button.button-insert-code,a.btn.btn-default.button.button-close-message,a.edit-section-button,a.action-area-close.btn.btn-danger,a.btn.btn-default.button.button-rename,a.btn.btn-default.button.button-move,a.btn.btn-default.button.button-no\,-cancel,a.btn.btn-default.button.button-yes\,-delete,a.btn.btn-default.button.button-close):before {
+:is(a.wiki-standalone-button,a.action-area-close,a.btn.btn-default.button.button-cancel-and-delete-draft,a.btn.btn-default.button.button-cancel-and-leave-draft,a.btn.btn-default.button.button-edit-original,a.btn.btn-default.button.button-edit-draft,a.btn.btn-default.button.button-cancel,a.btn.btn-default.button.button-yes\,-revert,a.btn.btn-default.button.button-insert-code,a.btn.btn-default.button.button-close-message,a.edit-section-button,a.action-area-close.btn.btn-danger,a.btn.btn-default.button.button-rename,a.btn.btn-default.button.button-move,a.btn.btn-default.button.button-no\,-cancel,a.btn.btn-default.button.button-yes\,-delete,a.btn.btn-default.button.button-close):before {
     font-size: 0.9rem;
     padding: 2px 6px;
 }
@@ -1300,13 +1300,16 @@ div#owindow-1.owindow.confirmation > .title:before{
 div#owindow-1.owindow.info > .title:before {
     content: var(--info-title)
 }
-div#owindow-1.owindow:has(a.btn.btn-default.button.button-insert-code,a.btn.btn-default.button.button-move,a.btn.btn-default.button.button-rename)  .title.modal-header {
+div#owindow-1.owindow:has(a.btn.btn-default.button.button-edit-original,a.btn.btn-default.button.button-cancel-and-delete-draft,a.btn.btn-default.button.button-insert-code,a.btn.btn-default.button.button-move,a.btn.btn-default.button.button-rename)  .title.modal-header {
     font-size: 0;
     height:2.25rem;
 }
-div#owindow-1.owindow:has(a.btn.btn-default.button.button-insert-code,a.btn.btn-default.button.button-move,a.btn.btn-default.button.button-rename)  .title.modal-header:before {
+div#owindow-1.owindow:has(a.btn.btn-default.button.button-edit-original,a.btn.btn-default.button.button-cancel-and-delete-draft,a.btn.btn-default.button.button-insert-code,a.btn.btn-default.button.button-move,a.btn.btn-default.button.button-rename)  .title.modal-header:before {
     font-size: 1.2rem;
     color: rgb(var(--scale-8));
+}
+div#owindow-1.owindow:has(a.btn.btn-default.button.button-cancel-and-delete-draft,a.btn.btn-default.button.button-edit-original) .title.modal-header:before {
+    content: var(--draft-title)
 }
 div#owindow-1.owindow:has(select#wd-ed-codewizard-type) .title.modal-header:before {
     content:var(--code-wizard-title)

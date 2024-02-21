@@ -537,15 +537,15 @@ input[type=radio]:checked:before {
     justify-self: flex-start;
     text-transform: uppercase
 }
-.pager span.pager-no + .target a[onclick*="updatePagedList"], .pager .target:last-of-type a[onclick*="updatePagedList"] {
+.pager span.pager-no + .target a:is([onclick*="updatePagedList" i],[onclick*="updateList" i],[onclick*="updateMemberList" i]), .pager .target:last-of-type a:is([onclick*="updatePagedList" i],[onclick*="updateList" i]) {
     font-size:0;
 }
-.pager span.pager-no + .target a[onclick*="updatePagedList"]:before {
+.pager span.pager-no + .target a:is([onclick*="updatePagedList" i],[onclick*="updateList" i],[onclick*="updateMemberList" i]):before {
     content: "\25C0 \25C0";
     font-size: 0.7rem;
     letter-spacing: -.4rem;
 }
-.pager .target:last-of-type a[onclick*="updatePagedList"]:before {
+.pager .target:last-of-type a:is([onclick*="updatePagedList" i],[onclick*="updateList" i],[onclick*="updateMemberList" i]):before {
     content: "\25B6 \25B6";
     font-size: 0.7rem;
     letter-spacing: -.4rem;
@@ -641,7 +641,7 @@ span.printuser {
     margin-right: 0
 }
 #main-content span.printuser {
-    align-items: baseline;
+    align-items: flex-start;
     text-indent: 0;
 }
 span.printuser a:first-of-type,span.printuser.deleted img {
@@ -995,6 +995,23 @@ table.page-files tbody tr td:not(.page-rate-widget-box):not(#search-top-box-form
     margin-block-end: 0;
     padding-inline-start: 20px;
     gap: 1em;
+}
+#action-area p:has(+ul[style="list-style: none"]) {
+    font-size: 0;
+}
+#action-area p:has(+ul[style="list-style: none"]):before {
+    content: var(--watchers-txt);
+    font-size: 0.85rem;
+}
+#who-rated-page-area h2 + div[style="-moz-column-count:3"] {
+    -webkit-column-count: 4;
+    -moz-column-count:4 !important;
+    column-count: 4;
+}
+#who-rated-page-area h2 + div[style="-moz-column-count:3"] span[style="color:#777"] {
+    color: rgb(var(--scale-2)) !important;
+    font-size: 1.25rem;
+    vertical-align: sub;
 }
 #action-area>form:nth-child(4)>table:first-child>tbody:first-child>tr:first-child {
     display: flex;
