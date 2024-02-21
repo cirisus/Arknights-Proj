@@ -65,5 +65,5 @@
     color: rgb(var(--type-developer-txt));
     border-top: 2px solid rgb(var(--type-admin-border));
     border-bottom: 2px solid rgb(var(--type-admin-border));
-    background-color: rgb(var(--type-admin-bg));
+    background-color: rgb(var(--type-developer-bg));
 }

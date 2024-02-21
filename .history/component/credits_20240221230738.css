@@ -64,6 +64,6 @@
     content: "认证信息：站务组机器人";
     color: rgb(var(--type-developer-txt));
     border-top: 2px solid rgb(var(--type-admin-border));
-    border-bottom: 2px solid rgb(var(--type-admin-border));
-    background-color: rgb(var(--type-admin-bg));
+    border-bottom: 2px solid rgb(var(--type-developer-border));
+    background-color: rgb(var(--type-developer-bg));
 }
