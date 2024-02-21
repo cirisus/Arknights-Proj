@@ -6987,7 +6987,7 @@ table.page-files tbody tr td:not(.page-rate-widget-box):not(#search-top-box-form
 #who-rated-page-area>div span:nth-of-type(odd) {
     padding: 0.2rem 0;
     padding-inline-start: 0.75rem;
-    border-inline-start: solid 0.075rem rgb(var(--scale-4-sub));
+    border-inline-start: solid 0.075rem rgb(var(--scale-2));
     transition: background-color 175ms ease-out;
     position: relative;
     align-items: center;
