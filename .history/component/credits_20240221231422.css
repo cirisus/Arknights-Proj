@@ -15,6 +15,7 @@
     --type-admin-bg:235,235,235;
     --type-admin-txt:22,22,22;
 }
+@import url(https://cdn.jsdelivr.net/gh/cirisus/Arknights-Proj/component/credits-font.css);
 /* == Template == */
 /*
 #odialog-container .owindow:has(a[onclick*="flagUser" i]):has(a[href*="******"])>div.modal-body>img[style*="padding: 2px 8px;"]:first-child+h1:after {
@@ -61,7 +62,7 @@
 }
 #odialog-container .owindow:has(a[onclick*="flagUser" i]):has(a[href*="7599370"])>div.modal-body>img[style*="padding: 2px 8px;"]:first-child+h1:after {
     content: "认证信息：站务组机器人";
-    color: rgb(var(--type-admin-txt));
+    color: rgb(var(--type-developer-txt));
     border-top: 2px solid rgb(var(--type-admin-border));
     border-bottom: 2px solid rgb(var(--type-admin-border));
     background-color: rgb(var(--type-admin-bg));
