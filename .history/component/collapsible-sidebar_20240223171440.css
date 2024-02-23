@@ -1,6 +1,6 @@
 @media (min-width: 767px) {
     div#extra-div-5::after {
-        content: "";
+        content: " ";
         position: fixed;
         display: -webkit-box;
         display: -webkit-flex;
@@ -48,6 +48,7 @@
                     background-size: 1rem 12.875rem;
             pointer-events: none;
         }
+     
     div#extra-div-5::before {
         content: " ";
         background-color: rgb(var(--scale-0));

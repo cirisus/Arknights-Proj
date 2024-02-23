@@ -3,7 +3,7 @@ var concat = require('gulp-concat');
 var cleanCSS = require('gulp-clean-css');
 
 gulp.task('css', function () {
-    return gulp.src(['roots.css','general.css','side.css','layout.css','gadgets.css','popups.css','collapsible-sidebar.css','forum.css','mobile.css','miscellus.css','credits.css','patch.css'])
+    return gulp.src(['roots.css','general.css','side.css','layout.css','gadgets.css','popups.css','collapsible-sidebar.css','forum.css',''])
         .pipe(concat('normalize.css'))
         .pipe(gulp.dest('dist'))
         .pipe(cleanCSS())

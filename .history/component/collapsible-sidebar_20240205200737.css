@@ -1,6 +1,6 @@
 @media (min-width: 767px) {
     div#extra-div-5::after {
-        content: "";
+        content: " ";
         position: fixed;
         display: -webkit-box;
         display: -webkit-flex;
@@ -48,6 +48,7 @@
                     background-size: 1rem 12.875rem;
             pointer-events: none;
         }
+     
     div#extra-div-5::before {
         content: " ";
         background-color: rgb(var(--scale-0));
@@ -94,6 +95,7 @@
         z-index: 9;
         overflow-y: hidden !important;
         margin-bottom: 0;
+    
         -webkit-backdrop-filter: blur(1em);
         backdrop-filter: blur(1em);
     }
@@ -106,6 +108,7 @@
                     transform: translateX(0);
             opacity: 0;
         }
+     
         div#extra-div-4:focus-within ~ div#extra-div-5::before {
             -webkit-transform: translateX(0);
                -moz-transform: translateX(0);
@@ -114,6 +117,7 @@
                     transform: translateX(0);
             opacity: 0;
         }
+    
     /* Generally sidebar collapses. */
     #side-bar, div#extra-div-4 {
         opacity: 0;
@@ -146,6 +150,8 @@
                 -webkit-transform .3s var(--standard-curve),
                 -moz-transform .3s var(--standard-curve),
                 -o-transform .3s var(--standard-curve);
+        -webkit-backdrop-filter: blur(1em);
+        backdrop-filter: blur(1em);
     }
     /* When outbounded sidebar stays still. */
     #side-bar:hover,
