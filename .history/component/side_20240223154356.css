@@ -28,19 +28,14 @@ div#side-bar:before {
     height: 100%;
     width: var(--sidebar-width-on-desktop);
     -webkit-backdrop-filter: blur(.5em);
-    backdrop-filter: blur(.5em);
+    backdrop-filter: blur(.5em) brightness(1.2);
     mask: var(--feather-mask);
     -webkit-mask: var(--feather-mask);
     z-index: -1;
-    transform: translateX(-1rem) scale(1.2);
+    transform: scale(1.2);
+    transform: translateX(0rem) scale(1.2);
 }
-@media only screen and (max-width: 767px) {
-    div#side-bar:before {
-        -webkit-backdrop-filter: blur(.5em)  brightness(1.2);
-        backdrop-filter: blur(.5em) brightness(1.2);
-        transform: translateX(0rem) scale(1.2);
-    }
-}
+@media only screen and 
 #side-bar a {
     position: relative;
     display: -webkit-box;
@@ -103,7 +98,6 @@ div#side-bar:before {
 }
 #side-bar .side-block {
     display: grid;
-    width: var(--sidebar-width-on-desktop);
     background-color: rgb(var(--sideblock-bg-color));
     padding: 0;
     box-shadow: 0 1px 5px rgb(var(--plain-third-color),.77);

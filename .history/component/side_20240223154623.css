@@ -111,6 +111,7 @@ div#side-bar:before {
     align-items: center;
     justify-items: center;
     direction: ltr;
+
 }
 
 #side-bar .side-block .heading {

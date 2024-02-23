@@ -43,7 +43,8 @@
 _______________________________________________________________________________________________ */
 
 @charset "utf-8";
-@import url(https://cdn.jsdelivr.net/gh/cirisus/l-arca/font-face.css);
+@import url(https://cdn.jsdelivr.net/gh/cirisus/Arknights-Proj/font-face.css);
+@import url(https://cdn.jsdelivr.net/gh/cirisus/Arknights-Proj/component/credits-font.css);
 @import url(https://fonts.googleapis.com/css2?family=Asul&display=swap);
 @import url(https://use.typekit.net/tqr1skr.css);
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+SC&family=Noto+Sans+TC&family=Noto+Serif&family=Noto+Serif+SC&family=Noto+Serif+TC&display=swap);
@@ -124,6 +125,9 @@ ________________________________________________________________________________
     --revert-question:"吗？";
     --revert-txt-2:"回覆页面版本的操作只会更改页面的源代码和/或标题，而附件、页面地址或者其他元信息不会被回覆。";
     --revert-txt-3:"如果确认回覆，你将发布一个与对应版本具有相同标题与源代码的新页面版本。";
+    --wanted-hovertip:"列出有链接指向但是尚未创建的页面地址。";
+    --orphant-hovertip:"列出没有任何链接指向它们的页面地址。";
+    --draft-hovertip:"列出保存有草稿的页面地址。";
 
     --code-wizard-title:"代码方块向导";
     --table-wizard-title:"表格向导";
@@ -184,7 +188,7 @@ ________________________________________________________________________________
     --sidebar-width-on-mobile:17em;
     --sidebar-padding-width:1em;
     --scrollbar-width:.8em;
-    --sidebar-final-width-on-mobile: calc(var(--sidebar-width-on-mobile) + var(--scrollbar-width) + var(--sidebar-padding-width));
+    --sidebar-final-width-on-mobile: calc(var(--sidebar-width-on-desktop) + var(--sidebar-padding-width)*2);
     /* == COLORS == */
     /* = PURE ACCENTS = */
     --scale-0:0,0,0;
@@ -528,6 +532,9 @@ ________________________________________________________________________________
     --revert-question: "?";
     --revert-txt-2: "Reverting the page version will only change the source code and/or title of the page, while attachments, page addresses or other metadata will not be reverted.";
     --revert-txt-3: "If you confirm the revert, you will publish a new page version with the same title and source code as the corresponding version.";
+    --wanted-hovertip:"List pages that are wanted but not created yet.";
+    --orphant-hovertip:"List pages that are not linked from any other page.";
+    --draft-hovertip:"List pages that have drafts saved.";
 
     --code-wizard-title:"Code block Wizard";
     --table-wizard-title:"Table Wizard";
@@ -610,6 +617,9 @@ ________________________________________________________________________________
     --revert-question: "?";
     --revert-txt-2: "La réversion de la version de la page ne changera que le code source et/ou le titre de la page, tandis que les pièces jointes, les adresses de page ou autres métadonnées ne seront pas rétablies.";
     --revert-txt-3: "Si vous confirmez la réversion, vous publierez une nouvelle version de la page avec le même titre et le même code source que la version correspondante.";
+    --wanted-hovertip: "Liste les adresses des pages qui ont des liens pointant vers elles mais qui n'ont pas été créées.";
+    --orphant-hovertip: "Liste les adresses des pages qui n'ont aucun lien pointant vers elles.";
+    --draft-hovertip: "Liste les adresses des pages qui ont des brouillons enregistrés.";
 
     --image-wizard-title:"Assistant d'Image";
     --choose-img-txt:"Veuillez sélectionner l'un des fichiers de la page.";
@@ -690,6 +700,9 @@ ________________________________________________________________________________
     --revert-question: "？";
     --revert-txt-2: "ページバージョンのリバートは、ページのソースコードおよび/またはタイトルのみを変更し、添付ファイル、ページアドレス、またはその他のメタデータはリバートされません。";
     --revert-txt-3: "リバートを確認すると、対応するバージョンと同じタイトルとソースコードを持つ新しいページバージョンを公開します。";
+    --wanted-hovertip: "リンクが指しているがまだ作成されていないページのアドレスをリストアップします。";
+    --orphant-hovertip: "リンクが指していないページのアドレスをリストアップします。";
+    --draft-hovertip: "ドラフトが保存されているページのアドレスをリストアップします。";
 
     --code-wizard-title:"コードブロックウィザード";
     --table-wizard-title:"テーブルウィザード";
@@ -770,6 +783,9 @@ ________________________________________________________________________________
     --revert-question: "?";
     --revert-txt-2: "Das Zurücksetzen der Seitenversion ändert nur den Quellcode und/oder den Titel der Seite, während Anhänge, Seitenadressen oder andere Metadaten nicht zurückgesetzt werden.";
     --revert-txt-3: "Wenn Sie das Zurücksetzen bestätigen, veröffentlichen Sie eine neue Seitenversion mit dem gleichen Titel und Quellcode wie die entsprechende Version.";
+    --wanted-hovertip: "Listet die Adressen der Seiten auf, auf die Links verweisen, die jedoch noch nicht erstellt wurden.";
+    --orphant-hovertip: "Listet die Adressen der Seiten auf, auf die keine Links verweisen.";
+    --draft-hovertip: "Listet die Adressen der Seiten auf, die Entwürfe gespeichert haben.";
 
     --code-wizard-title:"Code-Block-Assistent";
     --table-wizard-title:"Tabellen-Assistent";
@@ -850,6 +866,9 @@ ________________________________________________________________________________
     --revert-question: "?";
     --revert-txt-2: "Возврат версии страницы изменит только исходный код и/или заголовок страницы, в то время как вложения, адреса страниц или другие метаданные не будут возвращены.";
     --revert-txt-3: "Если вы подтвердите возврат, вы опубликуете новую версию страницы с тем же заголовком и исходным кодом, что и соответствующая версия.";
+    --wanted-hovertip: "Список адресов страниц, на которые есть ссылки, но которые еще не созданы.";
+    --orphant-hovertip: "Список адресов страниц, на которые нет ссылок.";
+    --draft-hovertip: "Список адресов страниц, на которых сохранены черновики.";
 
     --code-wizard-title:"Мастер блока кода";
     --table-wizard-title:"Мастер таблицы";
@@ -930,6 +949,9 @@ ________________________________________________________________________________
     --revert-question: "?";
     --revert-txt-2: "Il ripristino della versione della pagina cambierà solo il codice sorgente e/o il titolo della pagina, mentre gli allegati, gli indirizzi delle pagine o altri metadati non verranno ripristinati.";
     --revert-txt-3: "Se confermi il ripristino, pubblicherai una nuova versione della pagina con lo stesso titolo e codice sorgente della versione corrispondente.";
+    --wanted-hovertip: "Elenca gli indirizzi delle pagine a cui puntano i link ma che non sono state create.";
+    --orphant-hovertip: "Elenca gli indirizzi delle pagine a cui non puntano link.";
+    --draft-hovertip: "Elenca gli indirizzi delle pagine che hanno bozze salvate.";
 
     --code-wizard-title:"Assistente del blocco di codice";
     --table-wizard-title:"Assistente della tabella";
@@ -1010,6 +1032,9 @@ ________________________________________________________________________________
     --revert-question: "?";
     --revert-txt-2: "Revertir la versión de la página solo cambiará el código fuente y/o el título de la página, mientras que los adjuntos, las direcciones de las páginas u otros metadatos no se revertirán.";
     --revert-txt-3: "Si confirmas la reversión, publicarás una nueva versión de la página con el mismo título y código fuente que la versión correspondiente.";
+    --wanted-hovertip: "Enumera las direcciones de las páginas a las que se apuntan con enlaces pero que no se han creado.";
+    --orphant-hovertip: "Enumera las direcciones de las páginas a las que no se apuntan con ningún enlace.";
+    --draft-hovertip: "Enumera las direcciones de las páginas que tienen borradores guardados.";
 
     --code-wizard-title:"Asistente de bloque de código";
     --table-wizard-title:"Asistente de tabla";
@@ -1236,7 +1261,6 @@ ________________________________________________________________________________
     --type-admin-bg:235,235,235;
     --type-admin-txt:22,22,22;
 }
-@import url(../component/credits-font.css);
 /* == Template == */
 /*
 #odialog-container .owindow:has(a[onclick*="flagUser" i]):has(a[href*="******"])>div.modal-body>img[style*="padding: 2px 8px;"]:first-child+h1:after {
@@ -1249,6 +1273,7 @@ ________________________________________________________________________________
     font-size: 1rem;
     text-shadow: none;
     color: rgb(var(--scale-2));
+    letter-spacing: -0.025rem;
 }
 #odialog-container .owindow:has(a[onclick*="flagUser" i]):has(a[href*="******"])>div.modal-body>img[style*="padding: 2px 8px;"]:first-child+h1:after {
     content: '认证信息：';
@@ -1257,7 +1282,7 @@ ________________________________________________________________________________
     background-color: rgb(var());
 }
 */
-#odialog-container .owindow:has(a[onclick*="flagUser" i]):has(a[href*="7180920"])>div.modal-body>img[style*="padding: 2px 8px;"]:first-child+h1:after {
+#odialog-container .owindow:has(a[onclick*="flagUser" i]):has(a[onclick*="addContact" i])>div.modal-body>img[style*="padding: 2px 8px;"]:first-child+h1:after {
     display: flex;
     font-family: 'Latienne_Pro','Noto Serif SC';
     align-items: center;
@@ -1270,6 +1295,7 @@ ________________________________________________________________________________
     border-top: 2px solid #fff;
     border-bottom: 2px solid #fff;
     background-color: #fff;
+    letter-spacing: -0.025rem;
 }
 /* == CREDITS == */
 #odialog-container .owindow:has(a[onclick*="flagUser" i]):has(a[href*="7180920"])>div.modal-body>img[style*="padding: 2px 8px;"]:first-child+h1:after {
@@ -1278,6 +1304,13 @@ ________________________________________________________________________________
     border-top: 2px solid rgb(var(--type-developer-border));
     border-bottom: 2px solid rgb(var(--type-developer-border));
     background-color: rgb(var(--type-developer-bg));
+}
+#odialog-container .owindow:has(a[onclick*="flagUser" i]):has(a[href*="7599370"])>div.modal-body>img[style*="padding: 2px 8px;"]:first-child+h1:after {
+    content: "认证信息：站务组机器人";
+    color: rgb(var(--type-admin-txt));
+    border-top: 2px solid rgb(var(--type-admin-border));
+    border-bottom: 2px solid rgb(var(--type-admin-border));
+    background-color: rgb(var(--type-admin-bg));
 }
 /* INDEX */
 .forum-group table td.threads, .forum-group table td.posts {
@@ -4445,15 +4478,42 @@ table.page-files tbody tr td:not(.page-rate-widget-box):not(#search-top-box-form
     content: var(--watchers-txt);
     font-size: 0.85rem;
 }
-#who-rated-page-area h2 + div[style="-moz-column-count:3"] {
-    -webkit-column-count: 4;
-    -moz-column-count:4 !important;
-    column-count: 4;
+#who-rated-page-area > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(12.5rem,1fr) 1.75rem);
+    font-size: 0.9rem;
 }
-#who-rated-page-area h2 + div[style="-moz-column-count:3"] span[style="color:#777"] {
+#who-rated-page-area>div br {
+    display: none;
+}
+#who-rated-page-area>div span:nth-of-type(odd) {
+    padding: 0.2rem 0;
+    padding-inline-start: 0.75rem;
+    border-inline-start: solid 0.075rem rgb(var(--scale-4-sub));
+    transition: background-color 175ms ease-out;
+    position: relative;
+    align-items: center;
+    min-width: -webkit-fill-available;
+}
+#who-rated-page-area>div span:nth-of-type(odd):is(:hover,:focus-within), #who-rated-page-area>div span:nth-of-type(odd):is(:hover,:focus-within)+span[style*=color] {
+    background-color: rgb(var(--liltone));
+}
+#who-rated-page-area>div span:nth-of-type(odd)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 100%;
+    width: 1.75rem;
+    height: 100%;
+}
+#who-rated-page-area>div span[style*=color] {
+    display: grid;
+    place-items: center;
+    text-align: center;
     color: rgb(var(--scale-2)) !important;
     font-size: 1.25rem;
-    vertical-align: sub;
+    transition: background-color 175ms ease-out;
 }
 #action-area>form:nth-child(4)>table:first-child>tbody:first-child>tr:first-child {
     display: flex;
@@ -4605,6 +4665,22 @@ div#rename-option-rename {
     font-size: .8em;
     font-family: var(--Deco-font);
     text-align: right
+}
+:is(div#st-wanted-pages-button-hovertip.hovertip,div#st-orphaned-pages-button-hovertip.hovertip,div#st-draft-pages-button-hovertip.hovertip) > .content {
+    font-size:0
+}
+:is(div#st-wanted-pages-button-hovertip.hovertip,div#st-orphaned-pages-button-hovertip.hovertip,div#st-draft-pages-button-hovertip.hovertip) > .content:before {
+    font-size:.75rem;
+    padding: 2px 0
+}
+div#st-wanted-pages-button-hovertip.hovertip > .content:before {
+    content:var(--wanted-hovertip)
+}
+div#st-orphaned-pages-button-hovertip.hovertip > .content:before {
+    content:var(--orphant-hovertip)
+}
+div#st-draft-pages-button-hovertip.hovertip > .content:before {
+    content:var(--draft-hovertip)
 }
 a.avatar-hover, a.avatar-hover:hover {
     -webkit-backdrop-filter: drop-shadow(2px 4px 3px rgb(var(--scale-0))) blur(1px);
@@ -5033,7 +5109,7 @@ tr:has(td[class*=title]) {
         position: fixed;
         top: 0;
         left: -25em;
-        width: var(--sidebar-width-on-mobile);
+        width: unset;
         height: 100%;
         background-color: rgb(var(--sidebar-bg-color));
         z-index: 10;
@@ -5798,6 +5874,12 @@ to {
 #odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child~table tbody, #odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child~table tr {
     display: contents;
 }
+#odialog-container .content, #odialog-container .modal-body {
+    display: grid;
+    margin: 0 1rem;
+    padding: 0;
+    word-break: break-all
+}
 #odialog-container div.owindow {
     display: grid;
     position: fixed;
@@ -5876,6 +5958,7 @@ to {
     justify-content: center;
     align-self: center;
     justify-items: center;
+    width: calc(100% - 7.5rem);
     border-top: 2px solid rgb(var(--split-line));
     border-bottom: 2px solid rgb(var(--split-line));
     font-family: unset;
@@ -5884,13 +5967,18 @@ to {
     letter-spacing: -0.1rem;
     background-color: rgb(var(--bright-secondary-color),0.2);
 }
+@media only screen and (max-width:767px) {
+    #odialog-container .owindow:has(a[onclick*="flagUser" i])>div.modal-body>img[style*="padding: 2px 8px;"]:first-child+h1 {
+        width: -webkit-fill-available;
+        width: 100%;
+    }
+}
 #odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child~table {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column: 1/span 2;
     margin-top: .25rem
 }
-
 #odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child~table+div {
     display: grid;
     grid-template-rows: -webkit-min-content;
@@ -7374,7 +7462,7 @@ to {opacity:1}
 }
 #side-bar {
     display: grid;
-    width: var(--sidebar-width-on-desktop);
+    width: unset;
     height: 100vh;
     float: left;
     padding-right: 1em;
@@ -7393,13 +7481,20 @@ div#side-bar:before {
     display: block;
     position: absolute;
     height: 100%;
-    width: inherit;
+    width: var(--sidebar-width-on-desktop);
     -webkit-backdrop-filter: blur(.5em);
     backdrop-filter: blur(.5em);
     mask: var(--feather-mask);
     -webkit-mask: var(--feather-mask);
     z-index: -1;
-    transform: scale(1.2);
+    transform: translateX(-1rem) scale(1.2);
+}
+@media only screen and (max-width: 767px) {
+    div#side-bar:before {
+        -webkit-backdrop-filter: blur(.5em)  brightness(1.2);
+        backdrop-filter: blur(.5em) brightness(1.2);
+        transform: translateX(0rem) scale(1.2);
+    }
 }
 #side-bar a {
     position: relative;
@@ -7415,7 +7510,7 @@ div#side-bar:before {
     background-clip: border-box;
     width: fit-content;
     margin: 0;
-    padding: 4px 0 4px 4px;
+    padding: 4px 2px;
     border: none;
     font-size: 100%;
     color: rgb(var(--sidebar-link-color));
@@ -7463,6 +7558,7 @@ div#side-bar:before {
 }
 #side-bar .side-block {
     display: grid;
+    width: var(--sidebar-width-on-desktop);
     background-color: rgb(var(--sideblock-bg-color));
     padding: 0;
     box-shadow: 0 1px 5px rgb(var(--plain-third-color),.77);

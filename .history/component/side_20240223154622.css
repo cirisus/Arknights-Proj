@@ -103,7 +103,6 @@ div#side-bar:before {
 }
 #side-bar .side-block {
     display: grid;
-    width: var(--sidebar-width-on-desktop);
     background-color: rgb(var(--sideblock-bg-color));
     padding: 0;
     box-shadow: 0 1px 5px rgb(var(--plain-third-color),.77);
@@ -111,6 +110,7 @@ div#side-bar:before {
     align-items: center;
     justify-items: center;
     direction: ltr;
+
 }
 
 #side-bar .side-block .heading {

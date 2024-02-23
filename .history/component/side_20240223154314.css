@@ -7,6 +7,22 @@
 }
 #side-bar {
     display: grid;
+    width: var(--sidebar-width-on-desktop);
+    height: 100vh;
+    float: left;
+    padding-right: 1em;
+    clear: left;
+    position: fixed;
+    left: 0;
+    top: 3em;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+    z-index: 12;
+    direction: rtl;
+}
+#side-bar {
+    display: grid;
     width: unset;
     height: 100vh;
     float: left;
@@ -26,20 +42,13 @@ div#side-bar:before {
     display: block;
     position: absolute;
     height: 100%;
-    width: var(--sidebar-width-on-desktop);
+    width: inherit;
     -webkit-backdrop-filter: blur(.5em);
     backdrop-filter: blur(.5em);
     mask: var(--feather-mask);
     -webkit-mask: var(--feather-mask);
     z-index: -1;
-    transform: translateX(-1rem) scale(1.2);
-}
-@media only screen and (max-width: 767px) {
-    div#side-bar:before {
-        -webkit-backdrop-filter: blur(.5em)  brightness(1.2);
-        backdrop-filter: blur(.5em) brightness(1.2);
-        transform: translateX(0rem) scale(1.2);
-    }
+    transform: scale(1.2);
 }
 #side-bar a {
     position: relative;
@@ -103,7 +112,6 @@ div#side-bar:before {
 }
 #side-bar .side-block {
     display: grid;
-    width: var(--sidebar-width-on-desktop);
     background-color: rgb(var(--sideblock-bg-color));
     padding: 0;
     box-shadow: 0 1px 5px rgb(var(--plain-third-color),.77);
