@@ -183,8 +183,6 @@
     background: rgb(0,0,0,0.1) 1px 1px repeat;
     z-index: -1;
     opacity: 1;
-    -webkit-backdrop-filter: blur(.2em);
-    backdrop-filter: blur(0.2em);
     pointer-events: auto;
     visibility: visible;
 }
@@ -193,12 +191,12 @@
 }
     a.close-menu:before {
         content: "";
-        display: block;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        -webkit-backdrop-filter: blur(0);
-        backdrop-filter: blur(0);
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+        -webkit-backdrop-filter: blur(.2em);
+        backdrop-filter: blur(0em);
         mask: var(--feather-mask);
         -webkit-mask: var(--feather-mask);
         z-index: -1;

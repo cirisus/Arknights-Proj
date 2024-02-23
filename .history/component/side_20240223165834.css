@@ -46,7 +46,7 @@ div#side-bar:before {
     }
 }
 div#side-bar:is(:hover,:focus-within,:focus-visible):before {
-    backdrop-filter: blur(0.5rem)
+    backdrop-filter: blur(0.5rem);
 }
 #side-bar a {
     position: relative;
