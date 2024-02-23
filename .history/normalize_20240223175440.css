@@ -1334,7 +1334,7 @@ div#extra-div-1 {
     overflow: visible;
 }
 div#extra-div-2 {
-    height: 1400px;
+    height: 1800px;
     width: 100%;
     top: var(--banner-height);
     position: absolute;
@@ -4296,8 +4296,8 @@ div#dialog-clone-wait.wait-progress {
   }
 }
 @keyframes fountain {
-from {opacity:0}
-to {opacity:1}
+    from {opacity:0}
+    to {opacity:1}
 }
 #odialog-container {
     animation: fountain .75s cubic-bezier(0.25, 0.46, 0.45, 0.94 );
@@ -4776,6 +4776,7 @@ input.text.form-control, textarea#thread-description, textarea#post-edit, textar
     font-weight: var(--wght);
     transition: box-shadow .2s var(--standard-curve),color .15s var(--standard-curve),background-color .15s var(--standard-curve),transform .2s var(--standard-curve),font-weight .2s var(--standard-curve),font-variation-settings .2s var(--standard-curve);
     will-change: box-shadow,color,background-color,transform,font-weight,font-variation-settings;
+    width: 100% !important;
 }
 input.text.form-control:focus-within, textarea#thread-description:focus-within, textarea#post-edit:focus-within, textarea#np-text:focus-within {
     --wght: 500;
@@ -5373,7 +5374,7 @@ padding: 0.5em 1em;
         left: -25em;
         width: unset;
         height: 100%;
-        background-color: unset;
+        background-color: rgb(var(--sidebar-bg-color));
         z-index: 10;
         padding: var(--sidebar-padding-width);
         -webkit-transition: left 0.5s ease-in-out 0.1s;
@@ -5579,6 +5580,7 @@ padding: 0.5em 1em;
         font-size: calc(var(--base-font-size)*.85);
         font-family: var(--UI-font,var(--header-font))
     }
+ 
     #header div[class*=top-bar]>ul {
         display: flex;
         z-index: 20;
@@ -5606,6 +5608,7 @@ padding: 0.5em 1em;
         cursor: pointer;
         transition: background-color .15s var(--standard-curve)
     }
+ 
     #header div[class*=top-bar]>ul>li>a {
         --wght: calc(var(--ui-wght) + 100);
         display: inline-flex;
@@ -5964,6 +5967,7 @@ body {
     padding: 0;
     background-color: rgb(var(--mo-content-bg));
     box-shadow: none;
+ 
     display: grid;
     grid-template-columns: repeat(5,1fr);
     grid-template-areas:
@@ -7554,6 +7558,7 @@ tr:has(td[class*=title]) {
     font-size: 1rem !important;
     padding-left: 1rem;
 }
+/* === Credits Module === */
 :root {
     --type-developer-border:55,113,163;
     --type-developer-bg:211,225,255;
@@ -7687,4 +7692,3 @@ to {
 	background:#DDD;
 	text-decoration:none;
 }
-

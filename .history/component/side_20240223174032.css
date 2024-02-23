@@ -27,8 +27,8 @@ div#side-bar:before {
     content: "";
     display: block;
     position: absolute;
-    left:1rem;
     height: 100%;
+    left:1r
     width: var(--sidebar-width-on-desktop);
     -webkit-backdrop-filter: blur(0);
     backdrop-filter: blur(0);
@@ -116,9 +116,9 @@ div#side-bar:is(:hover,:focus-within,:focus-visible):before {
 #side-bar .side-block {
     display: grid;
     width: var(--sidebar-width-on-desktop);
-    background-color: rgb(var(--sideblock-bg-color),.4);
+    background-color: rgb(var(--sideblock-bg-color));
     padding: 0;
-    box-shadow: 0 1px 5px rgb(var(--sideblock-bg-color),.77);
+    box-shadow: 0 1px 5px rgb(var(--plain-third-color),.77);
     align-content: center;
     align-items: center;
     justify-items: center;
@@ -171,69 +171,6 @@ div#side-bar:is(:hover,:focus-within,:focus-visible):before {
     margin-top: -1px;
     width: 100%;
     margin-left: -14px;
-}
-div#side-bar:has(li.sfhover) {
-    padding-right:calc(0.8 * var(--sidebar-width-on-desktop));
-    transition: all 250ms
-}
-.side-block:has(ul) {
-    width:var(--sidebar-width-on-desktop)
-}
-#side-bar :is(ul,li,ol){
-    list-style:none;
-    padding:0;
-    margin:0;
-}
-#side-bar ul {
-    position:relative;
-    width:var(--sidebar-width-on-desktop)
-}
-#side-bar ul>li {
-    position:relative;
-    animation: respire 4s linear;
-    -moz-animation: respire 4s linear;
-    -webkit-animation: respire 4s linear;
-    -o-animation: respire 4s linear;
-    animation-direction: alternate-reverse;
-    animation-iteration-count: infinite;
-}
-#side-bar ul>li a {
-    position:relative;
-    width:calc(var(--sidebar-width-on-desktop) - 4px)
-}
-#side-bar ul>li>ul {
-    background-color: rgb(var(--sideblock-bg-color),.7);
-    padding: 0;
-    box-shadow: 0 1px 5px rgb(var(--sideblock-bg-color),.9);
-    -webkit-backdrop-filter: blur(.5rem);
-    backdrop-filter: blur(.5rem)
-}
-#side-bar ul>li>ul {
-    opacity:0;
-    list-style: none none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: calc(0.8 * var(--sidebar-width-on-desktop));
-    margin: 0;
-    margin-left: 100%;
-    display: block;
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
-    clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
-    transition: all 150ms
-}
-#side-bar ul>li.sfhover>ul {
-    opacity:1;
-    -webkit-clip-path: polygon(-5% 0, 105% -5%, 105% 105%, -5% 105%);
-    clip-path: polygon(-5% 0, 105% -5%, 105% 105%, -5% 105%);
-    transition: all 150ms
-}
-#side-bar ul>li>ul>li {
-    width: calc(0.8 * var(--sidebar-width-on-desktop))
-}
-#side-bar ul>li>ul>li a {
-    box-sizing: border-box;
-    max-width: calc(0.8 * var(--sidebar-width-on-desktop))
 }
 .subt:nth-child(odd) {
     display: inline-block;
