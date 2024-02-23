@@ -173,7 +173,7 @@ div#side-bar:is(:hover,:focus-within,:focus-visible):before {
     margin-left: -14px;
 }
 div#side-bar:has(li.sfhover) {
-    padding-right: calc(0.8 * var(--sidebar-width-on-desktop) + 6px);
+    calc(0.8 * var(--sidebar-width-on-desktop) + 6px);
     transition: all 250ms
 }
 .side-block:has(ul) {

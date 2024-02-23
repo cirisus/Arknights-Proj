@@ -7611,7 +7611,7 @@ tr:has(td[class*=title]) {
 }
 /* == CREDITS == */
 #odialog-container .owindow:has(a[onclick*="flagUser" i]):has(a[href*="7180920"])>div.modal-body>img[style*="padding: 2px 8px;"]:first-child+h1:after {
-    content: "认证信息：站务组组长｜Wikidot维护与开发";
+    content: "认证信息：站务组组长｜Wikidot维护";
     color: rgb(var(--type-developer-txt));
     border-top: 2px solid rgb(var(--type-developer-border));
     border-bottom: 2px solid rgb(var(--type-developer-border));

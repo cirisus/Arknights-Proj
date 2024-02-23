@@ -1557,7 +1557,7 @@ div#side-bar:is(:hover,:focus-within,:focus-visible):before {
     margin-left: -14px;
 }
 div#side-bar:has(li.sfhover) {
-    padding-right:calc(0.8 * var(--sidebar-width-on-desktop) + 6px);
+    padding-right:calc(0.8 * var(--sidebar-width-on-desktop) );
     transition: all 250ms
 }
 .side-block:has(ul) {
@@ -1586,7 +1586,7 @@ div#side-bar:has(li.sfhover) {
     width:calc(var(--sidebar-width-on-desktop) - 4px)
 }
 #side-bar ul>li>ul {
-    background-color: rgb(var(--sideblock-bg-color),.8);
+    background-color: rgb(var(--sideblock-bg-color),.7);
     padding: 0;
     box-shadow: 0 1px 5px rgb(var(--sideblock-bg-color),.9);
     -webkit-backdrop-filter: blur(.5rem);
@@ -7611,7 +7611,7 @@ tr:has(td[class*=title]) {
 }
 /* == CREDITS == */
 #odialog-container .owindow:has(a[onclick*="flagUser" i]):has(a[href*="7180920"])>div.modal-body>img[style*="padding: 2px 8px;"]:first-child+h1:after {
-    content: "认证信息：站务组组长｜Wikidot维护与开发";
+    content: "认证信息：站务组组长｜Wikidot开发";
     color: rgb(var(--type-developer-txt));
     border-top: 2px solid rgb(var(--type-developer-border));
     border-bottom: 2px solid rgb(var(--type-developer-border));

@@ -173,7 +173,7 @@ div#side-bar:is(:hover,:focus-within,:focus-visible):before {
     margin-left: -14px;
 }
 div#side-bar:has(li.sfhover) {
-    padding-right: calc(0.8 * var(--sidebar-width-on-desktop) + 6px);
+    padding-right:calc(0.8 * var(--sidebar-width-on-desktop));
     transition: all 250ms
 }
 .side-block:has(ul) {
@@ -224,8 +224,8 @@ div#side-bar:has(li.sfhover) {
 }
 #side-bar ul>li.sfhover>ul {
     opacity:1;
-    -webkit-clip-path: polygon(-5% -5%, 105% -5%, 105% 105%, -5% 105%);
-    clip-path: polygon(-5% -5%, 105% -5%, 105% 105%, -5% 105%);
+    -webkit-clip-path: polygon(-5% 0, 105% -5%, 105% 105%, -5% 105%);
+    clip-path: polygon(-5% 0, 105% -5%, 105% 105%, -5% 105%);
     transition: all 150ms
 }
 #side-bar ul>li>ul>li {
