@@ -10,7 +10,7 @@
         仅用于Arknights.wikidot.com站点。
 
     === License //授权方式 ===
-        v1.6 released on 2024.02.23 on Github.
+        v1.5 released on 2024.02.20 on Github.
         All rights reserved, NO CC LICENSE THIS TIME, DO NOT USE THE THEME WITHOUT PERMISSION.
         Open source version will be released after completely developed.
 
@@ -188,7 +188,7 @@ ________________________________________________________________________________
     --sidebar-width-on-mobile:17em;
     --sidebar-padding-width:1em;
     --scrollbar-width:.8em;
-    --sidebar-final-width-on-mobile: calc(var(--sidebar-width-on-desktop) + var(--sidebar-padding-width)*2);
+    --sidebar-final-width-on-mobile: calc(var(--sidebar-width-on-mobile) + var(--scrollbar-width) + var(--sidebar-padding-width));
     /* == COLORS == */
     /* = PURE ACCENTS = */
     --scale-0:0,0,0;
@@ -5305,7 +5305,7 @@ padding: 0.5em 1em;
         position: fixed;
         top: 0;
         left: -25em;
-        width: unset;
+        width: var(--sidebar-width-on-mobile);
         height: 100%;
         background-color: rgb(var(--sidebar-bg-color));
         z-index: 10;

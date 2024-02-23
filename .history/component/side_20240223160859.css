@@ -21,7 +21,6 @@
     overflow-y: visible;
     z-index: 12;
     direction: rtl;
-    transition: all 250ms
 }
 div#side-bar:before {
     content: "";

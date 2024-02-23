@@ -10,7 +10,7 @@
         仅用于Arknights.wikidot.com站点。
 
     === License //授权方式 ===
-        v1.6 released on 2024.02.23 on Github.
+        v1.5 released on 2024.02.20 on Github.
         All rights reserved, NO CC LICENSE THIS TIME, DO NOT USE THE THEME WITHOUT PERMISSION.
         Open source version will be released after completely developed.
 
@@ -188,7 +188,7 @@ ________________________________________________________________________________
     --sidebar-width-on-mobile:17em;
     --sidebar-padding-width:1em;
     --scrollbar-width:.8em;
-    --sidebar-final-width-on-mobile: calc(var(--sidebar-width-on-desktop) + var(--sidebar-padding-width)*2);
+    --sidebar-final-width-on-mobile: calc(var(--sidebar-width-on-mobile) + var(--scrollbar-width) + var(--sidebar-padding-width));
     /* == COLORS == */
     /* = PURE ACCENTS = */
     --scale-0:0,0,0;
@@ -1391,11 +1391,10 @@ div#extra-div-5 {
 }
 #side-bar {
     display: grid;
-    width: unset;
+    width: var(--sidebar-width-on-desktop);
     height: 100vh;
     float: left;
     padding-right: 1em;
-    padding-left:0.5rem;
     clear: left;
     position: fixed;
     left: 0;
@@ -1405,27 +1404,19 @@ div#extra-div-5 {
     overflow-y: visible;
     z-index: 12;
     direction: rtl;
-    transition: all 250ms
 }
 div#side-bar:before {
     content: "";
     display: block;
     position: absolute;
     height: 100%;
-    width: var(--sidebar-width-on-desktop);
+    width: inherit;
     -webkit-backdrop-filter: blur(.5em);
     backdrop-filter: blur(.5em);
     mask: var(--feather-mask);
     -webkit-mask: var(--feather-mask);
     z-index: -1;
-    transform: translateX(-1rem) scale(1.2);
-}
-@media only screen and (max-width: 767px) {
-    div#side-bar:before {
-        -webkit-backdrop-filter: blur(.5em)  brightness(1.2);
-        backdrop-filter: blur(.5em) brightness(1.2);
-        transform: translateX(0rem) scale(1.2);
-    }
+    transform: scale(1.2);
 }
 #side-bar a {
     position: relative;
@@ -1441,7 +1432,7 @@ div#side-bar:before {
     background-clip: border-box;
     width: fit-content;
     margin: 0;
-    padding: 4px 2px;
+    padding: 4px 0 4px 4px;
     border: none;
     font-size: 100%;
     color: rgb(var(--sidebar-link-color));
@@ -1489,7 +1480,6 @@ div#side-bar:before {
 }
 #side-bar .side-block {
     display: grid;
-    width: var(--sidebar-width-on-desktop);
     background-color: rgb(var(--sideblock-bg-color));
     padding: 0;
     box-shadow: 0 1px 5px rgb(var(--plain-third-color),.77);
@@ -5305,7 +5295,7 @@ padding: 0.5em 1em;
         position: fixed;
         top: 0;
         left: -25em;
-        width: unset;
+        width: var(--sidebar-width-on-mobile);
         height: 100%;
         background-color: rgb(var(--sidebar-bg-color));
         z-index: 10;

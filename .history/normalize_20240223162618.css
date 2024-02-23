@@ -5305,7 +5305,7 @@ padding: 0.5em 1em;
         position: fixed;
         top: 0;
         left: -25em;
-        width: unset;
+        width: var(--sidebar-width-on-mobile);
         height: 100%;
         background-color: rgb(var(--sidebar-bg-color));
         z-index: 10;

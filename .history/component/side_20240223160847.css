@@ -11,7 +11,7 @@
     height: 100vh;
     float: left;
     padding-right: 1em;
-    padding-left:0.5rem;
+    padding-left
     clear: left;
     position: fixed;
     left: 0;
@@ -21,7 +21,6 @@
     overflow-y: visible;
     z-index: 12;
     direction: rtl;
-    transition: all 250ms
 }
 div#side-bar:before {
     content: "";
