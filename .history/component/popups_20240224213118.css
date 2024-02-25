@@ -1308,7 +1308,7 @@ div#rename-option-delete:before {
     text-align: left;
     text-indent: 2em;
 }
-div#owindow-1:has(a[onclick*="forceOverwrite" i]):not([style^="width: 80%"]) > div#ohandle-1:before {
+div#owindow-1:has(a[onclick*=]):not([style^="width: 80%"]) > div#ohandle-1:before {
     content:var(--overwrite-txt);
 }
 div#owindow-1.owindow.error > .title,div#owindow-1.owindow.confirmation > .title, div#owindow-1[style*="width: 70%;"] > .title, div#owindow-1[style*="width: 60em;"] > .title {

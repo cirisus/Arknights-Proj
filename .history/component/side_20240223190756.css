@@ -154,14 +154,9 @@ div#side-bar:is(:hover,:focus-within,:focus-visible):before {
     animation-direction: alternate-reverse;
     animation-iteration-count: infinite;
 }
-/* UL Menu */
 div#side-bar:has(li.sfhover) {
     padding-right: calc(0.8 * var(--sidebar-width-on-desktop) + 6px);
-    transition: all 250ms var(--vivacissimo-curve)
-}
-div#side-bar:not(:has(li.sfhover)) {
-    padding-right: calc(0.8 * var(--sidebar-width-on-desktop) + 6px);
-    transition: all 250ms var(--vivacissimo-curve)
+    transition: all 250ms
 }
 .side-block:has(ul) {
     width:var(--sidebar-width-on-desktop)
@@ -207,15 +202,13 @@ div#side-bar:not(:has(li.sfhover)) {
     display: block;
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
     clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
-    transition: all 150ms;
-    transition-delay: 30ms
+    transition: all 150ms
 }
 #side-bar ul>li.sfhover>ul {
     opacity:1;
     -webkit-clip-path: polygon(-5% -5%, 105% -5%, 105% 105%, -5% 105%);
     clip-path: polygon(-5% -5%, 105% -5%, 105% 105%, -5% 105%);
-    transition: all 150ms;
-    transition-delay: 0
+    transition: all 150ms
 }
 #side-bar ul>li>ul>li {
     width: calc(0.8 * var(--sidebar-width-on-desktop))

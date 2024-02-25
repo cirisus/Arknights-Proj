@@ -1382,7 +1382,6 @@ div#extra-div-5 {
     height: 100vh;
     z-index: 0;
 }
-/* = Side Bar = */
 @keyframes respire {
     0% { border-bottom: 1px solid rgb(var(--highlight-primary-color), 0.3);}
     100% { border-bottom: 1px solid rgb(var(--highlight-primary-color), 1);}
@@ -1539,14 +1538,9 @@ div#side-bar:is(:hover,:focus-within,:focus-visible):before {
     animation-direction: alternate-reverse;
     animation-iteration-count: infinite;
 }
-/* UL Menu */
 div#side-bar:has(li.sfhover) {
-    padding-right: calc(0.8 * var(--sidebar-width-on-desktop) + 6px);
-    transition: all 250ms var(--vivacissimo-curve)
-}
-div#side-bar:not(:has(li.sfhover)) {
-    padding-right: calc(0.8 * var(--sidebar-width-on-desktop) + 6px);
-    transition: all 250ms var(--vivacissimo-curve)
+    padding-right:calc(0.8 * var(--sidebar-width-on-desktop) + 6px);
+    transition: all 250ms
 }
 .side-block:has(ul) {
     width:var(--sidebar-width-on-desktop)
@@ -1592,15 +1586,13 @@ div#side-bar:not(:has(li.sfhover)) {
     display: block;
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
     clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
-    transition: all 150ms;
-    transition-delay: 30ms
+    transition: all 150ms
 }
 #side-bar ul>li.sfhover>ul {
     opacity:1;
-    -webkit-clip-path: polygon(-5% -5%, 105% -5%, 105% 105%, -5% 105%);
-    clip-path: polygon(-5% -5%, 105% -5%, 105% 105%, -5% 105%);
-    transition: all 150ms;
-    transition-delay: 0
+    -webkit-clip-path: polygon(-5% 0, 105% -5%, 105% 105%, -5% 105%);
+    clip-path: polygon(-5% 0, 105% -5%, 105% 105%, -5% 105%);
+    transition: all 150ms
 }
 #side-bar ul>li>ul>li {
     width: calc(0.8 * var(--sidebar-width-on-desktop))
@@ -4010,7 +4002,7 @@ div#rename-option-delete:before {
     text-align: left;
     text-indent: 2em;
 }
-div#owindow-1:has(a[onclick*="forceOverwrite" i]):not([style^="width: 80%"]) > div#ohandle-1:before {
+div#owindow-1:not([style^="width: 80%"]) > div#ohandle-1:before {
     content:var(--overwrite-txt);
 }
 div#owindow-1.owindow.error > .title,div#owindow-1.owindow.confirmation > .title, div#owindow-1[style*="width: 70%;"] > .title, div#owindow-1[style*="width: 60em;"] > .title {
