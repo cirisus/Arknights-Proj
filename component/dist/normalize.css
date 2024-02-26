@@ -74,6 +74,7 @@ ________________________________________________________________________________
     --tags-label:"页面标签 \25bc";
     --tags-tip-txt:"\2197以空格分离不同的标签。";
     --watchers-txt:"以下用户关注了此页面，这表明他们曾经访问过此网站或者详细查看过站点内容。";
+    --watchers-tail-txt:"……以及更多。";
     --wanted-txt:"（待建页面）";
     --orphant-txt:"（孤立页面）";
     --drafts-txt:"（存稿页面）";
@@ -739,8 +740,8 @@ ________________________________________________________________________________
     --site-tools-txt:"———— Site-Werkzeuge ————";
     --edit-info-txt:"Kurzes Statement:";
     --variation-txt:"Geändert =\00a0";
-    --version-txt:"Version";
-    --flag-txt:"Markierung";
+    --version-txt:"Ver.";
+    --flag-txt:"Mark.";
     --behavior-txt:"Betrieb";
     --editor-txt:"Editor";
     --edit-time-txt:"Zeit";
@@ -1097,6 +1098,7 @@ img[src*="star"] {
 }
 img:is([src*="userkarma"],[src*="avatar"]):not([style*="padding"]) {
     image-rendering: pixelated;
+    vertical-align: text-bottom
 }
 h1, #page-title {
     color: rgb(var(--title-color));
@@ -1538,27 +1540,14 @@ div#side-bar:is(:hover,:focus-within,:focus-visible):before {
     animation-direction: alternate-reverse;
     animation-iteration-count: infinite;
 }
-
-#side-bar .side-block .menu-item:first-child {
-    display: flex;
-    flex-shrink: 0;
-    flex-basis: 100%;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: flex-start;
-    animation: respire 4s linear;
-    -moz-animation: respire 4s linear;
-    -webkit-animation: respire 4s linear;
-    -o-animation: respire 4s linear;
-    animation-direction: alternate-reverse;
-    animation-iteration-count: infinite;
-    margin-top: -1px;
-    width: 100%;
-    margin-left: -14px;
-}
+/* UL Menu */
 div#side-bar:has(li.sfhover) {
-    padding-right:calc(0.8 * var(--sidebar-width-on-desktop));
-    transition: all 250ms
+    padding-right: calc(0.8 * var(--sidebar-width-on-desktop) + 6px);
+    transition: all 250ms var(--vivacissimo-curve)
+}
+div#side-bar:not(:has(li.sfhover)) {
+    padding-right: calc(0.8 * var(--sidebar-width-on-desktop) + 6px);
+    transition: all 250ms var(--vivacissimo-curve)
 }
 .side-block:has(ul) {
     width:var(--sidebar-width-on-desktop)
@@ -1586,7 +1575,7 @@ div#side-bar:has(li.sfhover) {
     width:calc(var(--sidebar-width-on-desktop) - 4px)
 }
 #side-bar ul>li>ul {
-    background-color: rgb(var(--sideblock-bg-color),.7);
+    background-color: rgb(var(--sideblock-bg-color),.8);
     padding: 0;
     box-shadow: 0 1px 5px rgb(var(--sideblock-bg-color),.9);
     -webkit-backdrop-filter: blur(.5rem);
@@ -1604,13 +1593,15 @@ div#side-bar:has(li.sfhover) {
     display: block;
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
     clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
-    transition: all 150ms
+    transition: all 150ms;
+    transition-delay: 30ms
 }
 #side-bar ul>li.sfhover>ul {
     opacity:1;
-    -webkit-clip-path: polygon(-5% 0, 105% -5%, 105% 105%, -5% 105%);
-    clip-path: polygon(-5% 0, 105% -5%, 105% 105%, -5% 105%);
-    transition: all 150ms
+    -webkit-clip-path: polygon(-5% -5%, 105% -5%, 105% 105%, -5% 105%);
+    clip-path: polygon(-5% -5%, 105% -5%, 105% 105%, -5% 105%);
+    transition: all 150ms;
+    transition-delay: 0
 }
 #side-bar ul>li>ul>li {
     width: calc(0.8 * var(--sidebar-width-on-desktop))
@@ -4020,7 +4011,7 @@ div#rename-option-delete:before {
     text-align: left;
     text-indent: 2em;
 }
-div#owindow-1:not([style^="width: 80%"]) > div#ohandle-1:before {
+div#owindow-1:has(a[onclick*="forceOverwrite" i]):not([style^="width: 80%"]) > div#ohandle-1:before {
     content:var(--overwrite-txt);
 }
 div#owindow-1.owindow.error > .title,div#owindow-1.owindow.confirmation > .title, div#owindow-1[style*="width: 70%;"] > .title, div#owindow-1[style*="width: 60em;"] > .title {
@@ -7045,12 +7036,19 @@ table.page-files tbody tr td:not(.page-rate-widget-box):not(#search-top-box-form
     padding-inline-start: 20px;
     gap: 1em;
 }
-#action-area p:has(+ul[style="list-style: none"]) {
+#action-area p:has(+ul[style="list-style: none"]),#action-area ul[style="list-style: none"]+p {
     font-size: 0;
 }
-#action-area p:has(+ul[style="list-style: none"]):before {
+#action-area p:has(+ul[style="list-style: none"]):before, #action-area ul[style="list-style: none"]+p:before {
+    display: block;
+    text-align: left;
     content: var(--watchers-txt);
     font-size: 0.85rem;
+    line-height: 1.2;
+    padding-bottom: .5rem;
+}
+#action-area ul[style="list-style: none"]+p:before {
+    content: var(--watchers-tail-txt)
 }
 #who-rated-page-area > div {
     display: grid;
@@ -7599,7 +7597,7 @@ tr:has(td[class*=title]) {
     justify-content: center;
     padding: 0.2rem;
     margin: 0 0 2px 0;
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 1.35vw, 1rem);
     text-shadow: none;
     color: rgb(var(--scale-2));
     border-top: 2px solid #fff;
