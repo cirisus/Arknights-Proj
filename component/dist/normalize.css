@@ -483,6 +483,7 @@ ________________________________________________________________________________
     --tags-label:"Page Tags\25bc";
     --tags-tip-txt:"\2197Seperate different tags with a Space.";
     --watchers-txt:"The watchers of the site is listed below. Becoming a watcher means that they may visited the site frequently or once checked a page.";
+    --watchers-tail-txt: "...And even more.";
     --wanted-txt:"(To Be Created)";
     --orphant-txt:"(Unidirectional)";
     --drafts-txt:"(Drafts Remain)";
@@ -568,6 +569,7 @@ ________________________________________________________________________________
     --tags-label:"Balises de page\25bc";
     --tags-tip-txt:"\2197Séparer les différentes balises avec un espace.";
     --watchers-txt:"Les observateurs du site sont listés ci-dessous. Devenir un observateur signifie qu'ils peuvent visiter le site fréquemment ou avoir vérifié une page une fois.";
+    --watchers-tail-txt: "...et plus.";
     --wanted-txt:"(À créer)";
     --orphant-txt:"(Page unidirectionnelle)";
     --drafts-txt:"(Les projets restent)";
@@ -651,6 +653,7 @@ ________________________________________________________________________________
     --tags-label:"ページタグ";
     --tags-tip-txt:"\2197異なるタグをスペースで区切ってください。";
     --watchers-txt:"サイトのウォッチャーは以下にリストされています。ウォッチャーになるということは、頻繁にサイトを訪れたり、一度ページをチェックしたりすることがあります。";
+    --watchers-tail-txt: "...その他。";
     --wanted-txt:"（まだ作成されていない）";
     --orphant-txt:"（リンクはない）";
     --drafts-txt:"（下書が残っています）";
@@ -734,6 +737,7 @@ ________________________________________________________________________________
     --tags-label:"Seitenetiketten \25bc";
     --tags-tip-txt:"\2197 Etiketten durch Leerzeichen getrennt verschieben";
     --watchers-txt:"Die Beobachter der Website sind unten aufgeführt. Beobachter zu werden bedeutet, dass sie die Website häufig besuchen oder einmal eine Seite überprüft haben könnten.";
+    --watchers-tail-txt: "...und mehr.";
     --wanted-txt:"(Noch zu erstellen)";
     --orphant-txt:"(Einseitige Seite)";
     --drafts-txt:"(Entwürfe bleiben)";
@@ -817,6 +821,7 @@ ________________________________________________________________________________
     --tags-label:"Хэштеги страницы \25bc";
     --tags-tip-txt:"\2197 Разделите различные теги пробелами";
     --watchers-txt:"Наблюдатели сайта перечислены ниже. Стать наблюдателем означает, что они могут часто посещать сайт или однажды проверили страницу.";
+    --watchers-tail-txt: "...и больше.";
     --wanted-txt:"(Будет создано позднее)";
     --orphant-txt:"(Изолированная)";
     --drafts-txt:"(Проекты остаются)";
@@ -900,6 +905,7 @@ ________________________________________________________________________________
     --tags-label:"Etichette Pagina \25bc";
     --tags-tip-txt:"\2197 Separare diverse etichette con uno spazio";
     --watchers-txt:"Gli osservatori del sito sono elencati di seguito. Diventare un osservatore significa che potrebbero visitare il sito frequentemente o aver controllato una pagina una volta.";
+    --watchers-tail-txt: "...e altro.";
     --wanted-txt:"(Da Creare)";
     --orphant-txt:"(Isolato)";
     --drafts-txt:"(Progetti Rimangono)";
@@ -983,6 +989,7 @@ ________________________________________________________________________________
     --tags-label:"Etiquetas de página \25bc";
     --tags-tip-txt:"\2197 Separar diferentes etiquetas con un espacio";
     --watchers-txt:"Los observadores del sitio se enumeran a continuación. Convertirse en un observador significa que podrían visitar el sitio con frecuencia o haber revisado una página una vez.";
+    --watchers-tail-txt: "...y más.";
     --wanted-txt:"(Por Crear)";
     --orphant-txt:"(Aislado)";
     --drafts-txt:"(Proyectos Permanecen)";
@@ -6683,6 +6690,7 @@ span.printuser {
 #main-content span.printuser {
     align-items: flex-start;
     text-indent: 0;
+    vertical-align: bottom
 }
 span.printuser a:first-of-type,span.printuser.deleted img {
     display: inline-block;
@@ -7578,7 +7586,7 @@ tr:has(td[class*=title]) {
     justify-content: center;
     padding: 0.2rem;
     margin: 0 0 2px 0;
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 1.35vw, 1rem);
     text-shadow: none;
     color: rgb(var(--scale-2));
     letter-spacing: -0.025rem;
