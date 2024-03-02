@@ -1,19 +1,9 @@
 document.addEventListener('DOMContentLoaded', async function() {
-    function processUserInput(imagesInput, linksInput) {
-        const imageUrls = imagesInput.split(',');
-        const links = linksInput.split(',');
-        for(let i = 0; i < imageUrls.length; i++) {
-            imageUrls[i] = imageUrls[i].trim();
-        }
-        for(let i = 0; i < links.length; i++) {
-            links[i] = links[i].trim();
-        }
-        return { imageUrls, links };
-    }
-    const userInputImages = 'https://picsum.photos/500/300, https://picsum.photos/900/300';
-    const userInputLinks = 'https://link1.com, https://link2.com';
-    const { imageUrls, links } = processUserInput(userInputImages, userInputLinks);
-
+    const imageUrls = [
+        'https://example.com/image1.jpg',
+        'https://example.com/image2.jpg',
+        'https://example.com/image3.jpg',
+    ];
     const phaseLength = 500;
     const phaseNum = imageUrls.length;
     const autoInterval = 3000;
@@ -22,6 +12,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     var carousel = document.querySelector('.u_SliderClip');
     var track = document.querySelector('.u_ItemsTrack');
+    var items = document.querySelectorAll('.u_Item');
     var index = 0;
     var intervalId;
     var isHovered = false;
@@ -46,7 +37,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         return new Promise((resolve) => {
             imageUrls.forEach((url, index) => {
                 const a = document.createElement('a');
-                a.href = links[index];
+                a.href = `#${index + 1}`;
                 a.className = 'u_Item';
                 a.dataset.info = 'item';
                 const span = document.createElement('span');
@@ -92,11 +83,9 @@ document.addEventListener('DOMContentLoaded', async function() {
         });
     }
     await Promise.all([
-        assignImagesToCarousel(imageUrls, links),
+        assignImagesToCarousel(imageUrls),
         generateIndicators(phaseNum)
     ]);
-
-    var items = document.querySelectorAll('.u_Item');
 
     //Track transition
     var slideTransition = 'transform ' + transformSpeed + 'ms cubic-bezier(.6,0,.4,1)';

@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
         return { imageUrls, links };
     }
-    const userInputImages = 'https://picsum.photos/500/300, https://picsum.photos/900/300';
-    const userInputLinks = 'https://link1.com, https://link2.com';
+    const userInputImages = 'https://picsum.photos/500/300, https://picsum.photos/900/300, https://picsum.photos/700/300,https://picsum.photos/500/300, https://picsum.photos/900/300, https://picsum.photos/700/300';
+    const userInputLinks = 'https://link1.com, https://link2.com, https://link3.com,https://link1.com, https://link2.com, https://link3.com';
     const { imageUrls, links } = processUserInput(userInputImages, userInputLinks);
 
     const phaseLength = 500;

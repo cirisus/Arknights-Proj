@@ -1,19 +1,20 @@
 document.addEventListener('DOMContentLoaded', async function() {
-    function processUserInput(imagesInput, linksInput) {
-        const imageUrls = imagesInput.split(',');
-        const links = linksInput.split(',');
-        for(let i = 0; i < imageUrls.length; i++) {
-            imageUrls[i] = imageUrls[i].trim();
-        }
-        for(let i = 0; i < links.length; i++) {
-            links[i] = links[i].trim();
-        }
-        return { imageUrls, links };
-    }
-    const userInputImages = 'https://picsum.photos/500/300, https://picsum.photos/900/300';
-    const userInputLinks = 'https://link1.com, https://link2.com';
-    const { imageUrls, links } = processUserInput(userInputImages, userInputLinks);
-
+    const imageUrls = [
+        'https://picsum.photos/500/300',
+        'https://picsum.photos/900/300',
+        'https://picsum.photos/700/300',
+        'https://picsum.photos/800/300',
+        'https://picsum.photos/600/300',
+        'https://picsum.photos/400/300',
+    ];
+    const links = [
+        'https://link1.com',
+        'https://link2.com',
+        'https://link3.com',
+        'https://link4.com',
+        'https://link5.com',
+        'https://link6.com',
+    ];
     const phaseLength = 500;
     const phaseNum = imageUrls.length;
     const autoInterval = 3000;

@@ -1,19 +1,9 @@
 document.addEventListener('DOMContentLoaded', async function() {
-    function processUserInput(imagesInput, linksInput) {
-        const imageUrls = imagesInput.split(',');
-        const links = linksInput.split(',');
-        for(let i = 0; i < imageUrls.length; i++) {
-            imageUrls[i] = imageUrls[i].trim();
-        }
-        for(let i = 0; i < links.length; i++) {
-            links[i] = links[i].trim();
-        }
-        return { imageUrls, links };
-    }
-    const userInputImages = 'https://picsum.photos/500/300, https://picsum.photos/900/300';
-    const userInputLinks = 'https://link1.com, https://link2.com';
-    const { imageUrls, links } = processUserInput(userInputImages, userInputLinks);
-
+    const imageUrls = [
+        'https://example.com/image1.jpg',
+        'https://example.com/image2.jpg',
+        'https://example.com/image3.jpg',
+    ];
     const phaseLength = 500;
     const phaseNum = imageUrls.length;
     const autoInterval = 3000;
@@ -22,6 +12,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     var carousel = document.querySelector('.u_SliderClip');
     var track = document.querySelector('.u_ItemsTrack');
+    var items = document.querySelectorAll('.u_Item');
     var index = 0;
     var intervalId;
     var isHovered = false;
@@ -44,42 +35,37 @@ document.addEventListener('DOMContentLoaded', async function() {
     //image distribution
     function assignImagesToCarousel(imageUrls) {
         return new Promise((resolve) => {
+            const items = document.querySelectorAll('.u_Item');
             imageUrls.forEach((url, index) => {
-                const a = document.createElement('a');
-                a.href = links[index];
-                a.className = 'u_Item';
-                a.dataset.info = 'item';
-                const span = document.createElement('span');
-                span.style.backgroundImage = `url(${url})`;
-                span.dataset.toggle = 'superfical-layer';
-
-                a.appendChild(span);
-                track.appendChild(a);
+                if (items[index]) {
+                    const span = items[index].querySelector('span');
+                    if (span) {
+                        span.style.backgroundImage = `url(${url})`;
+                    }
+                }
             });
             resolve();
         });
     }
+    //indicator generation
     function generateIndicators(phaseNum) {
         return new Promise((resolve) => {
             const liElements = [];
             for (let i = 1; i <= phaseNum; i++) {
                 const li = document.createElement('li');
-                li.classList.add("present");
-
+                    li.classList.add("present");
                 const button = document.createElement('button');
-                button.id = `button-${i}`;
-                button.className = `u_indicator-${i}`;
-                button.setAttribute('aria-controls', `item-${i}`);
-                button.setAttribute('role', 'tab');
-                button.setAttribute('data-item', 'select');
-                button.textContent = i;
-
+                    button.id = `button-${i}`;
+                    button.className = `u_indicator-${i}`;
+                    button.setAttribute('aria-controls', `item-${i}`);
+                    button.setAttribute('role', 'tab');
+                    button.setAttribute('data-item', 'select');
+                    button.textContent = i;
                 li.appendChild(button);
                 liElements.push(li);
             }
-
             const ul = document.querySelector('ul[role="tablist"]');
-            liElements.forEach((li, i) => {
+                liElements.forEach((li, i) => {
                 li.addEventListener('click', () => {
                     stopAutoSlide();
                     index = i;
@@ -92,11 +78,9 @@ document.addEventListener('DOMContentLoaded', async function() {
         });
     }
     await Promise.all([
-        assignImagesToCarousel(imageUrls, links),
+        assignImagesToCarousel(imageUrls),
         generateIndicators(phaseNum)
     ]);
-
-    var items = document.querySelectorAll('.u_Item');
 
     //Track transition
     var slideTransition = 'transform ' + transformSpeed + 'ms cubic-bezier(.6,0,.4,1)';
