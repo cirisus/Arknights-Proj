@@ -6,6 +6,8 @@ from bs4.element import Tag
 
 class Config:
     url = 'https://arknights.wikidot.com'
+    username = 'Penguin Logistics'
+    password = 'Arknights'
     login_url = 'https://www.wikidot.com/default--flow/login__LoginPopupScreen?originSiteId=4592952&openerUri=https://arknights.wikidot.com'
     wikidot_token7 = '9c590ee55caf4ac3a98ceb6e53a6caf3'
     wikidot_session_id = '0730f8d0a03e82b6557ef1e6573b084f7b272e261e1448b7e4ba878'
