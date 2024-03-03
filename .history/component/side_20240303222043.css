@@ -237,9 +237,8 @@ div#side-bar:not(:has(li.sfhover)) {
 }
 .side-block.breaking-news {
     background-color: rgb(var(--sideblock-bg-color), .6) !important;
-    position: relative;
 }
-.side-block.breaking-news::before {
+.side-block.breaking-news :before {
     content: "BREAKING NEWS";
     position: absolute;
     left: -4px;

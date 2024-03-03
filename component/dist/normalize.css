@@ -1628,6 +1628,21 @@ div#side-bar:not(:has(li.sfhover)) {
     transform: skewY(10deg) translateY(.5px);
     -ms-transform: skewY(10deg) translateY(.5px);
 }
+.side-block.breaking-news {
+    background-color: rgb(var(--sideblock-bg-color), .6) !important;
+}
+.side-block.breaking-news :before {
+    content: "BREAKING NEWS";
+    position: absolute;
+    left: -4px;
+    top: 1rem;
+    background-color: rgb(var(--dark-primary-color));
+    color: #fff;
+    font-size: 10px;
+    font-family: 'Geometos', sans-serif;
+    padding: 0 2px;
+    box-shadow: 1px 2.5px 2px rgb(0 0 0 / 50%);
+}
 /* MAIN CONTENT */
 @keyframes merge {
     0% {transform: translateY(20%); filter: opacity(0)}
