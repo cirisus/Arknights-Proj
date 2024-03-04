@@ -1,4 +1,5 @@
-# Codes for Sami Foundation Project
+
+# Codes for Arknights Fanmake-Wiki Project
 
   Created by Cirisus/Senioriousc
   Since 2020.12
