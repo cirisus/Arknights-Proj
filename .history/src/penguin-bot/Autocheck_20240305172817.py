@@ -1,44 +1,30 @@
-import os
 import re
 import requests
 from bs4 import BeautifulSoup
 from bs4.element import Tag
-from Login import login_to_wikidot
-
+import Login
 
 class Config:
     url = 'https://arknights.wikidot.com'
-    login_url = 'https://www.wikidot.com/default--flow/login__LoginPopupScreen'
-    ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0'
+    login_url = 'https://www.wikidot.com/default--flow/login__LoginPopupScreen?originSiteId=4592952&openerUri=https://arknights.wikidot.com'
+    ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36'
     re_matcher = r'[1-9][0-9]；(同人作品搬运/原创|进行相关的艺术创作|参与网站文章内容评价讨论|其他)；一句暗号；(BILIBILI弹幕视频网|LOFTER|QQ/微信|贴吧|现实聊天|其他)'
 
     def __init__(self):
         self.wikidot_token7, self.wikidot_session_id = Login.login()
 
-    def request_module(self, module_name, data):
-        if data is None:
-            data = {}
-        if module_name is None:
-            module_name = 'Empty'
-        data['moduleName'] = module_name
-        data['callbackIndex'] = 0
-        data['wikidot_token7'] = self.wikidot_token7
-        #data['login'] = os.getenv('WIKIDOT_PENGUIN_BOT')
-        #data['password'] = os.getenv('WIKIDOT_PENGUIN_TOKEN')
-        return requests.post(self.url + '/ajax-module-connector.php',
-                             data=data,
-                             headers={
-                                 'X-Requested-With': 'XMLHttpRequest',
-                                 'User-Agent': self.ua,
-                                 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-                                 'Origin': self.url,
-                                 'Referer': self.url + '/_admin/start/ma'
-                             },
-                             cookies={
-                                 'wikidot_token7': self.wikidot_token7,
-                                 'WIKIDOT_SESSION_ID': self.wikidot_session_id,
-                                 'wikidot_udsession': '1',
-                             })
+    class Config:
+        # ...
+        def request_module(self):
+            return requests.get(self.url + '/_admin/start/ma',
+                                headers={
+                                    'User-Agent': self.ua,
+                                },
+                                cookies={
+                                    'wikidot_token7': self.wikidot_token7,
+                                    'WIKIDOT_SESSION_ID': self.wikidot_session_id,
+                                    'wikidot_udsession': '1',
+                                })
 
 
 class WikidotApplication(dict):
@@ -77,10 +63,8 @@ class WikidotApplicationsList:
         return self.json
 
     def get_html(self):
-        if self.json is None:
-            self.get_json()
-        self.soup = BeautifulSoup(self.json['body'], 'lxml')
-        print(self.soup.prettify())
+        r = self.config.request_module()
+        self.soup = BeautifulSoup(r.text, 'lxml')
         return self.soup
 
     def get_applications(self):

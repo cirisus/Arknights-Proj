@@ -3,7 +3,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 from bs4.element import Tag
-from Login import login_to_wikidot
+import Login
 
 
 class Config:
