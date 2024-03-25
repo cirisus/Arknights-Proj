@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
         return { imageUrls, links };
     }
-    const userInputImages = 'https://picsum.photos/500/300, https://picsum.photos/900/300, https://picsum.photos/900/300,https://picsum.photos/900/300,https://picsum.photos/900/300';
-    const userInputLinks = 'https://link1.com, https://link2.com,https://link2.com,https://link2.com,https://link2.com';
+    const userInputImages = 'https://picsum.photos/500/300, https://picsum.photos/900/300, https://picsum.photos/500/300, https://picsum.photos/900/300, https://picsum.photos/500/300, https://picsum.photos/900/300';
+    const userInputLinks = 'https://link1.com, https://link2.com, https://link1.com, https://link2.com, https://picsum.photos/500/300, https://picsum.photos/900/300';
     const { imageUrls, links } = processUserInput(userInputImages, userInputLinks);
 
     const phaseLength = 500;
@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     var index = 0;
     var intervalId;
     var isHovered = false;
+
     //Viewport size
     const u_ItemsTrack = document.querySelector('.u_ItemsTrack');
     u_ItemsTrack.style.width = `${phaseLength * phaseNum}px`;//Track final width
@@ -61,6 +62,10 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
     function generateIndicators(phaseNum) {
         return new Promise((resolve) => {
+            const ul = document.querySelector('ul[role="tablist"]');
+            const buttonWidth = phaseLength / phaseNum / 1.2;
+            ul.style.width = `${phaseLength}px`;
+
             const liElements = [];
             for (let i = 1; i <= phaseNum; i++) {
                 const li = document.createElement('li');
@@ -74,11 +79,12 @@ document.addEventListener('DOMContentLoaded', async function() {
                 button.setAttribute('data-item', 'select');
                 button.textContent = i;
 
+                button.style.width = `${buttonWidth}px`;
+
                 li.appendChild(button);
                 liElements.push(li);
             }
 
-            const ul = document.querySelector('ul[role="tablist"]');
             liElements.forEach((li, i) => {
                 li.addEventListener('click', () => {
                     stopAutoSlide();
@@ -97,7 +103,6 @@ document.addEventListener('DOMContentLoaded', async function() {
     ]);
 
     var items = document.querySelectorAll('.u_Item');
-
     //Track transition
     var slideTransition = 'transform ' + transformSpeed + 'ms cubic-bezier(.6,0,.4,1)';
     track.style.transition = slideTransition;
@@ -138,11 +143,75 @@ document.addEventListener('DOMContentLoaded', async function() {
             startAutoSlide();
         }
     }
-    //Slider throttle
+    //Slider throttle & Dragging Logic
     var isAnimating = false;
+    var isDragging = false;
+    var isMouseDown = false;
+    var startPos = 0;
+
+    function mouseMoveHandler(e) {
+        if (!isMouseDown) return;
+        e.preventDefault();
+        let x = e.pageX - startPos;
+        if (Math.abs(x) > phaseLength * 0.1 && x < 0) {
+            isDragging = true;
+            let transformValue = -index * phaseLength + x * 0.1;
+            track.style.transform = `translate3d(${transformValue}px,0,0)`;
+        } else if (Math.abs(x) > phaseLength * 0.1 && x > 0) {
+            isDragging = true;
+            let transformValue = index * phaseLength + x * 0.1;
+            track.style.transform = `translate3d(${transformValue}px,0,0)`;
+        }
+    }
 
     carousel.addEventListener('mouseenter', stopAutoSlide);
     carousel.addEventListener('mouseleave', resumeAutoSlide);
+
+    carousel.addEventListener('mousedown', (e) => {
+        e.preventDefault();
+        if (e.target.closest('ul[role="tablist"]')) {
+            return;
+        }
+        isMouseDown = true;
+        startPos = e.pageX;
+        stopAutoSlide();
+        carousel.style.cursor = 'grabbing';
+        carousel.addEventListener('mousemove', mouseMoveHandler);
+    });
+
+    document.addEventListener('mouseup', (e) => {
+        if (!isMouseDown || !isDragging) return;
+        if (e.target.closest('ul[role="tablist"]')) {
+            return;
+        }
+        isMouseDown = false;
+        isDragging = false;
+
+        let x = e.pageX - startPos;
+
+        if (x > 0) {
+            window.prevSlide(() => {
+                resetTransform();
+            });
+        } else {
+            window.nextSlide(() => {
+                resetTransform();
+            });
+        }
+        e.preventDefault();
+
+        carousel.style.cursor = 'default';
+        carousel.removeEventListener('mousemove', mouseMoveHandler);
+        updateTrackPosition();
+        if (!isAnimating) {
+            startAutoSlide();
+        }
+    });
+
+    function resetTransform() {
+        let transformValue = -index * phaseLength;
+        track.style.transform = `translate3d(${transformValue}px,0,0)`;
+    }
 
     startAutoSlide();
 
@@ -150,15 +219,22 @@ document.addEventListener('DOMContentLoaded', async function() {
         if (isAnimating) return;
         isAnimating = true;
         stopAutoSlide();
-        index = (index - 2 + items.length) % items.length;
+        index = (index - 3 + items.length) % items.length;
         updateTrackPosition();
-        setTimeout(() => isAnimating = false, transformSpeed);
+        setTimeout(() => {
+            isAnimating = false;
+            startAutoSlide();
+        }, transformSpeed);
     };
     window.nextSlide = function() {
         if (isAnimating) return;
         isAnimating = true;
         stopAutoSlide();
+        index = (index - 1) % items.length;
         updateTrackPosition();
-        setTimeout(() => isAnimating = false, transformSpeed);
+        setTimeout(() => {
+            isAnimating = false;
+            startAutoSlide();
+        }, transformSpeed);
     };
 });
