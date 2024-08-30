@@ -235,6 +235,10 @@ a.footnoteref:hover, a.bibcite:hover {
         width: 100%;
         text-indent: -1ch;
     }
+    .list-pages-box {
+        column-count: 3;
+        -moz-column-count: 3;
+    }
 }
 #history-form-1>table>tbody>tr:first-child>td:nth-of-type(2) input {
     margin-left: 50%;
@@ -946,6 +950,10 @@ table.page-files tbody tr td:not(.page-rate-widget-box):not(#search-top-box-form
     grid-template-columns: repeat(3,1fr);
     margin: 0 2em;
     gap: 2em
+}
+.list-pages-box {
+    column-count: 4;
+    -moz-column-count: 4;
 }
 #action-area a+h1+h2~ul li {
     text-align: left
